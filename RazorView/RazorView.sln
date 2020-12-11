@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorView", "RazorView\RazorView.csproj", "{D1508445-299E-45D4-AB59-681F26CABD73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewComponentSample", "ViewComponentSample\ViewComponentSample.csproj", "{86B2F1E8-9FF3-4F31-AA3A-0004F992BFD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{AF9F2DAC-24C8-49A7-9467-D606508D7C02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D1508445-299E-45D4-AB59-681F26CABD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1508445-299E-45D4-AB59-681F26CABD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1508445-299E-45D4-AB59-681F26CABD73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86B2F1E8-9FF3-4F31-AA3A-0004F992BFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86B2F1E8-9FF3-4F31-AA3A-0004F992BFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86B2F1E8-9FF3-4F31-AA3A-0004F992BFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86B2F1E8-9FF3-4F31-AA3A-0004F992BFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF9F2DAC-24C8-49A7-9467-D606508D7C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9F2DAC-24C8-49A7-9467-D606508D7C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9F2DAC-24C8-49A7-9467-D606508D7C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9F2DAC-24C8-49A7-9467-D606508D7C02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

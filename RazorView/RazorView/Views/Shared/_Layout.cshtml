@@ -25,7 +25,25 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        @*Добра практика да се използват sections*@
                         @RenderSection("Links", true)
+                        @*С тази проверка нарушаваме принципа на polymorphism в ООП*@
+                        @*Тук layout знае за своите "наследници" а той не трябва да знае за 
+                        тези view-a, който влизат при него и когато искаме да добавим
+                        ново view трябва да добавим нова проверка!!!*@
+                        @*@if (ViewContext.RouteData.Values["Action"] as string == "Index")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="https://google.com">Google</a>
+                            </li>
+                        }
+                        else if (ViewContext.RouteData.Values["Action"] as string == "Privacy")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="https://bing.com">Bing</a>
+                            </li>
+                        }*@
+
                     </ul>
                 </div>
             </div>

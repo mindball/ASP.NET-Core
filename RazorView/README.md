@@ -1,8 +1,28 @@
 # Razor Views
 ```
+Разгледай HTMLSanitizer
+```
+```
 View Engine Essentials
 Passing Data to a View
+
+в едно view може да има само един viewmodel, 
+ако искаме да има и други viewmodel-и трябва да го вкараме вкараме
+този, който е описан във view пример
 ```
+```c#
+public class IndexViewModel
+{        
+        public string Description { get; set; }
+
+        
+        public int Year { get; set; }
+
+        public int UsersCount { get; set; }
+		
+		public AnotherViewModel modelName {get; set; }
+```
+
 ## View Engine Essentials
 ```
 Views in ASP.NET Core MVC use the Razor View Engine to embed
@@ -19,6 +39,10 @@ ViewData, ViewBag or
 through a ViewModel (preferred  method)
 ``` 
 ## Views – Dependency Injection
+```
+Избягвайте да изпозлваме data services(DBContext-a) (други в отделни случай може) във view. Всички данни към view да само
+от viewmodel-a
+```
 ```
 This can be useful for view-specific services, such as localization or data 
 required only for populating view elements
@@ -46,6 +70,16 @@ Define a common site template (~/Views/Shared/_Layout.cshtml)
 Razor View engine renders content inside-out
 First the View is rendered, and after that – the Layout
 ```
+## Flow
+```
+1. Action
+2. _ViewStart.cshtml
+3. View.cshtml -> execute tag helpers + view components
+4. _Layout или ако е дефиниран друг layout във view-то: execute Sections
+@{
+    Layout = "_Layout"; тук може и друго layout  да сме посочили    
+}
+```
 ### _ViewStart.cshtml
 ```
 Views don't need to specify layout since their default layout is
@@ -53,13 +87,14 @@ set in their _ViewStart file:
 ```
 ### _ViewImports.cshtml
 ```
-If a directive or a dependency is shared between many Views it
-can be specified globally in the
+тук using-ите важат за всичките view-ta
 
 @using WebApplication1.Models.ManageViewModels
 
 @using Microsoft.AspNetCore.Identity
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+ако имаме custom tagHelper-и, които ние сме писали в проекта тук е мястото да
+ги добавим
 ```
 
 ## Sections
@@ -73,6 +108,21 @@ A layout can optionally reference one or more sections, by calling
 RenderSection. Sections provide a way to organize where certain page 
 elements should be placed. Each call to RenderSection can specify whether 
 that section is required or optional
+```
+```
+@*Добра практика да се използват sections*@ виж _Layout файла
+    @RenderSection("Links", true)
+    @*С тази проверка нарушаваме принципа на polymorphism в ООП*@
+    @*Тук layout знае за своите "наследници" а той не трябва да знае за 
+    тези view-a, който влизат при него и когато искаме да добавим
+    ново view трябва да добавим нова проверка!!!*@
+    @if (ViewContext.RouteData.Values["Action"] as string == "Index")
+	
+	Вместо проверката да се прави от наследниците се прави от базовия клас
+```
+```
+Добра практика при RenderSection когато изпълнява scripts да е най отдолу
+Най отгоре всички CSS
 ```
 
 ## Tag Helpers
@@ -88,14 +138,63 @@ HTML element creation and rendering, in Razor views
 Creating Your Own Tag Helper - inherit TagHelper
 ```
 
+```
+Когато TagHelper добавя много промени, по добре да използваме partial view
+или view компонента
+```
+
 ## Partial Views
 ```
 Partial Views render portions of a page
 Break up large markup files into smaller components
-Reduce the duplication of common view code
+Reduce the duplication of common view code (като правим промяна го правим
+на едно място)
+```
+```
+Могат да се добавят viewmodel-и и да се изпозлват
+```
+```
+първо се търси в логалната директория после в другите
 ```
 
 ## View Components
+```
+View Components могат да бъдат извикани само от друго view
+```
+```
+Когато ни трябва partial view с логика правим view component-a
+View-тата инициализират view component-тите(user-a не може, заявка е може)
+```
+### How works and when to use
+```
+извиква се view със синтаксиса:
+<vc:registered-users title="Registered users"></vc:registered-users> и връща
+view за което е закрепено към този метод, този метод не може да върне redirect
+Например: в общия layout искаме да се показват послените съобщения от форума, 
+или последните видео клипове. Layout си няма actions, достъп до база данните, 
+няма service, Layout ima някакви view-ta (section-a не е опция). 
+Как подаваме данни на Layout - това става с view component-a, защото тя, както и action-nite имат достъп до база
+данните, сървисите, могат да си inject-нат каквото им трябва, да си дръпнат данните
+да си направят view model и да го подадат на view component-a. За разлика от tagHelper-и,
+тук имаме достъп до база данните, сървисите и обикновенно view component-тите само
+свързани с някакви реални данни, докато tagHelper-и те алтернират съществуващ таг, partial 
+view-тата показват парче от view използвайки view model.
+
+Ако искаме да имаме функционалност и view и да не правим отделна заявка това се попълва от тези view component-и
+Dynamic navigation menus - Ако искаме менютата на нашият сайт да зареждат от база данните, ще използваме view component-a ()
+Login panels
+Shopping carts
+Sidebar content дърпа данни от базада.
+Recently published articles
+Tag cloud
+```
+
+```
+View componets consist 2 parts:
+class
+result View
+```
+
 ```
 View Components are similar to Partial Views but much more powerful
 ```
