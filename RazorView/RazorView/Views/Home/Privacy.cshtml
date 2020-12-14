@@ -1,4 +1,8 @@
 ﻿<partial name="_HomePageStart" />
+<partial name="_HomePageStart" model="DateTime.Now.ToString()" />
+@*Друг пример за partial от тук задаваме ModelView-то*@
+<partial name="_UserListPartial" model="@(new[] { "test array", "blalbla" })" />
+
 
 <h1>@ViewData["Title"]</h1>
 

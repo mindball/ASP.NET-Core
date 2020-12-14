@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace RazorView.ViewModels.Home
@@ -18,5 +19,7 @@ namespace RazorView.ViewModels.Home
         public int Id { get; set; }
 
         public string Name { get; set; }
+
+        public IEnumerable<string> Users { get; set; }
     }
 }

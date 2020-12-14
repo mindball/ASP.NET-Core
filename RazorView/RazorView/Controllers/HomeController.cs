@@ -31,6 +31,7 @@ namespace RazorView.Controllers
                 Year = DateTime.UtcNow.Year,
                 Processors = Environment.ProcessorCount,
                 UsersCount = this.dbContext.Users.Count(),
+                Users = this.dbContext.Users.Select(u => u.UserName).ToList(),
                 Description = "Курсът \"ASP.NET Core\" ще ви научи как се изграждат съвременни уеб приложения с архитектурата Model-View-Controller, използвайки HTML5, бази данни, Entity Framework Core и други технологии. Изучава се технологичната платформа ASP.NET Core, нейните компоненти и архитектура, създаването на MVC уеб приложения, дефинирането на модели, изгледи и частични изгледи с Razor view engine, дефиниране на контролери, работа с бази данни и интеграция с Entity Framework Core, LINQ и SQL Server. Курсът включа и по-сложни теми като работа с потребители, роли и сесии, използване на AJAX, кеширане, сигурност на уеб приложенията, уеб сокети и работа с библиотеки от MVC контроли.",
             };
 
@@ -39,6 +40,17 @@ namespace RazorView.Controllers
 
         public IActionResult Privacy()
         {
+            //var viewModel = new IndexViewModel
+            //{
+            //    Id = id,
+            //    Name = "Anonymous",
+            //    Year = DateTime.UtcNow.Year,
+            //    Processors = Environment.ProcessorCount,
+            //    UsersCount = this.dbContext.Users.Count(),
+            //    Description = "Курсът \"ASP.NET Core\" ще ви научи как се изграждат съвременни уеб приложения с архитектурата Model-View-Controller, използвайки HTML5, бази данни, Entity Framework Core и други технологии. Изучава се технологичната платформа ASP.NET Core, нейните компоненти и архитектура, създаването на MVC уеб приложения, дефинирането на модели, изгледи и частични изгледи с Razor view engine, дефиниране на контролери, работа с бази данни и интеграция с Entity Framework Core, LINQ и SQL Server. Курсът включа и по-сложни теми като работа с потребители, роли и сесии, използване на AJAX, кеширане, сигурност на уеб приложенията, уеб сокети и работа с библиотеки от MVC контроли.",
+            //};
+
+            //return View(viewModel);
             return View();
         }
 

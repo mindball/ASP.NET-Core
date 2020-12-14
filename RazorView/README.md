@@ -121,10 +121,10 @@ that section is required or optional
 	Вместо проверката да се прави от наследниците се прави от базовия клас
 ```
 ```
+@RenderSection("Scripts", required: false)
 Добра практика при RenderSection когато изпълнява scripts да е най отдолу
 Най отгоре всички CSS
 ```
-
 ## Tag Helpers
 ```
 Tag Helpers enable the participation of Server-side code in the
@@ -156,7 +156,20 @@ Reduce the duplication of common view code (като правим промяна
 ```
 първо се търси в логалната директория после в другите
 ```
-
+```
+Пример: Виж използването на partial във index и privacy, за viewmodel в index.cshtml се взима IndexViewModel,
+а в Privacy.cshtml се взима DateTime.Now.ToString(), това идва от описаното в partialView-_HomePageStart
+model string. Тук се преизползва partialView. За модел във partialView-то sme дали стринг =>
+които използва това partialView трябва да се съобрази с това.
+```
+```
+когато имаме много големи view-ta е добра практира да се използват partial view, ползата даваме имена на парченцата от
+дългото view - то става по четимо!!
+```
+```
+ако ще се ползва от Index and Privacy да сложи в директория Home,
+ако ще се ползва от _Layout се слага в директория Shared
+```
 ## View Components
 ```
 View Components могат да бъдат извикани само от друго view
@@ -190,9 +203,10 @@ Tag cloud
 ```
 
 ```
-View componets consist 2 parts:
-class
-result View
+View componets directory convención and consist:
+class -> Folder: ViewComponents
+result View -> Folder: ViewModel/ViewComponents -> viewModel
+View -> Shared/Component/"Името на view component-a" -> Default
 ```
 
 ```
@@ -206,3 +220,15 @@ View Components are similar to Partial Views but much more powerful
 ### View Components consist of 2 parts:
 * A class – typically derived from ViewComponent
 * A result – typically a View
+
+### ViewComponent has paramaters
+```
+ViewComponent-тата се използва като Tag, която може да има атрибути. Атрибутите отиват като параметри на ViewComponent-тата
+```
+
+## Difference partial view, tagHelper-и, view component-a
+```
+partial view са view-ta;
+tagHelper-и ca код
+view component-a са view + tagHelper-и
+```

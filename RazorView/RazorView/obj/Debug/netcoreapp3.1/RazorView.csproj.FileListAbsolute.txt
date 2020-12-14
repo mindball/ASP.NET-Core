@@ -436,3 +436,4 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\RazorView\RazorView\obj
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\RazorView\RazorView\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\RazorView\RazorView\obj\Debug\netcoreapp3.1\Razor\Views\Home\_HomePageStart.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\RazorView\RazorView\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\RegisteredUsers\Default.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\RazorView\RazorView\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_UserListPartial.cshtml.g.cs

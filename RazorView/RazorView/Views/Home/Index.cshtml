@@ -5,10 +5,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-<vc:registered-users title="Registered users"></vc:registered-users>
-<vc:registered-users title="Registered users" />
-<vc:registered-users title="Registered users" />
-<partial name="_HomePageStart" model="Model" />
+<vc:registered-users title="Registered users aaaa"></vc:registered-users>
+<vc:registered-users title="Registered users aaaa" />
+<vc:registered-users title="Registered users aaa" />
+@*Едно и също for и Model*@
+<partial name="_HomePageStart" for="Description" />
+<partial name="_HomePageStart" model="Model.Description" />
+@*Друг пример за partial от тук задаваме ModelView-то*@
+<partial name="_UserListPartial" model="Model.Users" />
+
 
 <form asp-action="Index">
     <textarea asp-for="Description"></textarea>
@@ -35,6 +40,10 @@
     <p>Processors: @Model.Processors</p>
     <p>Time: @DateTime.Now</p>
     <p>Id: @Model.Id</p>
+    @foreach (var item in Model.Users)
+    {
+        <p>User: @item </p>
+    }
 </div>
 
 <table bootstrap-table="" table-name="Digits table">
