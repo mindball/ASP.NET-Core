@@ -21,36 +21,68 @@ namespace CreateCustomMiddleware
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //Run, Use
             //The first Run() delegate terminates the pipeline
-            app.Run(async (context) =>
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("I`m the one and onle");
+            //});
+
+            // app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("1");
+            //    //short-cirquit
+            //    if (DateTime.Now.Second % 2 == 0)
+            //    {
+            //        await next();
+            //    }
+
+            //    await context.Response.WriteAsync("6");
+            //});
+
+            //Use custom middleware (може да си правим и extension methods)
+            //app.UseMiddleware<EveryTwoSecondsMiddleware>();
+
+            // app.Use(async (context, next) =>
+            // {
+            //     await context.Response.WriteAsync("2");
+            //     await next();
+            //     await context.Response.WriteAsync("5");
+            // });
+
+            // app.Use(async (context, next) =>
+            // {
+            //     await context.Response.WriteAsync("3");
+            //     await context.Response.WriteAsync("4");
+            // });
+
+            //Extension middleware
+            app.ExtensionUseCustom();
+
+            //Map 
+            app.Map("/softuni", app =>
             {
-                await context.Response.WriteAsync("I`m the one and onle");
+                app.UseWelcomePage();   //http://localhost:port/softuni
+                //тези middleware важат самота за softuni ако извън map имаме middleware 
+                //те не важат за този адрес
+                //Имаме възможност в този адрес да направим друг Map:
+                app.Map("/welcome", app =>
+                {
+                    app.Run(async (request) =>
+                        await request.Response.WriteAsync("Inner map"));
+                });
+                
             });
 
-            
-            app.Use(async (context, next) =>
-           {
-               await context.Response.WriteAsync("1");
-               //short-cirquit
-               if (DateTime.Now.Second % 2 == 0)
-               {
-                   await next();
-               }
-
-               await context.Response.WriteAsync("6");
-           });
-
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("2");
-                await next();
-                await context.Response.WriteAsync("5");
-            });
-
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("3");
-                await context.Response.WriteAsync("4");
+            //Имаме възможност в този адрес да направим друг Map:
+            app.Map("/softuni", app =>
+            {  
+                app.Map("/welcome", app => //http://localhost:port/softuni/welcome
+                {
+                    app.Run(async (request) =>
+                        await request.Response.WriteAsync("Inner map"));
+                });
+                app.UseWelcomePage();   //http://localhost:port/softuni
             });
         }
     }

@@ -1,3 +1,6 @@
+# MVC Request Lifecycle
+![Flow request](https://gwb.blob.core.windows.net/chetan/Windows-Live-Writer/dea7a7be3198_10BBC/clip_image002_thumb.jpg)
+
 # Application Fundamentals
 ```
 ASP.NET Core uses the Configure() method in the StartUp.cs
@@ -117,4 +120,76 @@ app.UseExceptionHandler обработва exception-ните 500
 Когато възникне exception някъде в нашето приложение, ще се случи само при заявката, която е 
 предизвикала exception-a, приложението продължава да работи !!! и другите заявки продължават 
 работят
+```
+
+# Middleware - Components ot HTTP Pipeline
+[Middleware Flow](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/index/_static/request-delegate-pipeline.png?view=aspnetcore-5.0)
+```
+Each middleware component is responsible for:
+- Invoking the next component in the pipeline
+- Or short-circuiting the pipeline (Short-circuiting is often desirable because it avoids unnecessary work)
+Под някаква форма, middleware-и или преценяват да прекъснат заявката или 
+преценяват да добавят нова информация и да предаде на следващия middleware 
+Access to Dependency injection and services
+```
+## Middleware order
+[Middleware order](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/index/_static/middleware-pipeline.svg?view=aspnetcore-5.0)
+```
+The order that middleware components are added in the Startup.Configure method 
+defines the order in which the middleware components are invoked on requests and the reverse 
+order for the response. The order is critical for security, performance, and functionality.
+
+In some scenarios, middleware will have different ordering. For example, 
+caching and compression ordering is scenario specific, and there's multiple valid orderings.
+
+Static File Middleware is called early in the pipeline so that it can handle requests and short-circuit 
+without going through the remaining components
+```
+```
+Typically, there will be multiple middleware in ASP.NET Core web application. It can be either 
+framework provided middleware, added via NuGet or your own custom middleware.
+ASP.NET Core is a modular framework. We can add server side features we need in our application by installing
+different plug-ins via NuGet.```
+
+### Map method
+```
+Създава нов-празен IApplicationBuilder за конкретен адрес
+```
+```C#
+//app.Map си има собствен Configure method example:
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+	app.Map("/softuni", app =>
+	{
+			//Configure method (за адреса /softuni  се зареждат тук определените middleware)
+			app.UseWelcomePage();
+	})
+}
+```
+```
+по време на pipeline request-a и response-а търпят развитие.
+```
+```
+В middleware-и next method-а се обработва от applicationBuilder-a
+```
+## Use, create  middleware
+```
+Винаги когато променяма нещо глобално в reques-a и respons-a
+Имаме достъп до всичките даннни, които user-a ни е изпратил
+```
+* For logging data
+* Checking data (User-Agent check)
+```C#
+if(context.Request.Headers["User-Agent"].First().Contains("Chrome")
+```
+* Limit Ip 
+* Limit users rights
+* Add, remove, modify response  and request
+* Use HTTPS
+* Count loading page (timer to debug how long page are loading)
+```C#
+if(context.Request.Scheme != "https")
+{
+	context.Response.Headers["Location"] = "https"; => //app.UseHttpsRedirection подобен
+}
 ```

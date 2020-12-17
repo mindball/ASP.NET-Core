@@ -43,23 +43,27 @@ namespace ApplicationFlowFiltersMiddleware
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //    app.UseDatabaseErrorPage();
-            //}
-            //else
-            //{
-            //    app.UseExceptionHandler("/Home/Error");
-            //    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-            //    app.UseHsts();
-            //}
+            //Test Error Handle Exception Handler
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
 
             //Test Error Handle Exception Handler
             //app.UseExceptionHandler("/Home/Error");
 
             //Test Error Handle Exception Status Code Pages
-            app.UseStatusCodePagesWithRedirects("/Home/StatusCodeError?errorCode={0}");
+            //app.UseStatusCodePagesWithRedirects("/Home/StatusCodeError?errorCode={0}");
+
+            //Middleware
+           
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

@@ -56,10 +56,10 @@ namespace ApplicationFlowFiltersMiddleware.Controllers
         //Test Error Handle Exception Status Code Pages
         public IActionResult StatusCodeError(int errorCode)
         {
-            if(errorCode == 404)
-            {
-                return this.View("404ViewModel")
-            }
+            //if(errorCode == 404)
+            //{
+            //    return this.View("404ViewModel");
+            //}
             return this.View();
         }
 
