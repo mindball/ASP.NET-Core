@@ -21,6 +21,18 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 	app.UseEndpoints(...);
 }
 ```
+## Controller Context
+```
+The Controller is one of the main components in the Request pipeline
+Each Controller has its own ControllerContext
+A set of useful properties containing data about the current Request
+```
+### ControllerContext Properties:
+* ActionDescriptor
+* HttpContext (Request, Response)
+* ModelState
+* RouteData
+* ValidProviderFactories
 
 ## Application Environments
 ```
@@ -122,6 +134,9 @@ app.UseExceptionHandler обработва exception-ните 500
 работят
 ```
 
+# Middleware operate on the level of ASP.NET Core and Filters on the level MVC
+
+
 # Middleware - Components ot HTTP Pipeline
 [Middleware Flow](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/index/_static/request-delegate-pipeline.png?view=aspnetcore-5.0)
 ```
@@ -133,7 +148,7 @@ Each middleware component is responsible for:
 Access to Dependency injection and services
 ```
 ## Middleware order
-[Middleware order](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/index/_static/middleware-pipeline.svg?view=aspnetcore-5.0)
+![Middleware order](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/index/_static/middleware-pipeline.svg?view=aspnetcore-5.0)
 ```
 The order that middleware components are added in the Startup.Configure method 
 defines the order in which the middleware components are invoked on requests and the reverse 
@@ -193,3 +208,106 @@ if(context.Request.Scheme != "https")
 	context.Response.Headers["Location"] = "https"; => //app.UseHttpsRedirection подобен
 }
 ```
+### Short cirquit
+```C#
+ await context.Response.WriteAsync("1");
+               //short-cirquit
+               if (DateTime.Now.Second % 2 == 0)
+               {
+                   await next();
+               }
+
+               await context.Response.WriteAsync("6");
+```
+
+# Filters
+![Filters](https://drek4537l1klr.cloudfront.net/lock/Figures/13fig02_alt.jpg)
+```
+Парче код, метод или клас, който се извиква в определена ситуация!!!
+```
+![FilterFlow](https://imgur.com/pLveRmq)
+
+```
+Всeки filter си има context например Result filters може да има context of View(),
+ActionFilters си има context result of Action-а, Exception filter -> context object of Exception
+```
+## Filter Attributes
+* Attributes allow Filters to accept arguments
+* Several of the Filter interfaces have corresponding Attributes
+```
+These can be used as base classes for custom implementation
+```
+
+### Filter Attributes:
+* ActionFilterAttribute
+* ExceptionFilterAttribute
+* ResultFilterAttribute
+* FormatFilterAttribute
+* ServiceFilterAttribute
+* TypeFilterAttribute
+
+### This particular Filter will attach the given Header and its value to every Result in the Controller
+```C#
+	[AddHeader("Author", "Steve Smith @ardalis")]
+	public class SampleController : Controller
+	{
+		public IActionResult Index()
+		{
+			return Content("Examine the headers using developer tools.");
+		}
+	
+		public IActionResult Test()
+		{
+			return Content("Header will be present here too.");
+		}
+	}
+```
+## Use case
+### Globally
+```C#
+Когато се регистрират глобално ще се изпълняват от всички action-и ConfigureServices
+
+ services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(new AddHeaderActionGlobalFilter());
+                //same
+                //options.Filters.Add(typeof(AddHeaderActionGlobalFilter));
+            });
+```
+### Local
+```C#
+прилагат се на целият контролер - Ще се изпълнят преди и след всеки action-и
+
+	[AddHeaderActionAttributeFilter] //Ще се изпълни преди и след всеки action-и
+    public class InfoController : Controller
+    {
+		....
+	}
+```
+
+### Application of specific action
+```C#
+	    [AddHeaderActionAttributeFilter]
+        public IActionResult Time()
+        {
+            return this.Content(DateTime.Now.ToLongTimeString());
+        }
+```
+
+## Filter Dependency Injection
+### Filters that are implemented as Attributes:
+ * Are added directly to Controller classes or Action methods
+ * Cannot have constructor dependencies provided by DI
+ * Parameters must be supplied where the attributes are applied
+ * This is a limitation of how filters attributes work
+### There are several approaches to include DI in Filter Attributes
+ * ServiceFilterAttribute
+ * TypeFilterAttribute
+### Service filter implementation types are registered in DI
+ * ServiceFilterAttribute retrieves an instance of the filter from DI
+ * Used only for Filters that are registered as Services
+### TypeFilterAttribute is similar to ServiceFilterAttribute 
+ * The type is not resolved directly from the DI container
+ * Type is instantiated using ObjectFactory.
+### There are ways to control the reusability of the instances
+ * There is no guarantee that a single instance will be created

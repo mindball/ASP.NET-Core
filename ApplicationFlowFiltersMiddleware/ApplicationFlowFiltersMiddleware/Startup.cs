@@ -1,4 +1,5 @@
 using ApplicationFlowFiltersMiddleware.Data;
+using ApplicationFlowFiltersMiddleware.Filters;
 using ApplicationFlowFiltersMiddleware.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,7 +28,12 @@ namespace ApplicationFlowFiltersMiddleware
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(new AddHeaderActionGlobalFilter());
+                //same
+                //options.Filters.Add(typeof(AddHeaderActionGlobalFilter));
+            });
             services.AddRazorPages();
 
             //Singleton
@@ -38,6 +44,11 @@ namespace ApplicationFlowFiltersMiddleware
 
             //Scoped
             services.AddScoped<IInstanceCounter, InstanceCounter>();
+
+            //ServiceFilter add to container - according to the type of case
+            services.AddSingleton<FilterDependencyInjectionServiceFilter>();
+            //services.AddScoped<FilterDependencyInjectionServiceFilter>();
+            //services.AddSingleton<FilterDependencyInjectionServiceFilter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
