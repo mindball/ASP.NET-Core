@@ -8,9 +8,11 @@ using Microsoft.Extensions.Logging;
 using ApplicationFlowFiltersMiddleware.Models;
 using ApplicationFlowFiltersMiddleware.Services;
 using Microsoft.Extensions.Configuration;
+using ApplicationFlowFiltersMiddleware.Filters;
 
 namespace ApplicationFlowFiltersMiddleware.Controllers
 {
+    [LogFilter]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
