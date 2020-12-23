@@ -87,6 +87,13 @@ namespace ApplicationFlowFiltersMiddleware
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "blog",
+                    pattern: "Blog/{controller=BlogPattern}/{action=Details}/{title?}/{date?}");
+            });
+
+                app.UseEndpoints(endpoints =>
+            {               
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();

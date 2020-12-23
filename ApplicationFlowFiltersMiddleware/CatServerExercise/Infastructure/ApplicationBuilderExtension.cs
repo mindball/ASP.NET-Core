@@ -20,7 +20,7 @@
         public static IApplicationBuilder UseRequestaHandlers(
             this IApplicationBuilder builder)
         {
-            //Get all handlers, whick implement and inherits IHandler
+            //Get all handlers, which implement and inherits IHandler
             var handlers = Assembly
                 .GetExecutingAssembly()
                 .GetTypes()

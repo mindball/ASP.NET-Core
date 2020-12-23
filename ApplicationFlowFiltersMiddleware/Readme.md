@@ -136,7 +136,6 @@ app.UseExceptionHandler обработва exception-ните 500
 
 # Middleware operate on the level of ASP.NET Core and Filters on the level MVC
 
-
 # Middleware - Components ot HTTP Pipeline
 [Middleware Flow](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/index/_static/request-delegate-pipeline.png?view=aspnetcore-5.0)
 ```
@@ -220,17 +219,75 @@ if(context.Request.Scheme != "https")
                await context.Response.WriteAsync("6");
 ```
 
+### When to use 'Map' when 'MapWhen'
+```
+Use Map when you branch request based on request path only. 
+Use MapWhen when you branch request based on other data from the HTTP request.
+(MapWhen is more powerful and allows branching the request based on result of 
+specified predicate that operates with current HttpContext object)
+```
+```C#
+MapWhen branches the request pipeline based on the result of the given predicate. 
+Any predicate of type Func<HttpContext, bool> can be used to map requests to a new 
+branch of the pipeline
+
+app.MapWhen(context => context.Request.Query.ContainsKey("branch"),
+                               HandleBranch);
+```
+
+## Endpoints
+```
+Request-сте се регистрират към съответните controller-и и action-и.
+```
+## Custom patterns
+```C#
+app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "admin",
+                    pattern: "Admin/{controller}/{action}");
+			}
+Има отново значение ред на подреждане!!!
+
+explanation: 
+ако имаме request -> /Admin/Cats/Index - ще се изпълни custom шаблона, ако не 
+съвпадне продължава надолу докато не намери съвпадение или не се изпълни default шаблона
+ако имаме request -> /Admin/Cats/ -> няма да се изпълне custom шаблона
+```
+```C#
+app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "blog",
+                    pattern: "Blog/{controller}/{action}/{title}/{date}");
+			}
+{title}/{date} са параметри на action-а
+```
+```
+Важно правило името на параметъра в шаблона трябва да съвпада с параметър-името на action метода
+```
+
 # Filters
 ![Filters](https://drek4537l1klr.cloudfront.net/lock/Figures/13fig02_alt.jpg)
 ```
 Парче код, метод или клас, който се извиква в определена ситуация!!!
 ```
-![FilterFlow](https://imgur.com/pLveRmq)
+![FilterFlow](https://i.imgur.com/pLveRmq.png)
 
 ```
 Всeки filter си има context например Result filters може да има context of View(),
 ActionFilters си има context result of Action-а, Exception filter -> context object of Exception
 ```
+
+## Filter types
+### Authorization filters 
+```
+ run first and are used to determine whether the user is authorized for the request. 
+ Authorization filters short-circuit the pipeline if the request is not authorized.
+```
+### Resource filters
+
+
 ## Filter Attributes
 * Attributes allow Filters to accept arguments
 * Several of the Filter interfaces have corresponding Attributes
@@ -242,6 +299,11 @@ These can be used as base classes for custom implementation
 * ActionFilterAttribute
 * ExceptionFilterAttribute
 * ResultFilterAttribute
+```
+run code immediately before and after the execution of action results. 
+They run only when the action method has executed successfully. 
+They are useful for logic that must surround view or formatter execution.
+```
 * FormatFilterAttribute
 * ServiceFilterAttribute
 * TypeFilterAttribute
