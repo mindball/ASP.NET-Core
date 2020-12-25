@@ -1,0 +1,36 @@
+﻿@model AllCustomerViewModel
+
+@ViewData["Title"] = "All Customers"
+
+<h2>All cutomers</h2>
+<h3>Order by Birth day and order by <strong>@Model.Order</strong></h3>
+
+<table class="table table-bordered table-hover">
+    <thead class="">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Young Driver</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int index = 1;
+            foreach (var customer in Model.OrderCustomers)
+            {
+                <tr>
+                    <th scope="row">@index</th>
+                    <td>@customer.Name</td>
+                    <td>@customer.Birthday.ToShortDateString()</td>
+                    <td>@(customer.IsYoungDriver ? "Yes" : "No")</td>
+                    <td>
+                        <a class="btn btn-info" href="/customers/edit/@(customer.Id.ToString())" role="button">Edit</a>
+                    </td>
+                </tr>
+                index++;
+            }
+        }
+    </tbody>
+</table>
