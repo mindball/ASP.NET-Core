@@ -1,0 +1,38 @@
+﻿@model CarsByMakeViewModel
+
+@{
+    ViewData["Title"] = "All Cars";
+}
+
+<h2>All cars</h2>
+<h3><strong>@Model.Maker</strong></h3>
+
+<table class="table table-bordered table-hover">
+    <thead class="">
+        <tr>
+            <th>#</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Travelled distance</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int index = 1;
+            foreach (var car in Model.CarsByMake)
+            {
+                <tr>
+                    <th scope="row">@index</th>
+                    <td>@car.Make</td>
+                    <td>@car.Model</td>
+                    <td>@car.TravelledDistance</td>
+                    <td>
+                        <a class="btn btn-info" href="/cars/edit/@(car.Id.ToString())" role="button">Edit</a>
+                    </td>
+                </tr>
+                index++;
+            }
+        }
+    </tbody>
+</table>

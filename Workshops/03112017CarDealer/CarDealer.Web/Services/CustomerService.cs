@@ -1,13 +1,11 @@
-﻿using CarDealer.Web.Common;
-using CarDealer.Web.Data;
-using CarDealer.Web.Services.DTO.Customer;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CarDealer.Web.Services
+﻿namespace CarDealer.Web.Services
 {
+    using CarDealer.Web.Common;
+    using CarDealer.Web.Data;
+    using CarDealer.Web.Services.DTO.Customer;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
     public class CustomerService : ICustomerService
     {
         private readonly CarDealerDbContext dbContext;

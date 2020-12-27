@@ -1,0 +1,38 @@
+﻿@model SupplierModel
+
+@{
+    ViewData["Title"] = "Suppliers";
+}
+
+<h2>Suppliers</h2>
+<h3><strong>@Model.Type</strong></h3>
+
+<table class="table table-bordered table-hover">
+    <thead class="">
+        <tr>
+            <th>#</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Parts</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int index = 1;
+            foreach (var supplier in Model.Suppliers)
+            {
+                <tr>
+                    <th scope="row">@index</th>
+                    <td>@supplier.Id</td>
+                    <td>@supplier.Name</td>
+                    <td>@supplier.NumerOfParts</td>
+                    <td>
+                        <a class="btn btn-info" href="/supplier/edit/@(supplier.Id.ToString())" role="button">Edit</a>
+                    </td>
+                </tr>
+                index++;
+            }
+        }
+    </tbody>
+</table>

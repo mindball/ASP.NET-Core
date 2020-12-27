@@ -19,6 +19,7 @@ namespace CarDealer.Web.Controllers
             this.customerService = customerService;
         }
 
+        //This route is customized
         [Route(nameof(All) + "/{orderBy?}")]
         public IActionResult All(string orderBy)
         {
