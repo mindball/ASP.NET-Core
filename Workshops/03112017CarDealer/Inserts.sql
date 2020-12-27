@@ -1,21 +1,3 @@
-Skip to content
-sevdalin
-/
-Software-University-SoftUni
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-More
-Software-University-SoftUni/C# MVC Frameworks - ASP.NET Core/02. ASP.NET Core - Essentials/CarSystem.sql
-@sevdalin
-sevdalin C# MVC Frameworks - ASP.NET Core
- History
- 1 contributor
-1803 lines (1798 sloc)  289 KB
-  
 USE [CarDealerSystem]
 GO
 SET IDENTITY_INSERT [dbo].[Cars] ON 
