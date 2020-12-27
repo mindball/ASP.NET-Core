@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 6af906f7cd7633ef37901f55a5983bc80dcdc7b6
 USE [CarDealerSystem]
 GO
 SET IDENTITY_INSERT [dbo].[Cars] ON 
