@@ -18,7 +18,7 @@ namespace CarDealer.Web.Controllers
             this.carService = carService;
         }
 
-        [Route("{make}")]
+        [Route("{make}", Order = 2)]
         public IActionResult ByMake(string make)
         {
             var carResult = this.carService.GetMakedCar(make.ToLower());
@@ -31,5 +31,14 @@ namespace CarDealer.Web.Controllers
 
             return this.View(cars);
         }
+
+        [Route("parts", Order = 1)]
+        public IActionResult Parts()
+        {
+            var result = this.carService.GetCarsWithParts();
+
+            return this.View(result);
+        }
+               
     }
 }

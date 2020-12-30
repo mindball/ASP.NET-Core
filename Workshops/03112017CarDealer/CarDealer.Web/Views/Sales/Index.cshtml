@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SaleModel>
+
+@{
+    ViewData["Title"] = "Sales with Customers and Cars";
+}
+
+<h2>All sales</h2>
+<table class="table table-bordered table-hover">
+    <thead class="">
+        <tr>
+            <th>#</th>
+            <th>Customer Name</th>
+            <th>Car make</th>
+            <th>Car model</th>
+            <th>Travelled Distance</th>
+            <th>Price</th>
+            <th>Discount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int index = 1;
+            foreach (var sale in Model)
+            {
+                <tr>
+                    <th scope="row">@index</th>
+                    <td>@sale.CustomerName</td>
+                    <td>@sale.Make</td>
+                    <td>@sale.Model</td>
+                    <td>@sale.TravelledDistance</td>
+                    <td>@sale.TotalPrice</td>
+                    <td>@sale.Discount</td>
+                    <td>
+                        <a class="btn btn-info" href="/sales/edit/@(sale.SaleId.ToString())" role="button">Edit</a>
+                    </td>
+                </tr>
+                index++;
+            }
+        }
+    </tbody>
+</table>
+                

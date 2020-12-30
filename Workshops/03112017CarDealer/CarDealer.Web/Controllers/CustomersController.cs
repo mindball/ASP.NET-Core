@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CarDealer.Web.Common;
-using CarDealer.Web.Models.Customers;
-using CarDealer.Web.Services;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CarDealer.Web.Controllers
+﻿namespace CarDealer.Web.Controllers
 {
+    using CarDealer.Web.Common;
+    using CarDealer.Web.Models.Customers;
+    using CarDealer.Web.Services;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("customers")]
     public class CustomersController : Controller
     {
@@ -21,7 +17,7 @@ namespace CarDealer.Web.Controllers
 
         //This route is customized
         [Route(nameof(All) + "/{orderBy?}")]
-        public IActionResult All(string orderBy)
+        public IActionResult All(string orderBy = "ascending")
         {
             OrderType orderType =
                 orderBy == "descending" ?
@@ -37,5 +33,10 @@ namespace CarDealer.Web.Controllers
 
             return View(customersView);
         }
+
+        [Route("{id?}")]
+        public IActionResult TotalSalesCustomer(int id) =>
+
+            this.View("CustomerSales", this.customerService.TotalSalesByCustomer(id));
     }
 }

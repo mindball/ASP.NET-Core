@@ -7,5 +7,7 @@
     public interface ICustomerService
     {
         IEnumerable<OrderCustomer> OrderCustomers(OrderType orderBy);
+
+        CustomerSales TotalSalesByCustomer(int id);
     }
 }

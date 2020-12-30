@@ -6,5 +6,7 @@
     public interface ICarService
     {
         IEnumerable<CarMaked> GetMakedCar(string make);
+
+        IEnumerable<CarWithParts> GetCarsWithParts();
     }
 }

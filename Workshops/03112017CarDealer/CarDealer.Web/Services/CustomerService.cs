@@ -51,5 +51,25 @@
             }
         }
 
+        //Total Sales by Customer
+        public CustomerSales TotalSalesByCustomer(int id)
+        {
+            if (!this.dbContext.Customers.Any(c => c.Id == id))
+            {
+                return null;
+            }
+
+            var result = this.dbContext.Customers
+            .Where(c => c.Id == id)
+            .Select(c => new CustomerSales
+            {
+                Name = c.Name,
+                BoughtCarCount = c.Sales.Count,
+                SpendMoney = c.Sales.Sum(s => s.Car.PartCars.Sum(p => (double)p.Part.Price))
+            })
+            .FirstOrDefault();
+
+            return result;
+        }       
     }
 }
