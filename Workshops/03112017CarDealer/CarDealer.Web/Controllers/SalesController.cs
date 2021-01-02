@@ -10,7 +10,7 @@
 
         public SalesController(ISalesService saleService)
         {
-            this.saleService = saleService;
+            this.saleService = saleService;           
         }
 
         public IActionResult Index()
@@ -26,8 +26,7 @@
 
         [Route("discounted/{discount?}")]
         public IActionResult Discounted(double? discount)
-        {
-            return this.View("Index", this.saleService.Discounted(discount));
-        }
+            => this.View(this.saleService.Discounted(discount));
+
     }
 }

@@ -61,15 +61,27 @@
 
             var result = this.dbContext.Customers
             .Where(c => c.Id == id)
-            .Select(c => new CustomerSales
+            .Select(c => new 
             {
                 Name = c.Name,
                 BoughtCarCount = c.Sales.Count,
-                SpendMoney = c.Sales.Sum(s => s.Car.PartCars.Sum(p => (double)p.Part.Price))
+                CarsSale = c.Sales
+                                .Where(s => s.CustomerId == c.Id)                               
+                                .Select(cr => new 
+                                {
+                                    Price = cr.Car.PartCars.Sum(p => (double)p.Part.Price)
+                                })
             })
             .FirstOrDefault();
 
-            return result;
+            var sumResult = new CustomerSales()
+            {
+                Name = result.Name,
+                BoughtCarCount = result.BoughtCarCount,
+                SpendMoney = result.CarsSale.Sum(a => a.Price)
+            };
+
+            return sumResult;
         }       
-    }
+    }    
 }

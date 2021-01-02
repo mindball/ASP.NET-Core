@@ -12,7 +12,7 @@
 
         public CustomersController(ICustomerService customerService)
         {
-            this.customerService = customerService;
+            this.customerService = customerService;    
         }
 
         //This route is customized
@@ -35,8 +35,10 @@
         }
 
         [Route("{id?}")]
-        public IActionResult TotalSalesCustomer(int id) =>
-
-            this.View("CustomerSales", this.customerService.TotalSalesByCustomer(id));
+        public IActionResult CustomerSales(int id)
+        {            
+           this.customerService.TotalSalesByCustomer(id);
+           return this.View(this.customerService.TotalSalesByCustomer(id));
+        }
     }
 }

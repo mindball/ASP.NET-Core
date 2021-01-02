@@ -1,5 +1,8 @@
 # Razor Views
 ```
+добра практика е да не сменяме url-линковете, защото ще счупим SEO-то
+```
+```
 Разгледай HTMLSanitizer
 ```
 ```
@@ -142,6 +145,13 @@ Creating Your Own Tag Helper - inherit TagHelper
 Когато TagHelper добавя много промени, по добре да използваме partial view
 или view компонента
 ```
+```
+TagHelper <a asp-controller="Controller" asp-action="Ivan"> този tagHelper
+се съобразява с routing-таблицата Configure
+по гъвкаво (разгледай случай ако сменим имената на controller-а или променим
+нещо в custom route)
+Винаги ще имаме валидния route
+```
 
 ## Partial Views
 ```
@@ -206,7 +216,7 @@ Tag cloud
 View componets directory convención and consist:
 class -> Folder: ViewComponents
 result View -> Folder: ViewModel/ViewComponents -> viewModel
-View -> Shared/Component/"Името на view component-a" -> Default
+View -> Shared/Component/"Името на view component-a"/ -> Default
 ```
 
 ```

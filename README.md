@@ -95,3 +95,60 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     });
 }
 ```
+#### Using Conventional Routing, with the default route:
+* Optimizes an application by preventing the creation of a new URL pattern for every Action
+* Ensures URL consistency in CRUD style applications
+* Simplifies code and makes the UI more predictable
+#### Route Constraints
+* Route Constraints are rules on the URL segments
+* All the constraints are regular expression compatible with the Regex class
+```C#
+routes.MapRoute(
+    name: "blog",
+    template: "{year}/{month}/{day}",
+    defaults: new { controller = "Blog", action = "ByDate" },
+    constraints: new { year = @"\d{4}", month = @"\d{1,2}", day = @"\d{1,2}", });
+```
+### Attribute Routing
+```
+Attribute routing uses a set of attributes to map actions directly to route templates
+```
+```C#
+public class HomeController : Controller
+{
+    [Route("/")]
+    public IActionResult Index()
+    {
+        return View();
+    }
+}
+```
+Attribute routing can also directly define the Request Method
+```C#
+[HttpGet("/")]
+    public IActionResult Index()
+    {
+        return View();
+    }
+
+[HttpPost("Login")]
+    public IActionResult Login()
+    {
+        return View();
+    }
+```
+
+# Good practice
+```
+Добра практика за е описателния Route /Blog/{year}/{month}/{day}/ това е добре за SEO-то на google.
+
+Също така е удобство за потребителите
+
+Server site validation and client-side - да не влизат невалидни данни а при клиента да не се генерират излишни заявки(може да имаме големи форми и тежки заявки)
+
+Винаги при post (success)заявка или промяна на Server-state(запис в базаданните) трябва да RedirectToAction(някъдето където е удачно),
+може да стане проблем ако потребителя натисне F5 да добваи същите данни. При redirect
+browser-а redirect към GET заявка
+```
+
+

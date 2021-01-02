@@ -25,11 +25,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cars" asp-action="parts">Cars</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sales<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Sales" asp-action="Index">All sales</a></li>
+                                <li><a asp-controller="Sales" asp-action="Discounted">Discounted sales</a></li>
+                            </ul>
+                        </li>
                         @*•	Customers - customers/all/ascending
-                        •	Sales
-                        o	All – /sales
-                        o	Discounted - sales/discounted
-                        •	Cars - cars/all list of all cars with their make, model and travelled distance*@
+        •	Sales
+        o	All – /sales
+        o	Discounted - sales/discounted
+        •	Cars - cars/all list of all cars with their make, model and travelled distance*@
 
                     </ul>
                 </div>

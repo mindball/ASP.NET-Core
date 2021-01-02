@@ -2,6 +2,7 @@
 {
     using CarDealer.Web.Data;
     using CarDealer.Web.Services.DTO.Sales;
+    using DTO.Car;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -32,13 +33,16 @@
             {
                 SaleId = s.Id,
                 Discount = s.Discount + (s.Customer.IsYoungDriver ? 5 : 0),
-                CustomerName = s.Customer.Name,
-                Make = s.Car.Make,
-                Model = s.Car.Model,
-                TravelledDistance = s.Car.TravelledDistance,
-                TotalPrice = s.Car.PartCars
-                                //.Where(pc => pc.CarId == s.CarId)
-                                .Sum(pc => pc.Part.Price)                 
+                CustomerName = s.Customer.Name,                
+                TotalPrice = s.Car.PartCars.Where(c => c.CarId == s.CarId)
+                                .Sum(pc => pc.Part.Price),                 
+                CarMaked = new CarMaked
+                { 
+                    Id = s.CarId,
+                    Make = s.Car.Make,
+                    Model = s.Car.Model,
+                    TravelledDistance = s.Car.TravelledDistance
+                },
             })
             .ToList();
 
@@ -50,13 +54,17 @@
                     .Where(s => s.Discount == (decimal)discount)
                     .Select(s => new SaleModel
                     {
-                        SaleId = s.Id,
-                        Make = s.Car.Make,
-                        Model = s.Car.Model,
-                        TravelledDistance = s.Car.TravelledDistance,
+                        SaleId = s.Id,                        
                         CustomerName = s.Customer.Name,
                         TotalPrice = s.Car.PartCars.Sum(p => p.Part.Price),
-                        Discount = s.Discount
+                        Discount = s.Discount,
+                        CarMaked = new CarMaked
+                        {
+                            Id = s.CarId,
+                            Make = s.Car.Make,
+                            Model = s.Car.Model,
+                            TravelledDistance = s.Car.TravelledDistance
+                        }
                     })                
                 .ToList();
 
@@ -67,9 +75,13 @@
                 .Select(s => new SaleModel
                 {
                     SaleId = s.Id,
-                    Make = s.Car.Make,
-                    Model = s.Car.Model,
-                    TravelledDistance = s.Car.TravelledDistance,
+                    CarMaked = new CarMaked
+                    {
+                        Id = s.CarId,
+                        Make = s.Car.Make,
+                        Model = s.Car.Model,
+                        TravelledDistance = s.Car.TravelledDistance
+                    },
                     CustomerName = s.Customer.Name,
                     TotalPrice = s.Car.PartCars.Sum(p => p.Part.Price),
                     Discount = s.Discount + (s.Customer.IsYoungDriver ? 5 : 0)

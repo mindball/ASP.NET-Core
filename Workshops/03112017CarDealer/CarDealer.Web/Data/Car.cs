@@ -1,6 +1,7 @@
 ﻿namespace CarDealer.Web.Data
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class Car
     {
@@ -12,6 +13,7 @@
 
         public int Id { get; set; }
 
+        [Required]
         public string Make { get; set; }
 
         public string Model { get; set; }

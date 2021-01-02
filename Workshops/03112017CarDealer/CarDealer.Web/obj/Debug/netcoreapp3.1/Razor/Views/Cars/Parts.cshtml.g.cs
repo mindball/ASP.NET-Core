@@ -76,7 +76,7 @@ using CarDealer.Web.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"94f8ea5f2604d250b3d0b33b3a147a9f7b2fb736", @"/Views/Cars/Parts.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b56a20b6f43a150abf263da90de838f0e2ab07b4", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ac4f0022adb706550423cf303d7bd5e97184136e", @"/Views/_ViewImports.cshtml")]
     public class Views_Cars_Parts : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<CarWithParts>>
     {
         #pragma warning disable 1998
