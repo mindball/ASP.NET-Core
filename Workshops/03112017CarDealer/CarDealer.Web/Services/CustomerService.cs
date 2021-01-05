@@ -15,6 +15,57 @@
             this.dbContext = dbContext;
         }
 
+        public void Create(string name, DateTime birthday, bool isYoundDriver)
+        {
+            var customer = new Customer
+            {
+                Name = name,
+                BirthDate = birthday,
+                IsYoungDriver = isYoundDriver
+            };
+
+            this.dbContext.Customers.Add(customer);
+
+            this.dbContext.SaveChanges();
+        }
+
+        public OrderCustomer CustomerEdit(int id)
+        {
+            if (!this.dbContext.Customers.Any(c => c.Id == id))
+            {
+                return null;
+            }
+
+            var customer = this.dbContext.Customers
+                .Where(c => c.Id == id)
+                .Select(c => new OrderCustomer
+                {
+                    Name = c.Name,
+                    Birthday = c.BirthDate
+                })
+                .FirstOrDefault();
+
+            return customer;
+        }
+
+        public void Edit(int id, string name, DateTime birthday)
+        {
+            bool isYoungDriver = this.IsYoungDriver(birthday);
+
+            var customer = this.dbContext.Customers.FirstOrDefault(c => c.Id == id);
+
+            if(customer == null)
+            {
+                return;
+            }
+
+            customer.Name = name;
+            customer.BirthDate = birthday;
+            customer.IsYoungDriver = isYoungDriver;
+
+            this.dbContext.SaveChanges();
+        }
+
         public IEnumerable<OrderCustomer> OrderCustomers(OrderType orderBy)
         {
             switch (orderBy)
@@ -82,6 +133,14 @@
             };
 
             return sumResult;
-        }       
+        }
+
+        private bool IsYoungDriver(DateTime birthDay)
+        {
+            var age = (DateTime.Now - birthDay).Days / 365.25m;
+            var experience = age - 18;
+
+            return experience < 2.0m;
+        }
     }    
 }

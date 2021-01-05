@@ -94,6 +94,7 @@ Register all services. Called before the Configure() method, by the WebHost
 *  Transient
 ```
 най често е transient, а за repository-тата и dbContexta се иползва scoped
+това е така защото EF Core кешира данните и затова не се ползва като singleton
 ```
 
 # Error Handling
@@ -264,8 +265,22 @@ app.UseEndpoints(endpoints =>
 {title}/{date} са параметри на action-а
 ```
 ```
-Важно правило името на параметъра в шаблона трябва да съвпада с параметър-името на action метода
+Виж blog controller-a
 ```
+
+```
+Важно правило името на параметъра в шаблона трябва да съвпада с параметър-името на action метода.
+Когато напишем custom endpoints.MapControllerRoute, казваме на MVC да се съобрази със тази конвенция
+```
+Кенов версия:
+```
+Използват defaultroute или някакви customRouting-и. А на места където искаме изрично(специфично)
+какво точно да се случи използваме Attributes[Route()]. Как работи: конвенционалния routing (startup) 
+и attribute[Route] си работят заедно. С [Route] презаписваме (overwrite) конвенционалния routing и 
+искаме да имаме нещо малко по специфично.
+ 
+```
+
 
 # Filters
 ![Filters](https://drek4537l1klr.cloudfront.net/lock/Figures/13fig02_alt.jpg)

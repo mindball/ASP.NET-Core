@@ -1,0 +1,32 @@
+﻿@model CreateCustomerViewModel
+
+@{
+    ViewData["Title"] = "Add customer";
+}
+
+<h2>Add customer</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="Post">
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="form-text text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Birthday">Customer birthday</label>
+                <input asp-for="Birthday" type="date" class="form-control">
+                <span asp-validation-for="Birthday" class="form-text text-danger"></span>
+            </div>            
+            <div class="form-group">
+                <input asp-for="IsYoungDriver">
+                <label asp-for="IsYoungDriver">Is Young Driver</label>
+                <span asp-validation-for="IsYoungDriver" class="form-text text-danger"></span>
+            </div>
+            <div>
+                <input class="btn btn-success"  type="submit" value="Add Customer" />
+            </div>
+        </form>
+    </div>
+</div>

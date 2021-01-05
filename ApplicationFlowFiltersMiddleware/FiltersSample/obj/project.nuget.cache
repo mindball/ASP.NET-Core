@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "oKTYRs+w+LVFoMjdGAEB2tLGMPs4dpFX4naYmGyYy/p1udgCrFN2Ga4aAkcQrV6ULEjX0lZ5UZBuyxAYTwuKLw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\ApplicationFlowFiltersMiddleware\\FiltersSample\\FiltersSample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.10\\microsoft.extensions.configuration.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.10\\microsoft.extensions.configuration.abstractions.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.10\\microsoft.extensions.configuration.binder.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.10\\microsoft.extensions.dependencyinjection.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.10\\microsoft.extensions.dependencyinjection.abstractions.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.logging\\3.1.10\\microsoft.extensions.logging.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.10\\microsoft.extensions.logging.abstractions.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.logging.debug\\3.1.10\\microsoft.extensions.logging.debug.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.options\\3.1.10\\microsoft.extensions.options.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.10\\microsoft.extensions.primitives.3.1.10.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\rick.docs.samples.routeinfo\\1.0.0.4\\rick.docs.samples.routeinfo.1.0.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
