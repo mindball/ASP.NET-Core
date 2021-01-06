@@ -1,0 +1,9 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\RepositoryServicePattern\RepositoryServicePatternDemo.Core\bin\Debug\netstandard2.0\RepositoryServicePatternDemo.Core.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\RepositoryServicePattern\RepositoryServicePatternDemo.Core\bin\Debug\netstandard2.0\RepositoryServicePatternDemo.Core.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\RepositoryServicePattern\RepositoryServicePatternDemo.Core\obj\Debug\netstandard2.0\RepositoryServicePatternDemo.Core.csprojAssemblyReference.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\RepositoryServicePattern\RepositoryServicePatternDemo.Core\obj\Debug\netstandard2.0\RepositoryServicePatternDemo.Core.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\RepositoryServicePattern\RepositoryServicePatternDemo.Core\obj\Debug\netstandard2.0\RepositoryServicePatternDemo.Core.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\RepositoryServicePattern\RepositoryServicePatternDemo.Core\obj\Debug\netstandard2.0\RepositoryServicePatternDemo.Core.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\RepositoryServicePattern\RepositoryServicePatternDemo.Core\bin\Debug\netstandard2.0\RepositoryServicePatternDemo.Core.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\RepositoryServicePattern\RepositoryServicePatternDemo.Core\obj\Debug\netstandard2.0\RepositoryServicePatternDemo.Core.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\RepositoryServicePattern\RepositoryServicePatternDemo.Core\obj\Debug\netstandard2.0\RepositoryServicePatternDemo.Core.pdb
