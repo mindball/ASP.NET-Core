@@ -56,27 +56,34 @@ using CarDealer.Web.Models.Cars;
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\Views\_ViewImports.cshtml"
-using CarDealer.Web.Models.Customers;
+using CarDealer.Web.Models.Parts;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 8 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\Views\_ViewImports.cshtml"
-using CarDealer.Web.Models.Suppliers;
+using CarDealer.Web.Models.Customers;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 9 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\Views\_ViewImports.cshtml"
+using CarDealer.Web.Models.Suppliers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\Views\_ViewImports.cshtml"
 using CarDealer.Web.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3c094fc73ad59f7da33a51606c7c7eabdce1085c", @"/Views/Suppliers/Suppliers.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ac4f0022adb706550423cf303d7bd5e97184136e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"316390565caccc26f328f85d7f0e33d017694072", @"/Views/_ViewImports.cshtml")]
     public class Views_Suppliers_Suppliers : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<SupplierModel>
     {
         #pragma warning disable 1998

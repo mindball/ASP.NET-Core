@@ -1,12 +1,9 @@
-﻿using CarDealer.Web.Data;
-using CarDealer.Web.Services.DTO.Supplier;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CarDealer.Web.Services
+﻿namespace CarDealer.Web.Services
 {
+    using CarDealer.Web.Data;
+    using CarDealer.Web.Services.DTO.Supplier;
+    using System.Collections.Generic;
+    using System.Linq;
     public class SupplierService : ISupplierService
     {
         private readonly CarDealerDbContext db;
@@ -22,6 +19,6 @@ namespace CarDealer.Web.Services
                 Name = s.Name,
                 NumerOfParts = s.Parts.Count()
             })
-            .ToList();        
+            .ToList();
     }
 }

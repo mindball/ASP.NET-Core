@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CarDealer.Web.Models.Cars;
-using CarDealer.Web.Services;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CarDealer.Web.Controllers
+﻿namespace CarDealer.Web.Controllers
 {
+    using CarDealer.Web.Models.Cars;
+    using CarDealer.Web.Services;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("cars")]
     public class CarsController : Controller
     {
@@ -39,6 +35,6 @@ namespace CarDealer.Web.Controllers
 
             return this.View(result);
         }
-               
+
     }
 }

@@ -13,7 +13,7 @@
 
         OrderCustomer CustomerEdit(int id);
 
-        void Edit(int id, string name, DateTime birthday);
+        void Edit(int id, string name, DateTime birthday, bool isYoungDriver);
 
         void Create(string name, DateTime birthday, bool isYoundDriver);
     }

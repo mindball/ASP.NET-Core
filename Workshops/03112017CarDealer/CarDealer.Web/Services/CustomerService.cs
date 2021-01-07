@@ -40,17 +40,19 @@
                 .Where(c => c.Id == id)
                 .Select(c => new OrderCustomer
                 {
+                    Id = c.Id,
                     Name = c.Name,
-                    Birthday = c.BirthDate
+                    Birthday = c.BirthDate,
+                    IsYoungDriver = c.IsYoungDriver                    
                 })
                 .FirstOrDefault();
 
             return customer;
         }
 
-        public void Edit(int id, string name, DateTime birthday)
+        public void Edit(int id, string name, DateTime birthday, bool isYoungDriver)
         {
-            bool isYoungDriver = this.IsYoungDriver(birthday);
+            //bool isYoungDriver = this.IsYoungDriver(birthday);
 
             var customer = this.dbContext.Customers.FirstOrDefault(c => c.Id == id);
 
@@ -135,6 +137,7 @@
             return sumResult;
         }
 
+        //later usage
         private bool IsYoungDriver(DateTime birthDay)
         {
             var age = (DateTime.Now - birthDay).Days / 365.25m;

@@ -2,11 +2,10 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
-
-
-    //Use partial view -> CustomerFormViewModel
-    public class CreateCustomerViewModel
+    public class CustomerFormViewModel
     {
+        public int Id { get; set; }
+
         [Required]
         [MaxLength(200)]
         public string Name { get; set; }

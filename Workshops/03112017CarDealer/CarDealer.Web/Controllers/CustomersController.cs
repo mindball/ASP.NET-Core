@@ -4,7 +4,6 @@
     using CarDealer.Web.Models.Customers;
     using CarDealer.Web.Services;
     using Microsoft.AspNetCore.Mvc;
-    using System;
 
     [Route("customers")]
     public class CustomersController : Controller
@@ -20,7 +19,7 @@
         public IActionResult Create() => this.View();
 
         [HttpPost(nameof(Create))]
-        public IActionResult Create(CreateCustomerViewModel customerModel)
+        public IActionResult Create(CustomerFormViewModel customerModel)
         {
             if (customerModel == null && !ModelState.IsValid)
             {
@@ -36,24 +35,24 @@
         public IActionResult Edit(int id)
         {
             var customer = this.customerService.CustomerEdit(id);
-            var customerModel = new CustomerViewModel
+            var customerModel = new CustomerFormViewModel
             {
                 Id = customer.Id,
                 Name = customer.Name,
-                Birthday = customer.Birthday
+                Birthday = customer.Birthday,
+                IsYoungDriver = customer.IsYoungDriver                
             };
 
             return this.View(customerModel);
         }
 
-
         [HttpPost(nameof(Edit) + "/{id}")]
-        public IActionResult Edit(CustomerViewModel customer) 
+        public IActionResult Edit(CustomerFormViewModel customer) //CustomerViewModel customer use partial view reuse form in html) 
         {
 
             if (customer != null && ModelState.IsValid)
             {
-                this.customerService.Edit(customer.Id, customer.Name, customer.Birthday);
+                this.customerService.Edit(customer.Id, customer.Name, customer.Birthday, customer.IsYoungDriver);
 
                 return RedirectToAction(nameof(All));
             }

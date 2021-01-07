@@ -40,7 +40,7 @@ namespace CarDealer.Web
             services.AddTransient<ICarService, CarService>();
             services.AddTransient<ISupplierService, SupplierService>();
             services.AddTransient<ISalesService, SalesService>();
-
+            services.AddTransient<IPartService, PartService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

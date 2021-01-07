@@ -425,7 +425,6 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDe
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\CarDealer.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\All.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\ByMake.cshtml.g.cs
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\CarDealer.Web.csprojAssemblyReference.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Suppliers\Suppliers.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Parts.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\CustomerSales.cshtml.g.cs
@@ -441,3 +440,6 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDe
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Sales\Index.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Edit.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Create.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\_CustomerForm.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\CarDealer.Web.csprojAssemblyReference.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Parts\Index.cshtml.g.cs
