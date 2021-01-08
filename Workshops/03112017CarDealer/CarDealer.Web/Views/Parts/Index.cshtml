@@ -5,6 +5,8 @@
 }
 
 <h2>@ViewData["Title"]</h2>
+<h3><a class="btn btn-info" href="/parts/create" role="button">Add part</a></h3>
+
 
 @{
     var previousDisable = Model.CurrentPage == 1 ? "disable" : string.Empty;
@@ -54,7 +56,8 @@
                     <td>@part.Quantity</td>
                     <td>@part.SupplierName</td>
                     <td>
-                        <a class="btn btn-info" href="#" role="button">Edit</a>
+                        <a class="btn btn-info" href="\parts\edit\@(part.Id.ToString())" role="button">Edit</a>
+                        <a class="btn btn-danger" href="\parts\delete\@(part.Id.ToString())" role="button">Delete</a>
                     </td>
                 </tr>
                 index++;
@@ -71,7 +74,8 @@
     </li>
     @for (int i = 1; i < Model.TotalPages; i++)
     {
-        <li class="page-item @(Model.CurrentPage == i ? "active" : string.Empty)"><a class="page-link" href="/parts/index/?page=@i">@i</a></li>     
+        <li class="page-item @(Model.CurrentPage == i ? "active" : string.Empty)"><a class="page-link" href="/parts/index/?page=@i">@i</a></li>
+
     }
     <li class="page-item @nextDisable">
         <a class="page-link @nextDisable" href="/parts/index/?page=@Model.NextPage" aria-label="Next">

@@ -1,0 +1,42 @@
+﻿@model PartFormViewModel
+
+<form method="Post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" readonly="@Model.IsEdit">
+        <span asp-validation-for="Name" class="form-text text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input asp-for="Price" class="form-control">
+        <span asp-validation-for="Price" class="form-text text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity">Quantity</label>
+        <input asp-for="Quantity" min="1" class="form-control">
+        <span asp-validation-for="Price" class="form-text text-danger"></span>
+    </div>
+    @*<div class="form-group">
+            <label asp-for="SupplierId"></label>
+            <select asp-for="SupplierId"
+                    asp-items="@(new SelectList(Model.AllSuppliers,"Id","Name"))">
+                <option>Please select one</option>
+            </select>
+            <span asp-validation-for="SupplierId" class="form-text text-danger"></span>
+        </div>*@
+    @*kenov version*@
+    @if (!Model.IsEdit)
+    {
+        <div class="form-group">
+            <label asp-for="SupplierId"></label>
+            <select asp-for="SupplierId"
+                    asp-items="(Model.AllSuppliersKenovVersion)">
+                <option>Please select one</option>
+            </select>
+            <span asp-validation-for="SupplierId" class="form-text text-danger"></span>
+        </div>
+    }
+    <div>
+        <input class="btn btn-success" type="submit" value="Save part" />
+    </div>
+</form>

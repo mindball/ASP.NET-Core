@@ -8,5 +8,13 @@
         IEnumerable<FullPartInfo> GetAllParts(int page, int pageSize);
 
         int Count();
+
+        void Create(string name, decimal price, int quantity, int supplierId);
+
+        void Destroy(int id);
+
+        EditPartServiceModel GetPartById(int id);
+
+        void EditPart(int id, decimal price, int quantity);
     }
 }

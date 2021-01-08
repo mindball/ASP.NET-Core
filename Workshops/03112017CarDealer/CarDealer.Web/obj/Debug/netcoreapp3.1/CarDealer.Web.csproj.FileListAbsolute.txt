@@ -443,3 +443,7 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDe
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\_CustomerForm.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\CarDealer.Web.csprojAssemblyReference.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Parts\Index.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Parts\Create.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Parts\_PartForm.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Parts\Edit.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Parts\Delete.cshtml.g.cs

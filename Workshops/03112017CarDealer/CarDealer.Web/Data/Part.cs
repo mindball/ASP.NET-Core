@@ -14,6 +14,7 @@ namespace CarDealer.Web.Data
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(100)]
         public string Name { get; set; }
 
         [Range(0, double.MaxValue)]
@@ -23,6 +24,7 @@ namespace CarDealer.Web.Data
         public int Quantity { get; set; }
 
         public int SupplierId { get; set; }
+
         public Supplier Supplier { get; set; }
 
         public virtual ICollection<PartCar> PartCars { get; set; }

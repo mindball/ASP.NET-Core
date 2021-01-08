@@ -1,0 +1,12 @@
+﻿@model int
+
+@{
+    ViewData["Title"] = "Delete part";
+}
+
+<h2>Are you shure to @ViewData["Title"]</h2>
+
+<div>
+    <a class="btn btn-info" href="\parts\index" role="button">Cancel</a>
+    <a class="btn btn-danger" href="\parts\destroy\@Model" role="button">Delete</a>
+</div>

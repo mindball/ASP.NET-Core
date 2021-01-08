@@ -21,7 +21,7 @@
         [HttpPost(nameof(Create))]
         public IActionResult Create(CustomerFormViewModel customerModel)
         {
-            if (customerModel == null && !ModelState.IsValid)
+            if (customerModel == null || !ModelState.IsValid)
             {
                 return this.View(customerModel);
             }
@@ -50,7 +50,7 @@
         public IActionResult Edit(CustomerFormViewModel customer) //CustomerViewModel customer use partial view reuse form in html) 
         {
 
-            if (customer != null && ModelState.IsValid)
+            if (customer != null || ModelState.IsValid)
             {
                 this.customerService.Edit(customer.Id, customer.Name, customer.Birthday, customer.IsYoungDriver);
 

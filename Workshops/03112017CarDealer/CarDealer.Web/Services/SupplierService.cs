@@ -11,6 +11,18 @@
         {
             this.db = db;
         }
+
+        public IEnumerable<SupplierServiceModel> All()
+            => this.db.Suppliers
+            .OrderBy(s => s.Name)
+            .Select(s => new SupplierServiceModel
+            {
+                Id = s.Id,
+                Name = s.Name
+            })
+            
+            .ToList();
+
         public IEnumerable<FilteredSupplier> GetSuppliers(bool isImporter) =>
              this.db.Suppliers.Where(s => s.IsImporter == isImporter)
             .Select(s => new FilteredSupplier

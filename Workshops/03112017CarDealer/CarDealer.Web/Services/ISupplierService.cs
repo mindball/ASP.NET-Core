@@ -5,5 +5,7 @@
     public interface ISupplierService
     {
         IEnumerable<FilteredSupplier> GetSuppliers(bool isImporter);
+
+        IEnumerable<SupplierServiceModel> All();
     }
 }
