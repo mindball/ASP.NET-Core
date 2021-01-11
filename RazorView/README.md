@@ -242,3 +242,14 @@ partial view са view-ta;
 tagHelper-и ca код
 view component-a са view + tagHelper-и
 ```
+
+## TempData
+```
+ASP.NET Core exposes the Razor Pages TempData or Controller TempData. 
+This property stores data until it's read in another request. 
+The Keep(String) and Peek(string) methods can be used to examine 
+the data without deletion at the end of the request. Keep marks all items 
+in the dictionary for retention.
+```
+* Useful for redirection when data is required for more than a single request.
+* Implemented by TempData providers using either cookies or session state.

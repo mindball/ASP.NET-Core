@@ -1,0 +1,23 @@
+﻿@model TempDataDemo.Models.HomeIndexVM
+
+@{
+    ViewData["Title"] = "Flash Message Test";
+}
+
+@Html.Partial("_FlashMessage")
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <div>
+        <div>
+            @Html.LabelFor(x => x.Message)
+            @Html.TextBoxFor(x => x.Message)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Type)
+            @*@Html.EnumDropDownListFor(x => x.Type)*@
+            @Html.TextBoxFor(x => x.Type)
+        </div>
+        <input type="submit" value="Go!" />
+    </div>
+}
