@@ -5,8 +5,16 @@
 
     public interface ICarService
     {
-        IEnumerable<CarMaked> GetMakedCar(string make);
+        IEnumerable<FullDetailCarSericeModel> GetFullDetailCar(string make);
 
         IEnumerable<CarWithParts> GetCarsWithParts();
+
+        IEnumerable<CarMakeServiceModel> GetCarMake();
+
+        void Create(string make, string model, long travelledDistance);
+
+        IEnumerable<FullDetailCarSericeModel> GetAllCars(int pageNumber, int pageSize);
+
+        int Count();
     }
 }

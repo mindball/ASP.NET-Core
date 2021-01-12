@@ -5,6 +5,7 @@
 }
 
 <h3>@ViewData["Title"]</h3>
+<h3><a class="btn btn-info" href="/cars/create" role="button">Add car</a></h3>
 
 <div class="container">
     <ul class="pagination">
@@ -30,7 +31,9 @@
             foreach (var car in Model)
             {
                 <tr>
-                    <td>@car.Make</td>
+                    <td>
+                        <a href="/cars/bymake/@car.CarMake">@car.CarMake</a>
+                    </td>
                     <td>@car.Model</td>
                     <td>@car.TravelledDistance</td>
                     <td>

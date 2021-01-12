@@ -3,7 +3,7 @@
     using CarDealer.Web.Services.DTO.Part;
     using System.Collections.Generic;
 
-    public class CarWithParts : CarMaked
+    public class CarWithParts : FullDetailCarSericeModel
     {
         public IEnumerable<PartInfo> Parts { get; set; }
     }

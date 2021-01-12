@@ -35,10 +35,10 @@
                 CustomerName = s.Customer.Name,                
                 TotalPrice = s.Car.PartCars.Where(c => c.CarId == s.CarId)
                                 .Sum(pc => pc.Part.Price),                 
-                CarMaked = new CarMaked
+                CarMaked = new FullDetailCarSericeModel
                 { 
                     Id = s.CarId,
-                    Make = s.Car.Make,
+                    CarMake = s.Car.Make,
                     Model = s.Car.Model,
                     TravelledDistance = s.Car.TravelledDistance
                 },
@@ -57,10 +57,10 @@
                         CustomerName = s.Customer.Name,
                         TotalPrice = s.Car.PartCars.Sum(p => p.Part.Price),
                         Discount = s.Discount,
-                        CarMaked = new CarMaked
+                        CarMaked = new FullDetailCarSericeModel
                         {
                             Id = s.CarId,
-                            Make = s.Car.Make,
+                            CarMake = s.Car.Make,
                             Model = s.Car.Model,
                             TravelledDistance = s.Car.TravelledDistance
                         }
@@ -74,10 +74,10 @@
                 .Select(s => new SaleModel
                 {
                     SaleId = s.Id,
-                    CarMaked = new CarMaked
+                    CarMaked = new FullDetailCarSericeModel
                     {
                         Id = s.CarId,
-                        Make = s.Car.Make,
+                        CarMake = s.Car.Make,
                         Model = s.Car.Model,
                         TravelledDistance = s.Car.TravelledDistance
                     },

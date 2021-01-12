@@ -1,11 +1,11 @@
 ﻿@model CarsByMakeViewModel
 
 @{
-    ViewData["Title"] = "All Cars";
+    ViewData["Title"] = $"{Model.Maker} manufacturer ";
 }
 
-<h2>All cars</h2>
-<h3><strong>@Model.Maker</strong></h3>
+<h2>@ViewData["Title"]</h2>
+
 
 <table class="table table-bordered table-hover">
     <thead class="">
@@ -24,7 +24,7 @@
             {
                 <tr>
                     <th scope="row">@index</th>
-                    <td>@car.Make</td>
+                    <td>@car.CarMake</td>
                     <td>@car.Model</td>
                     <td>@car.TravelledDistance</td>
                     <td>

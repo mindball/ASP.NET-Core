@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     public class CarsByMakeViewModel
     {
-        public IEnumerable<CarMaked> CarsByMake { get; set; }
+        public IEnumerable<FullDetailCarSericeModel> CarsByMake { get; set; }
 
         public string Maker { get; set; }
     }

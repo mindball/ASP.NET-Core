@@ -22,6 +22,7 @@
             this.supplierService = supplierService;
         }
 
+
         public IActionResult Index(int page = 1)
             => this.View(new PartPageListingViewModel
             {
@@ -64,7 +65,7 @@
             return this.RedirectToAction(nameof(Index));
         }
 
-            public IActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {    
             return this.View(id);
         }
@@ -88,13 +89,13 @@
                 });
 
             //Kenov version
-            var parrModelKenov = new PartFormViewModel
+            var partModelKenov = new PartFormViewModel
             {
                 AllSuppliersKenovVersion =
                     GetSupplierListItems()
             };
 
-            return this.View(parrModelKenov);
+            return this.View(partModelKenov);
             //return this.View(partModel);
         }
 

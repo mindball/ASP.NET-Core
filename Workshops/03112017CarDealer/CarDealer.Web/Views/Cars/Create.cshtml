@@ -1,0 +1,13 @@
+﻿@model CarFormViewModel
+@{
+    ViewData["Title"] = "Create car";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <partial name="_CarForm" model="@Model" view-data="ViewData" />
+    </div>
+</div>
+

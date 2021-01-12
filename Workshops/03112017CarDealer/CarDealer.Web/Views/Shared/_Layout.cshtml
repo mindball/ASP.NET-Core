@@ -43,9 +43,16 @@
                                 <a class="nav-link text-dark" asp-controller="Parts" asp-action="Create">Add part</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cars" asp-action="parts">Cars</a>
-                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-info" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Cars
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="nav-link text-dark" asp-controller="Cars" asp-action="Index">All cars</a>
+                                <a class="nav-link text-dark" asp-controller="Cars" asp-action="Parts">All cars with parts</a>
+                                <a class="nav-link text-dark" asp-controller="Cars" asp-action="Create">Add car</a>
+                            </div>
+                        </li>                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-info" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Sales

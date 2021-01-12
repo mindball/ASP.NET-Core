@@ -187,6 +187,9 @@ View Components могат да бъдат извикани само от дру
 ```
 Когато ни трябва partial view с логика правим view component-a
 View-тата инициализират view component-тите(user-a не може, заявка е може)
+
+Или да reusable html code, който има някаква логика(да не пишем заявки(бизнес логика) в view-tata)
+не е вързана към конкретен action contoller.
 ```
 ### How works and when to use
 ```
@@ -207,9 +210,13 @@ view-тата показват парче от view използвайки view 
 Dynamic navigation menus - Ако искаме менютата на нашият сайт да зареждат от база данните, ще използваме view component-a ()
 Login panels
 Shopping carts
-Sidebar content дърпа данни от базада.
+Sidebar content дърпа данни от базата.
 Recently published articles
 Tag cloud
+```
+```
+Te не са контролери, защото не отговярят на request, те са някаква логика за view-тата, която не е 
+за контролера но не е и за view-to по точно не е логика вързана към конкретния request
 ```
 
 ```

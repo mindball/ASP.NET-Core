@@ -16,8 +16,10 @@
         [Required]
         public string Make { get; set; }
 
+        [Required]
         public string Model { get; set; }
 
+        [Required]
         public long TravelledDistance { get; set; }
 
         public virtual ICollection<Sale> Sales { get; set; }

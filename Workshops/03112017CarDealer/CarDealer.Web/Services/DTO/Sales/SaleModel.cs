@@ -7,7 +7,7 @@
     {
         public int SaleId { get; set; }
 
-        public CarMaked CarMaked { get; set; }
+        public FullDetailCarSericeModel CarMaked { get; set; }
 
         public decimal Discount { get; set; }
 
