@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraBazaar.Data.Models", "CameraBazaar.Data.Models\CameraBazaar.Data.Models.csproj", "{3500A5DC-6950-4ACE-8B31-9D90F057D838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraBazaar.Web", "CameraBazaar.Web\CameraBazaar.Web.csproj", "{106F5DE0-F997-467C-923A-F258AA415238}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3500A5DC-6950-4ACE-8B31-9D90F057D838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3500A5DC-6950-4ACE-8B31-9D90F057D838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3500A5DC-6950-4ACE-8B31-9D90F057D838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3500A5DC-6950-4ACE-8B31-9D90F057D838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106F5DE0-F997-467C-923A-F258AA415238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106F5DE0-F997-467C-923A-F258AA415238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106F5DE0-F997-467C-923A-F258AA415238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106F5DE0-F997-467C-923A-F258AA415238}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A6B9193-E076-40AE-B18F-C6B8690C1829}
+	EndGlobalSection
+EndGlobal
