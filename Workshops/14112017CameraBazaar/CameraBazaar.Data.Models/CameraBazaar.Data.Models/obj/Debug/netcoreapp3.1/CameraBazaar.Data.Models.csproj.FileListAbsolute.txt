@@ -1,9 +1,0 @@
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Data.Models\CameraBazaar.Data.Models\bin\Debug\netcoreapp3.1\CameraBazaar.Data.Models.deps.json
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Data.Models\CameraBazaar.Data.Models\bin\Debug\netcoreapp3.1\CameraBazaar.Data.Models.dll
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Data.Models\CameraBazaar.Data.Models\obj\Debug\netcoreapp3.1\CameraBazaar.Data.Models.AssemblyInfoInputs.cache
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Data.Models\CameraBazaar.Data.Models\obj\Debug\netcoreapp3.1\CameraBazaar.Data.Models.AssemblyInfo.cs
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Data.Models\CameraBazaar.Data.Models\bin\Debug\netcoreapp3.1\CameraBazaar.Data.Models.pdb
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Data.Models\CameraBazaar.Data.Models\obj\Debug\netcoreapp3.1\CameraBazaar.Data.Models.csproj.CoreCompileInputs.cache
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Data.Models\CameraBazaar.Data.Models\obj\Debug\netcoreapp3.1\CameraBazaar.Data.Models.dll
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Data.Models\CameraBazaar.Data.Models\obj\Debug\netcoreapp3.1\CameraBazaar.Data.Models.pdb
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Data.Models\CameraBazaar.Data.Models\obj\Debug\netcoreapp3.1\CameraBazaar.Data.Models.csprojAssemblyReference.cache

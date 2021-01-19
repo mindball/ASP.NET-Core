@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "VOF7S+1NAxgTng9a+MTXWi3RwwYVp5x/yPn7thScdpTYEuAb9DacpsDsxRULpd6pS14IO+9DqEj3Ti0/QhuaWw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\14112017CameraBazaar\\CameraBazaar.Web\\CameraBazaar.Common\\CameraBazaar.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
