@@ -1,0 +1,12 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\bin\Debug\netstandard2.1\MoiteRecepti2.Data.Models.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\bin\Debug\netstandard2.1\MoiteRecepti2.Data.Models.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\bin\Debug\netstandard2.1\MoiteRecepti2.Data.Models.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\bin\Debug\netstandard2.1\MoiteRecepti2.Data.Common.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\bin\Debug\netstandard2.1\MoiteRecepti2.Data.Common.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Models.csprojAssemblyReference.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Models.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Models.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Models.csproj.CopyComplete
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Models.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Models\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Models.pdb

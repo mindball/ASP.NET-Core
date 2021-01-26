@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LUh+MUkWBa0WGKE7OVu2JRsHPYNgbUsbXSGl2YFygFHYN7kUp9SWNKVCYQ99XFXANH8+0XUluDUONOBzc/VZVQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\MoiteRecepti2\\MoiteRecepti2.Common\\MoiteRecepti2.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oilaripi\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.312\\stylecop.analyzers.1.2.0-beta.312.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.312\\stylecop.analyzers.unstable.1.2.0.312.nupkg.sha512"
+  ],
+  "logs": []
+}

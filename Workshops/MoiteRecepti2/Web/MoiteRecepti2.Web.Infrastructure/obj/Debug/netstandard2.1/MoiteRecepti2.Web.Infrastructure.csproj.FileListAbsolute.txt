@@ -1,0 +1,8 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Web\MoiteRecepti2.Web.Infrastructure\bin\Debug\netstandard2.1\MoiteRecepti2.Web.Infrastructure.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Web\MoiteRecepti2.Web.Infrastructure\bin\Debug\netstandard2.1\MoiteRecepti2.Web.Infrastructure.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Web\MoiteRecepti2.Web.Infrastructure\bin\Debug\netstandard2.1\MoiteRecepti2.Web.Infrastructure.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Web\MoiteRecepti2.Web.Infrastructure\obj\Debug\netstandard2.1\MoiteRecepti2.Web.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Web\MoiteRecepti2.Web.Infrastructure\obj\Debug\netstandard2.1\MoiteRecepti2.Web.Infrastructure.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Web\MoiteRecepti2.Web.Infrastructure\obj\Debug\netstandard2.1\MoiteRecepti2.Web.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Web\MoiteRecepti2.Web.Infrastructure\obj\Debug\netstandard2.1\MoiteRecepti2.Web.Infrastructure.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Web\MoiteRecepti2.Web.Infrastructure\obj\Debug\netstandard2.1\MoiteRecepti2.Web.Infrastructure.pdb

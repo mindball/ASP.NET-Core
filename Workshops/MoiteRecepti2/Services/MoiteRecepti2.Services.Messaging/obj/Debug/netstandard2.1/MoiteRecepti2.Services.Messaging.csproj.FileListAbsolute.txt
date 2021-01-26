@@ -1,0 +1,9 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Services\MoiteRecepti2.Services.Messaging\bin\Debug\netstandard2.1\MoiteRecepti2.Services.Messaging.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Services\MoiteRecepti2.Services.Messaging\bin\Debug\netstandard2.1\MoiteRecepti2.Services.Messaging.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Services\MoiteRecepti2.Services.Messaging\bin\Debug\netstandard2.1\MoiteRecepti2.Services.Messaging.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Services\MoiteRecepti2.Services.Messaging\obj\Debug\netstandard2.1\MoiteRecepti2.Services.Messaging.csprojAssemblyReference.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Services\MoiteRecepti2.Services.Messaging\obj\Debug\netstandard2.1\MoiteRecepti2.Services.Messaging.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Services\MoiteRecepti2.Services.Messaging\obj\Debug\netstandard2.1\MoiteRecepti2.Services.Messaging.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Services\MoiteRecepti2.Services.Messaging\obj\Debug\netstandard2.1\MoiteRecepti2.Services.Messaging.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Services\MoiteRecepti2.Services.Messaging\obj\Debug\netstandard2.1\MoiteRecepti2.Services.Messaging.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Services\MoiteRecepti2.Services.Messaging\obj\Debug\netstandard2.1\MoiteRecepti2.Services.Messaging.pdb

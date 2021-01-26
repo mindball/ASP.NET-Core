@@ -1,0 +1,9 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Common\bin\Debug\netstandard2.1\MoiteRecepti2.Data.Common.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Common\bin\Debug\netstandard2.1\MoiteRecepti2.Data.Common.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Common\bin\Debug\netstandard2.1\MoiteRecepti2.Data.Common.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Common\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Common.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Common\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Common.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Common\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Common.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Common\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Common.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Common\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Common.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\MoiteRecepti2\Data\MoiteRecepti2.Data.Common\obj\Debug\netstandard2.1\MoiteRecepti2.Data.Common.csprojAssemblyReference.cache
