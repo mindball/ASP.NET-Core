@@ -32,7 +32,13 @@ namespace WebApiDemo
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddControllersWithViews();
+
+            //Add xml returns
+            //services.AddControllersWithViews()
+            //    .AddXmlSerializerFormatters();
+
             services.AddRazorPages();
         }
 

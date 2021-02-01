@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using WebApiDemo.Models;
-
-namespace WebApiDemo.Controllers
+﻿namespace WebApiDemo.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+
+    using WebApiDemo.Models;
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -43,12 +41,9 @@ namespace WebApiDemo.Controllers
         public ActionResult<IEnumerable<Product>> SoftUni(Product product)
         {
             if(product == null)  return BadRequest();
+
             return new List<Product> { product, product };
         }
     }
 
-    public class Product
-    {
-        public string Name { get; set; }
-    }
 }
