@@ -78,7 +78,29 @@ errors are transformed into ProblemDetails
 
 
 ### AddXmlSerializerFormatters() заедно със Header-a "Accept=application/xml" ще позволи api-то да обработва и връща XML
-
+### Content Negotiation
+* Content-Type
+* Accept
+```
+Content-Type and Accept header are the important elements while requesting a service. It tells the 
+service in which format he will be receiving the input and in which format he needs to send the data back respectively.
+ If you are making an Ajax call, below is the basic structure
+```
+[![ContentType](https://dotnettrickscloud.blob.core.windows.net/img/webapi/webapi-negotiationwebapi2-1.png)](https://dotnettrickscloud.blob.core.windows.net/img/webapi/webapi-negotiationwebapi2-1.png)
+```Summary
+Content-Type and Accept header are the important elements while requesting a service. It tells the 
+service in which format he will be receiving the input and in which format he needs to send the data 
+back respectively. If you are making an Ajax call, below is the basic structure:
+```
+```Ajax
+$.ajax({
+ url: "http://localhost:1240/api/Products",
+ dataType: "application/xml",
+ contentType: "application/json; charset=utf-8",
+ data: JSON.stringify(inputdata),
+ success: function(result) { },
+});
+```
 ## API Endpoint return types or controller action return types in ASP.NET Core web API:
 
 ### Specific type - primitive or complex data type
@@ -129,16 +151,42 @@ public ActionResult<IEnumerable<Product>> Get()
 
 ```
 
+## RESTful API
+```
+Концепцията: url да са едни и същи за CRUD операции. Зависи от http методите.
+```
+[![restful-Pic.jpg](https://i.postimg.cc/9MMnCBc5/restful-Pic.jpg)](https://postimg.cc/8F2HbMFt)
+
+### Примери:
+```
+https://softuni.bg/trainings/1797/c-sharp-mvc-frameworks-asp-net-core-october2017#lesson-7069 този
+url е SEO-friendly, 
+https://softuni.bg/trainings/ -> GET query return all trainings и т.н.
+```
+
+### Odata RESTfull api
+```
+Добавя автоматични филтрации в URL. Пример:
+http://host/service/Products?$filter=Name eq 'Milk' - All products with a Name equal to 'Milk'
+http://host/service/Products?$filter=Name ne 'Milk' - All products with a Name not equal to 'Milk'
+GET http://host/service/Categories?$orderby=Products/$count - Return all Categories ordered by the number of Products within each category
+```
+
 ## Some stuff from the lectures
 
 ### Method HEAD - върни само headers без body
 
 ### Method OPTIONS - cross origin request sharing какви са правата ни да правим заявки при определен адрес
 
-### Odata RESTfull api
+
 
 ## CORS
 ```
 Ако някои тръгне да прави заявка със postman, друг тоол, никои няма да му забрани да направи заявката
-ограничава и дава насоки на BROWSE-рите.
+ограничава и дава насоки на BROWSE-рите. Кой домейни могат да ни достъпват api-то
+```
+
+## Good practice
+```
+Добре е да връщаме status code, според спецефичните резултати. Пример: Unauthorize, OK, NotFound, BadRequest
 ```
