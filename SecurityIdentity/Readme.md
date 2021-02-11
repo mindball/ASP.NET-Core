@@ -50,7 +50,10 @@ public void ConfigureServices(IServiceCollection services)
 ### Identity model customization in ASP.NET Core
 
 [customization identity model 2:56:00](https://www.youtube.com/watch?v=itT73BVRuEQ) 
-
+```
+В контролерите this.User е доста ограничен, но ако искаме да извлечем даден потребител от DB
+DI -> UserManager<T> в конструктора на controller-a
+```
 ## Claims
 ```
 Абстрактен начин за ре-презентиране на потребителска информация 
@@ -83,6 +86,13 @@ Cross-Site Request Forgery няма да проработи.
 Не, може да се направи чрез IHttpContextAccessor но не е правилно(Не правилно se)
 Правилно е Controller-рите, да извличат потребителите и да ги подават на services-те като id 
 ```
+```
+Къде се добавят други dbcontext-и:  
+	services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+Добавянето на други contexт-и е за големи с две бази данни едната за приложението другата за потребителите.
+```
+
 
 ## JWT Authentication
 ```
