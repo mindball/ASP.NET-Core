@@ -89,7 +89,6 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\Create
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\CreateAdminPanel.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\CreateAdminPanel.pdb
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\CreateAdminPanel.genruntimeconfig.cache
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\CreateAdminPanel.csprojAssemblyReference.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Views\Identity\All.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
@@ -168,3 +167,7 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\Create
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Views\Identity\UserRoles.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Views\Identity\Register.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Views\Identity\IdentityChangePasswordViewModel.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Views\Identity\Delete.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Views\Identity\AddRole.cshtml.g.cs

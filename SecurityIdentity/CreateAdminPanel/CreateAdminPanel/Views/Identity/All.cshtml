@@ -1,8 +1,20 @@
 ﻿@model IEnumerable<ListUserViewModel>
-@{ 
+@{
     ViewData["Title"] = "All users";
 }
 <h2>@ViewData["Title"]</h2>
+
+@*това може да се направи на глобално ниво не само за този контролер*@
+@if(TempData["SuccessMessage"] != null)
+{
+    <h2 class="text-success">@TempData["SuccessMessage"]</h2>
+}
+
+<div>
+    <a href="/identity/register" class="btn btn-primary">Register</a>
+</div>
+<br />
+
 <table class="table table-bordered table-hover">
     <tr>
         <th>UserName</th>
@@ -15,8 +27,10 @@
             <th>@user.UserName</th>
             <th>@user.Email</th>
             <th>
-                <a href="/identity/UserRoles/@user.Id" class="btn" >Roles</a>
+                <a href="/identity/changepassword/@user.Id" class="btn btn-secondary">Change Password</a>
+                <a href="/identity/userroles/@user.Id" class="btn btn-info">Roles</a>
+                <a href="/identity/delete/@user.Id" class="btn btn-danger">Remove</a>
             </th>
         </tr>
     }
-</table> 
+</table>
