@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltersMoreSpecificThings", "FiltersMoreSpecificThings\FiltersMoreSpecificThings.csproj", "{7AE62AB4-17A3-4C5F-B8F9-1CC3162A615B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAndUseInMemoryDB", "CreateAndUseInMemoryDB\CreateAndUseInMemoryDB.csproj", "{29A6B1C3-719B-4325-9643-DD35ED84FA03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AE62AB4-17A3-4C5F-B8F9-1CC3162A615B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE62AB4-17A3-4C5F-B8F9-1CC3162A615B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE62AB4-17A3-4C5F-B8F9-1CC3162A615B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE62AB4-17A3-4C5F-B8F9-1CC3162A615B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A6B1C3-719B-4325-9643-DD35ED84FA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A6B1C3-719B-4325-9643-DD35ED84FA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A6B1C3-719B-4325-9643-DD35ED84FA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A6B1C3-719B-4325-9643-DD35ED84FA03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E5D8795-C8C7-4516-A39C-742E7D26F695}
+	EndGlobalSection
+EndGlobal
