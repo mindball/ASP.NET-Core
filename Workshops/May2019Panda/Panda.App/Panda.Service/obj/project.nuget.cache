@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HPdeEGkK4gi3G9El4jpvKqyqtGW5SSwz9PZp5jZd8RsCqvhN+RR55nLlUZ5RBGUI7vKdJqWSL35p1JsHMOW3sg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\May2019Panda\\Panda.App\\Panda.Service\\Panda.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
