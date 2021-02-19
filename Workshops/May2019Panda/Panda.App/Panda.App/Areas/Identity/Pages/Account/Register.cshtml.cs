@@ -47,7 +47,7 @@
             public string Email { get; set; }
 
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -72,15 +72,14 @@
                 var user = new PandaUser { UserName = Input.Username, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
-                if (_userManager.Users.Count() == 1)
-                {
-                    await _userManager.AddToRoleAsync(user, "Admin");
-                }
-                else
-                {
-                    await _userManager.AddToRoleAsync(user, "User");
-                }
-
+                //if (_userManager.Users.Count() == 1)
+                //{
+                //    await _userManager.AddToRoleAsync(user, "Admin");
+                //}
+                //else
+                //{
+                //    await _userManager.AddToRoleAsync(user, "User");
+                //}
 
                 if (result.Succeeded)
                 {

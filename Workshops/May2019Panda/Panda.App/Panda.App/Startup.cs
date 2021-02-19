@@ -1,5 +1,6 @@
 namespace Panda.App
 {
+    using AspNetCoreHero.ToastNotification;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
@@ -43,6 +44,13 @@ namespace Panda.App
                 options.Password.RequiredUniqueChars = 0;
 
                 options.User.RequireUniqueEmail = true;
+            });
+
+            services.AddNotyf(config => 
+            { 
+                config.DurationInSeconds = 10; 
+                config.IsDismissable = true; 
+                config.Position = NotyfPosition.BottomRight; 
             });
 
             services.AddControllersWithViews();

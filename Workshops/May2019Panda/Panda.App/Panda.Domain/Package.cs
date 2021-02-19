@@ -4,6 +4,11 @@ namespace Panda.Domain
 
     public class Package
     {
+        public Package()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
+
         public string Id { get; set; }
 
         public string Description { get; set; }

@@ -18,7 +18,6 @@
 
         public PandaDbContext()
         {
-
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

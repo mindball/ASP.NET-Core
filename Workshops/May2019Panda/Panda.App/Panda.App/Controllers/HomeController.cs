@@ -1,14 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Panda.App.Models;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Panda.App.Controllers
+﻿namespace Panda.App.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
+    using Panda.App.Models;
+    using System.Diagnostics;
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -17,6 +13,9 @@ namespace Panda.App.Controllers
         {
             _logger = logger;
         }
+
+        //TODO : Add route value to Login form
+        //TODO : Add route value to Register form
 
         public IActionResult Index()
         {

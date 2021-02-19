@@ -1,9 +1,9 @@
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\bin\Debug\netstandard2.0\Panda.Service.deps.json
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\bin\Debug\netstandard2.0\Panda.Service.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\bin\Debug\netstandard2.0\Panda.Service.pdb
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\obj\Debug\netstandard2.0\Panda.Service.csprojAssemblyReference.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\obj\Debug\netstandard2.0\Panda.Service.AssemblyInfoInputs.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\obj\Debug\netstandard2.0\Panda.Service.AssemblyInfo.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\obj\Debug\netstandard2.0\Panda.Service.csproj.CoreCompileInputs.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\obj\Debug\netstandard2.0\Panda.Service.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\obj\Debug\netstandard2.0\Panda.Service.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Service\obj\Debug\netstandard2.0\Panda.Service.csprojAssemblyReference.cache

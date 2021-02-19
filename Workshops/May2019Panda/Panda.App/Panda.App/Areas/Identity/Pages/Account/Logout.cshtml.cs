@@ -17,20 +17,21 @@ namespace Panda.App.Areas.Identity.Pages.Account
         private readonly SignInManager<PandaUser> _signInManager;
         private readonly ILogger<LogoutModel> _logger;
 
-        public LogoutModel(SignInManager<PandaUser> signInManager, ILogger<LogoutModel> logger)
+        public LogoutModel(
+            SignInManager<PandaUser> signInManager, 
+            ILogger<LogoutModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;
         }
 
-        public void OnGet()
-        {
-        }
-
-        public async Task<IActionResult> OnPost(string returnUrl = null)
+        public async Task<IActionResult> OnGet(string returnUrl = null)
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
+
+            returnUrl = "/Home/Index";
+
             if (returnUrl != null)
             {
                 return LocalRedirect(returnUrl);
@@ -40,5 +41,10 @@ namespace Panda.App.Areas.Identity.Pages.Account
                 return RedirectToPage();
             }
         }
+
+        //public async Task<IActionResult> OnPost(string returnUrl = null)
+        //{
+           
+        //}
     }
 }
