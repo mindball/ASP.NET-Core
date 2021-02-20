@@ -7,6 +7,7 @@ namespace Panda.Domain
         public Package()
         {
             this.Id = Guid.NewGuid().ToString();
+            this.Status = new PackageStatus { Name = "Pending" };
         }
 
         public string Id { get; set; }
@@ -19,7 +20,7 @@ namespace Panda.Domain
 
         public string StatusId { get; set; }
 
-        public PackageStatus Status { get; set; }
+        public PackageStatus Status { get; set; } 
 
         public DateTime? EstimatedDeliveryDate { get; set; }
 

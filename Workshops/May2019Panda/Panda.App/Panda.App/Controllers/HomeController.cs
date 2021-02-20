@@ -1,7 +1,9 @@
 ﻿namespace Panda.App.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
+    using Panda.App.Common;
     using Panda.App.Models;
     using System.Diagnostics;
 
@@ -17,6 +19,7 @@
         //TODO : Add route value to Login form
         //TODO : Add route value to Register form
 
+        [Authorize(Roles = GlobalConstants.AdminRole)]
         public IActionResult Index()
         {
             return View();

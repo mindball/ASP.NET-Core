@@ -4,5 +4,9 @@ namespace Panda.Domain
 
     public class PandaUserRole : IdentityRole
     {
+        public PandaUserRole(string Name)
+        {
+            this.Name = Name;
+        }
     }
 }

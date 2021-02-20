@@ -5,14 +5,18 @@
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
     using Microsoft.Extensions.Logging;
-    using Panda.Domain;
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
     using System.Threading.Tasks;
 
+    using Panda.Domain;
+    using Panda.App.Common;
+
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
+        
+
         private readonly SignInManager<PandaUser> _signInManager;
         private readonly RoleManager<PandaUserRole> _roleManager;
         private readonly UserManager<PandaUser> _userManager;
@@ -72,14 +76,15 @@
                 var user = new PandaUser { UserName = Input.Username, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
-                //if (_userManager.Users.Count() == 1)
-                //{
-                //    await _userManager.AddToRoleAsync(user, "Admin");
-                //}
-                //else
-                //{
-                //    await _userManager.AddToRoleAsync(user, "User");
-                //}
+                if (_userManager.Users.Count() == 1)
+                {
+                    await this.CreateRole(GlobalConstants.AdminRole);
+
+                    await _userManager.AddToRoleAsync(user, GlobalConstants.AdminRole);
+                }
+
+                await this.CreateRole(GlobalConstants.OrdinaryRole);
+                await _userManager.AddToRoleAsync(user, GlobalConstants.OrdinaryRole);
 
                 if (result.Succeeded)
                 {
@@ -97,6 +102,17 @@
 
             // If we got this far, something failed, redisplay form
             return Page();
+        }
+
+        private async Task CreateRole(string roleName)
+        {
+            var roleCheck = await this._roleManager.RoleExistsAsync(roleName);
+            IdentityResult roleResult;
+
+            if (!roleCheck)
+            {
+                roleResult = await this._roleManager.CreateAsync(new PandaUserRole(roleName));
+            }
         }
     }
 }

@@ -2,12 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-@if(TempData["SuccessMessage"] != null)
+@if (TempData["SuccessMessage"] != null)
 {
     <h3 class="text-success">@TempData["SuccessMessage"]</h3>
 }
 
-@if (!User.Identity.IsAuthenticated)
+@if (!User.IsInRole(GlobalConstants.AdminRole))
 {
     <div class="jumbotron mt-3 bg-panda">
         <h1 class="text-white">Welcome to PANDA Delivery Services.</h1>
