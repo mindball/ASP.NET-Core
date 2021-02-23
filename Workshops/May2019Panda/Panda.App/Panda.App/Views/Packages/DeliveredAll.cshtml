@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<PackageCreateBindingModel>
 
 @{
-    ViewData["Title"] = "Pending";
+    ViewData["Title"] = "Delivered";
     var rowNumber = 1;
 }
 <h1 class="text-center">@ViewData["Title"]</h1>
@@ -28,7 +28,7 @@
                     <td class="col-lg-3 d-flex justify-content-center"><h5>@item.ShippingAddress</h5></td>
                     <td class="col-lg-2 d-flex justify-content-center"><h5>@item.Recipient</h5></td>
                     <td class="col-lg-1 d-flex justify-content-center">
-                        <a href="/Packages/Shipped/@item.Id" class="btn bg-panda text-white">Ship</a>
+                        <a href="/Packages/Details/@item.Id" class="btn bg-panda text-white">Details</a>
                     </td>
                 </tr>
             </tbody>

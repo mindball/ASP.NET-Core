@@ -19,7 +19,7 @@
         //TODO : Add route value to Login form
         //TODO : Add route value to Register form
 
-        [Authorize(Roles = GlobalConstants.AdminRole)]
+        //[Authorize(Roles = GlobalConstants.AdminRole)]
         public IActionResult Index()
         {
             return View();

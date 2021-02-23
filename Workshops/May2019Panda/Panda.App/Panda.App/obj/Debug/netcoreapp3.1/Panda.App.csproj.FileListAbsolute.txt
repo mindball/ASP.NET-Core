@@ -445,4 +445,5 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\bin\Debug\netcoreapp3.1\AspNetCoreHero.ToastNotification.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Packages\Details.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Packages\Pending.cshtml.g.cs
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Packages\Shipped.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Packages\ShippedAll.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Packages\DeliveredAll.cshtml.g.cs

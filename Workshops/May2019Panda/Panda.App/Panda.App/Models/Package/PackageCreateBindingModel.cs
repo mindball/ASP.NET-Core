@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Panda.App.Models.Package
+﻿namespace Panda.App.Models.Package
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+
     public class PackageCreateBindingModel
     {
         public string Id { get; set; }
@@ -27,6 +24,8 @@ namespace Panda.App.Models.Package
 
         public string PackageStatus { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
         public DateTime? EstimatedDeliveryDate { get; set; }
     }
 }

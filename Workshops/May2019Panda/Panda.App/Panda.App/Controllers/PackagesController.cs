@@ -3,14 +3,16 @@
     using AspNetCoreHero.ToastNotification.Abstractions;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-    using Panda.App.Common;
-    using Panda.App.Models.Package;
-    using Panda.Data;
-    using Panda.Domain;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+
+    using Panda.App.Common;
+    using Panda.App.Models.Package;
+    using Panda.Data;
+    using Panda.Domain;
+    using System.Globalization;
 
     public class PackagesController : Controller
     {
@@ -37,7 +39,11 @@
         public async Task<IActionResult> Create(PackageCreateBindingModel pckModel)
         {
             var existUser = this.db.Users.Any(u => u.Id == pckModel.Recipient);
-            if(!this.ModelState.IsValid || !existUser)
+            string setDefaultShipStatusId = GetShipStatusId(ShipStatus.Pending);
+
+            if (!this.ModelState.IsValid ||
+                !existUser ||
+                setDefaultShipStatusId == null)
             {
                 this.ViewData["Recipients"] = this.db.Users.ToList();
                 return this.BadRequest(pckModel);
@@ -48,13 +54,14 @@
                 Description = pckModel.Description,
                 Weight = pckModel.Weight,
                 ShippingAddress = pckModel.ShippingAddress,
-                RecipientId = pckModel.Recipient                
+                RecipientId = pckModel.Recipient,
+                StatusId = setDefaultShipStatusId
             };
 
             this.db.Packages.Add(newPackage);
 
             var result = await this.db.SaveChangesAsync();
-            if(result > 0)
+            if (result > 0)
             {
                 //this.TempData["SuccessMessage"] = $"Created package";
                 this._notyf.Success("Created package");
@@ -77,43 +84,91 @@
                         .Where(u => u.Id == packageDetail.RecipientId)
                         .Select(q => q.UserName)
                         .FirstOrDefault();
-            
-            if(packageDetail == null || recipient == null)
+
+            if (packageDetail == null || recipient == null)
             {
                 return this.BadRequest("not exit user");
             }
 
-            var result = new PackageCreateBindingModel
+            var dateFormat = packageDetail.EstimatedDeliveryDate != null
+                ? packageDetail.EstimatedDeliveryDate.Value.ToShortTimeString() : null;
+
+            var shipStatus = GetShipStatusName(packageDetail.StatusId);
+
+            var result = new PackageDetailedBindingModel
             {
                 Description = packageDetail.Description,
                 ShippingAddress = packageDetail.ShippingAddress,
-                PackageStatus = packageDetail.Status.Name,
-                EstimatedDeliveryDate = packageDetail.EstimatedDeliveryDate,
+                PackageStatus = shipStatus,
+                EstimatedDeliveryDate = dateFormat,
                 Weight = packageDetail.Weight,
                 Recipient = recipient
             };
+
+            ////If the package’s status is Delivered or Acquired, instead of the date, 
+            ////“Delivered” should be presented.
+            if ((packageDetail.Status.Name == ShipStatus.Delivered.ToString()
+                || packageDetail.Status.Name == ShipStatus.Acquired.ToString())
+                && packageDetail.EstimatedDeliveryDate == null)
+            {
+                result.PackageStatus = ShipStatus.Acquired.ToString();
+                result.EstimatedDeliveryDate = packageDetail.Status.Name;
+            }
 
             return this.View(result);
         }
 
         public IActionResult Pending()
         {
-            var shippedPackige = GetPackingByShipStatus(ShipStatus.Pending);
+            var shippedPackage = GetPackingByShipStatus(ShipStatus.Pending);
 
-            return this.View(shippedPackige);
+            return this.View(shippedPackage);
         }
 
         public async Task<IActionResult> Shipped(string id)
         {
+            var statusId = GetShipStatusId(ShipStatus.Shipped);
+
             int randomDay = GenerataRandomDay(GlobalConstants.MinDaysToDelivery,
                 GlobalConstants.MaxDaysToDelivery);
 
-            var estimatedDeliveryDate = DateTime.UtcNow.AddDays(randomDay);
+            var estimatedDeliveryDate = DateTime.UtcNow.AddDays(randomDay).ToString("d");//, CultureInfo.CreateSpecificCulture("es-ES"));
 
-            await SetShipStatus(id, ShipStatus.Shipped, estimatedDeliveryDate);
+            await SetShipStatus(id, statusId, estimatedDeliveryDate);
 
-            return this.View(GetPackingByShipStatus(ShipStatus.Shipped));
+            //return this.View(viewModel, "Shipped");
+            return this.RedirectToAction(nameof(ShippedAll));
         }
+
+        public IActionResult ShippedAll()
+        {
+            var viewModel = GetPackingByShipStatus(ShipStatus.Shipped);
+
+            return this.View(viewModel);
+        }
+
+        public async Task<IActionResult> Delivered(string id)
+        {
+            var statusId = GetShipStatusId(ShipStatus.Delivered);
+
+            await SetShipStatus(id, statusId, null);
+
+            return this.RedirectToAction(nameof(DeliveredAll));
+        }
+
+        //TOTO : Status acqured
+        public IActionResult DeliveredAll()
+        {
+            var viewModel = GetPackingByShipStatus(ShipStatus.Delivered);
+
+            return this.View(viewModel);
+        }
+
+        private string GetShipStatusId(ShipStatus statusName)
+            => this.db.PackageStatus
+                          .Where(p => p.Name == statusName.ToString())
+                          .Select(p => p.Id)
+                          .FirstOrDefault();
 
         private int GenerataRandomDay(int minDaysToDelivery, int maxDaysToDelivery)
         {
@@ -121,26 +176,40 @@
             return r.Next(20, 41);
         }
 
-        private async Task SetShipStatus(string packageId, ShipStatus shipped, DateTime deliveryDate)
+        private async Task SetShipStatus(string packageId, string statusId, string deliveryDate)
         {
             var package = this.db.Packages
                .Where(p => p.Id == packageId).FirstOrDefault();
 
-            if(package == null)
+            var status = this.db.PackageStatus
+                .Where(ps => ps.Id == statusId)
+                .Select(ps => ps.Id)
+                .FirstOrDefault();
+
+            if (package == null || status == null)
             {
                 return;
             }
 
-            package.EstimatedDeliveryDate = deliveryDate;
-            package.Status.Name = shipped.ToString();
+            //ToString("d", CultureInfo.CreateSpecificCulture("es-ES"));
+            if (deliveryDate != null)
+            {
+                package.EstimatedDeliveryDate =
+                    DateTime.Parse(deliveryDate, CultureInfo.CreateSpecificCulture("es-ES"));
+            }
+            else
+            {
+                package.EstimatedDeliveryDate = null;
+            }
+
+            package.StatusId = status;
 
             this.db.Update(package);
-
             await this.db.SaveChangesAsync();
         }
 
         private IEnumerable<PackageCreateBindingModel> GetPackingByShipStatus(ShipStatus status)
-            =>  this.db
+            => this.db
                .Packages
                .Where(p => p.Status.Name == status.ToString())
                .Select(p => new PackageCreateBindingModel
@@ -149,9 +218,32 @@
                    Description = p.Description,
                    Weight = p.Weight,
                    EstimatedDeliveryDate = p.EstimatedDeliveryDate,
-                   Recipient = p.Recipient.UserName
+                   Recipient = p.Recipient.UserName,
+                   ShippingAddress = p.ShippingAddress
                })
                .ToList();
-        
+
+        private string GetShipStatusName(string id = null, string shipStatusName = null)
+        {
+            if (id == null && shipStatusName == null)
+            {
+                return null;
+            }
+
+            if (id != null)
+            {
+                var pckStatusById = this.db.PackageStatus
+                    .Where(ps => ps.Id == id)                    
+                    .FirstOrDefault();
+
+                return pckStatusById.Name;
+            }
+
+            var pckStatusByName = this.db.PackageStatus
+                    .Where(ps => ps.Name == shipStatusName)                    
+                    .FirstOrDefault();
+
+            return pckStatusByName.Name;
+        }
     }
 }
