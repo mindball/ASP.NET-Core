@@ -30,7 +30,7 @@ namespace Panda.App.Areas.Identity.Pages.Account
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
 
-            returnUrl = "/Home/Index";
+            returnUrl = "/Packages/Index";
 
             if (returnUrl != null)
             {

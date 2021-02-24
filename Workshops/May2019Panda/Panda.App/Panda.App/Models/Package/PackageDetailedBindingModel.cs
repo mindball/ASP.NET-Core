@@ -1,8 +1,7 @@
 ﻿namespace Panda.App.Models.Package
 {
-    public class PackageDetailedBindingModel    {
-        
-        
+    public class PackageDetailedBindingModel    
+    {       
         public string Description { get; set; }
         
         public double Weight { get; set; }

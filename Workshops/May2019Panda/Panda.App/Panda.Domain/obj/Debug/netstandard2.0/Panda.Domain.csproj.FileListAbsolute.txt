@@ -6,4 +6,3 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Domain\obj\Debug\netstandard2.0\Panda.Domain.csproj.CoreCompileInputs.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Domain\obj\Debug\netstandard2.0\Panda.Domain.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Domain\obj\Debug\netstandard2.0\Panda.Domain.pdb
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.Domain\obj\Debug\netstandard2.0\Panda.Domain.csprojAssemblyReference.cache

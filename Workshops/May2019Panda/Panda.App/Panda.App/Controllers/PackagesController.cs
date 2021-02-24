@@ -13,6 +13,7 @@
     using Panda.Data;
     using Panda.Domain;
     using System.Globalization;
+    using System.Security.Claims;
 
     public class PackagesController : Controller
     {
@@ -24,6 +25,27 @@
         {
             this.db = db;
             this._notyf = _notyf;
+        }
+                
+        public IActionResult Index()
+        {
+            if(this.User.Identity.IsAuthenticated)
+            {
+                var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+                List<PackageHomeViewModel> packages = null;
+                if (this.User.IsInRole(GlobalConstants.AdminRole))
+                {
+                    packages = GetPackages(userId, true);
+                    return this.View(packages);
+                }
+
+                packages = GetPackages(userId);
+
+                return this.View(packages);
+            }
+
+            return this.View();
         }
 
         [Authorize(Roles = GlobalConstants.AdminRole)]
@@ -67,7 +89,7 @@
             {
                 //this.TempData["SuccessMessage"] = $"Created package";
                 this._notyf.Success("Created package");
-                return this.Redirect("/Home/Index");
+                return this.Redirect("/Packages/Index");
             }
             else
             {
@@ -161,8 +183,7 @@
 
             return this.RedirectToAction(nameof(DeliveredAll));
         }
-
-        //TOTO : Status acqured
+                
         [Authorize]
         public IActionResult DeliveredAll()
         {
@@ -264,6 +285,30 @@
             };
 
             this.db.Receipts.Add(newReceipt);
+        }
+
+        private List<PackageHomeViewModel> GetPackages(string userClaim, bool isAdmin = false)
+        {
+            var packages = this.db.Packages
+                .Select(r => new PackageHomeViewModel
+                {
+                    Id = r.Id,
+                    Description = r.Description,
+                    Status = r.Status.Name,
+                    UserId = r.RecipientId
+                });
+
+            if (isAdmin)
+            {
+                var allAPackages = packages.ToList();
+                return allAPackages;
+            }
+
+            var allUserPackages = packages
+                .Where(r => r.UserId == userClaim)
+                .ToList();
+
+            return allUserPackages;
         }
     }
 }
