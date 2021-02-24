@@ -4,6 +4,11 @@ namespace Panda.Domain
 {
     public class Receipt
     {
+        public Receipt()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
+
         public string Id { get; set; }
 
         public decimal Fee { get; set; }

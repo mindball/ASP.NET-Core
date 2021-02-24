@@ -447,3 +447,5 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Packages\Pending.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Packages\ShippedAll.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Packages\DeliveredAll.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Receipts\Index.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Panda\Panda.App\Panda.App\obj\Debug\netcoreapp3.1\Razor\Views\Receipts\Details.cshtml.g.cs

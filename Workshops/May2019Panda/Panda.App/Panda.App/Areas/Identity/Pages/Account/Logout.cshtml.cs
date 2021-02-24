@@ -44,7 +44,7 @@ namespace Panda.App.Areas.Identity.Pages.Account
 
         //public async Task<IActionResult> OnPost(string returnUrl = null)
         //{
-           
+        //    return RedirectToPage();
         //}
     }
 }

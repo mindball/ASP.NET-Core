@@ -32,6 +32,7 @@ namespace Panda.App
 
             services.AddIdentity<PandaUser, PandaUserRole>()
                .AddEntityFrameworkStores<PandaDbContext>()
+               .AddDefaultUI()
                .AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>

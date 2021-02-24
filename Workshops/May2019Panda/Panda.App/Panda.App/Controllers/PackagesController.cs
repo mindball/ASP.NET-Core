@@ -57,8 +57,10 @@
                 RecipientId = pckModel.Recipient,
                 StatusId = setDefaultShipStatusId
             };
+            
+            CreateReceipt(pckModel, newPackage);
 
-            this.db.Packages.Add(newPackage);
+            this.db.Packages.Add(newPackage);            
 
             var result = await this.db.SaveChangesAsync();
             if (result > 0)
@@ -71,9 +73,9 @@
             {
                 return this.View(pckModel);
             }
-        }
+        }       
 
-        [Authorize(Roles = GlobalConstants.AdminRole)]
+        [Authorize]
         public IActionResult Details(string id)
         {
             var packageDetail = this.db.Packages
@@ -118,6 +120,7 @@
             return this.View(result);
         }
 
+        [Authorize]
         public IActionResult Pending()
         {
             var shippedPackage = GetPackingByShipStatus(ShipStatus.Pending);
@@ -125,6 +128,7 @@
             return this.View(shippedPackage);
         }
 
+        [Authorize]
         public async Task<IActionResult> Shipped(string id)
         {
             var statusId = GetShipStatusId(ShipStatus.Shipped);
@@ -140,6 +144,7 @@
             return this.RedirectToAction(nameof(ShippedAll));
         }
 
+        [Authorize]
         public IActionResult ShippedAll()
         {
             var viewModel = GetPackingByShipStatus(ShipStatus.Shipped);
@@ -147,6 +152,7 @@
             return this.View(viewModel);
         }
 
+        [Authorize]
         public async Task<IActionResult> Delivered(string id)
         {
             var statusId = GetShipStatusId(ShipStatus.Delivered);
@@ -157,6 +163,7 @@
         }
 
         //TOTO : Status acqured
+        [Authorize]
         public IActionResult DeliveredAll()
         {
             var viewModel = GetPackingByShipStatus(ShipStatus.Delivered);
@@ -244,6 +251,19 @@
                     .FirstOrDefault();
 
             return pckStatusByName.Name;
+        }
+
+        private void CreateReceipt(PackageCreateBindingModel pckModel, Package newPackage)
+        {
+            var newReceipt = new Receipt
+            {
+                Fee = (decimal)(pckModel.Weight * 2.67),
+                IssuedOn = DateTime.UtcNow,
+                RecipientId = pckModel.Recipient,
+                PackageId = newPackage.Id
+            };
+
+            this.db.Receipts.Add(newReceipt);
         }
     }
 }
