@@ -1,0 +1,9 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Infrastructure\bin\Debug\netcoreapp2.1\Eventures.Infrastructure.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Infrastructure\bin\Debug\netcoreapp2.1\Eventures.Infrastructure.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Infrastructure\bin\Debug\netcoreapp2.1\Eventures.Infrastructure.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Infrastructure\obj\Debug\netcoreapp2.1\Eventures.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Infrastructure\obj\Debug\netcoreapp2.1\Eventures.Infrastructure.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Infrastructure\obj\Debug\netcoreapp2.1\Eventures.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Infrastructure\obj\Debug\netcoreapp2.1\Eventures.Infrastructure.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Infrastructure\obj\Debug\netcoreapp2.1\Eventures.Infrastructure.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Infrastructure\obj\Debug\netcoreapp2.1\Eventures.Infrastructure.csprojAssemblyReference.cache
