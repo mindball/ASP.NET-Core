@@ -4,15 +4,19 @@ namespace Eventures.Web
     using Eventures.Data;
     using Eventures.Infrastructure.Mapping;
     using Eventures.Models;
+    using Eventures.Services;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.HttpsPolicy;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Identity.UI;
+    using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using Middleware;
+    using Middleware.Extensions;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -52,6 +56,14 @@ namespace Eventures.Web
             services.AddControllersWithViews();
 
             services.AddRazorPages();
+
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
+            services.AddTransient<IEventsService, EventsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,12 +71,7 @@ namespace Eventures.Web
         {
             Mapper.Initialize(config => config.AddProfile<AutoMapperProfile>());
 
-            using (var serviceScope = app.ApplicationServices.CreateScope())
-            {
-                var context = serviceScope.ServiceProvider.GetRequiredService<EventuresDbContext>();
-
-                context.Database.EnsureCreated();
-            }
+            app.UseSeedMiddleware();
 
             if (env.IsDevelopment())
             {

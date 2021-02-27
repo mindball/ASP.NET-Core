@@ -25,9 +25,9 @@
             ILogger<RegisterModel> logger
             /*IEmailSender emailSender*/)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _logger = logger;
+            this._userManager = userManager;
+            this._signInManager = signInManager;
+            this._logger = logger;
             //_emailSender = emailSender;
         }
 
@@ -36,7 +36,7 @@
 
         public string ReturnUrl { get; set; }
 
-        public IList<AuthenticationScheme> ExternalLogins { get; set; }
+        //public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
         public class InputModel
         {
@@ -51,7 +51,7 @@
             public string Email { get; set; }
 
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -105,7 +105,7 @@
             }
 
             //ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
                 var user = new EventuresUser
                 {
@@ -116,7 +116,7 @@
                     UniqueCitizenNumber = this.Input.UniqueCitizenNumber
                 };
 
-                var result = await _userManager.CreateAsync(user, this.Input.Password);
+                var result = await this._userManager.CreateAsync(user, this.Input.Password);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
