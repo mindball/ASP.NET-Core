@@ -8,6 +8,7 @@
     using Infrastructure;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
 
     public class Seed
     {
@@ -31,7 +32,7 @@
             {
                 this.executed = true;
 
-                dbContext.Database.EnsureCreated();
+                dbContext.Database.Migrate();
 
                 if (!await roleManager.RoleExistsAsync(GlobalConstants.AdminRoleName))
                 {

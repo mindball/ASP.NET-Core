@@ -10,6 +10,7 @@
     using Eventures.Models;
     using AutoMapper.QueryableExtensions;
     using Microsoft.EntityFrameworkCore;
+    using System.Linq;
 
     public class EventsService : DataService, IEventsService
     {
@@ -18,24 +19,38 @@
         {
         }
 
-        public async Task CreateAsync(EventServiceModel model)
+        public void Create(EventServiceModel model)
         {
             if (!this.IsEntityStateValid(model))
             {
                 return;
             }
 
-            var ev = Mapper.Map<Event>(model);
+            var @event = new Event
+            {
+                Name = model.Name,
+                StartDate = model.StartDate,
+                EndDate = model.EndDate,
+                Place = model.Place
+            };
 
-            await this.context.AddAsync(ev);
+            this.context.Add(@event);
 
-            await this.context.SaveChangesAsync();
+            this.context.SaveChanges();
         }
 
         public async Task<IEnumerable<EventServiceModel>> GetAll()
-             =>  await this.context.Events
-               .ProjectTo<EventServiceModel>()
-               .ToArrayAsync();
+             => await this.context
+                .Events.Select(a => new EventServiceModel
+                {
+                    Name = a.Name,
+                    StartDate = a.StartDate,
+                    EndDate = a.EndDate,
+                    Place = a.Place
+                })
+            .ToListAsync();
+               
+               
         
     }
 }

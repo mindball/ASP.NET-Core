@@ -35,13 +35,27 @@ using Eventures.Web.Models.Events;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Web\Views\_ViewImports.cshtml"
+using Eventures.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Web\Views\_ViewImports.cshtml"
+using Eventures.Services.DTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Web\Views\_ViewImports.cshtml"
 using Eventures.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"718451d1bb60a35f0b093aa52fa7c55fdfaba6a4", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a6b4c1863c1e8ba197b2a6a23cc3c4de64057ad4", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

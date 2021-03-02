@@ -4,11 +4,9 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
-
-<div class="mt-5 mb-3 w-50 container text-center">
+<div class="mt-2 mb-3 w-50 container text-center">
     <form method="post" asp-action-returnUrl="@Model.ReturnUrl">
-        <h2>Register</h2>
+        <h2>@ViewData["Title"]</h2>
         <div asp-validation-summary="All" class="text-danger"></div>
         <hr class="hr-2 eventures-bg-color">
         <div class="row">

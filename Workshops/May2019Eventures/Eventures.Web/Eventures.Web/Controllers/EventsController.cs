@@ -27,10 +27,9 @@
         [Authorize]
         public async Task<IActionResult> All()
         {
-            var events = (await this.eventsService.GetAll())
-                .Select(Mapper.Map<ListingViewModel>)
-                .ToArray();
+            var events = await this.eventsService.GetAll();
 
+           
             return this.View(events);
         }
 
@@ -43,20 +42,26 @@
         [HttpPost]
         [Authorize(Roles = GlobalConstants.AdminRoleName)]
         //TODO: [TypeFilter(typeof(AdminCreateLoggerActionFilterAttribute))]
-        public async Task<IActionResult> Create(CreateViewModel model)
+        public IActionResult Create(CreateViewModel model)
         {
             if (!this.ModelState.IsValid)
             {
                 return this.View();
             }
 
-            var serviceModel = Mapper.Map<EventServiceModel>(model);
+            var @event = new EventServiceModel
+            {
+                Name = model.Name,
+                StartDate = model.StartDate,
+                EndDate = model.EndDate,
+                Place = model.Place,
+                PricePerTicket = model.PricePerTicket,
+                TotalTickets = model.TotalTickets
+            };
 
-            await this.eventsService.CreateAsync(serviceModel);
+            this.eventsService.Create(@event);            
 
-            this.logger.LogInformation("Event created: " + serviceModel.Name, serviceModel);
-
-            return this.RedirectToAction("All");
-        }
+            return this.RedirectToAction(nameof(All));
+        }       
     }
 }

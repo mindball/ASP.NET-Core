@@ -6,7 +6,7 @@
 
     public interface IEventsService
     {
-        Task CreateAsync(EventServiceModel model);
+        void Create(EventServiceModel model);
 
         Task<IEnumerable<EventServiceModel>> GetAll();
     }

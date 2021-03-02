@@ -35,13 +35,27 @@ using Eventures.Web.Models.Events;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Web\Views\_ViewImports.cshtml"
+using Eventures.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Web\Views\_ViewImports.cshtml"
+using Eventures.Services.DTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Web\Views\_ViewImports.cshtml"
 using Eventures.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"94c67a90abb3c6a54c0f7090fc473add60d8d9af", @"/Views/Shared/_LoginPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"718451d1bb60a35f0b093aa52fa7c55fdfaba6a4", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a6b4c1863c1e8ba197b2a6a23cc3c4de64057ad4", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__LoginPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "Identity", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -95,7 +109,7 @@ using Eventures.Models;
 #line hidden
 #nullable disable
             WriteLiteral("!</p>\r\n        </li>\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c67a90abb3c6a54c0f7090fc473add60d8d9af7076", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c67a90abb3c6a54c0f7090fc473add60d8d9af7576", async() => {
                 WriteLiteral("\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link text-black\" href=\"javascript:document.getElementById(\'logoutForm\').submit()\">Logout</a>\r\n            </li>\r\n        ");
             }
             );
@@ -143,7 +157,7 @@ using Eventures.Models;
 #line hidden
 #nullable disable
             WriteLiteral("        <li class=\"nav-item\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c67a90abb3c6a54c0f7090fc473add60d8d9af10645", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c67a90abb3c6a54c0f7090fc473add60d8d9af11145", async() => {
                 WriteLiteral("Register");
             }
             );
@@ -162,7 +176,7 @@ using Eventures.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        </li>\r\n        <li class=\"nav-item\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c67a90abb3c6a54c0f7090fc473add60d8d9af12148", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c67a90abb3c6a54c0f7090fc473add60d8d9af12648", async() => {
                 WriteLiteral("Login");
             }
             );

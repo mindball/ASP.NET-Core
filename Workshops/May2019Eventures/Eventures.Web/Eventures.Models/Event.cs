@@ -34,6 +34,6 @@
         [Required]
         public decimal PricePerTicket { get; set; }
 
-        
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }

@@ -1,8 +1,9 @@
-﻿@model IEnumerable<ListingViewModel>
+﻿@model IEnumerable<EventServiceModel>
 
 @{
     ViewData["Title"] = "All Events";
     const string dateFormat = "dd-MMM-yyyy hh:mm:ss";
+    int i = 1;
 }
 
 <main class="mt-3 mb-5 container">
@@ -18,20 +19,16 @@
                 <th class="col-md-2">Place</th>
             </tr>
         </thead>
-        <tbody>
-            @{
-                var orders = Model as ListingViewModel[] ?? Model.ToArray();
-            }
-            @for (int i = 0; i < orders.Length; i++)
-            {
-                var m = orders[i];
+        <tbody>            
+            @foreach(var item in Model)
+            {               
 
                 <tr class="row">
                     <th class="col-md-1">@(i + 1)</th>
-                    <td class="col-md-5">@m.Name</td>
-                    <td class="col-md-2">@m.StartDate.ToString(dateFormat)</td>
-                    <td class="col-md-2">@m.EndDate.ToString(dateFormat)</td>
-                    <td class="col-md-2">@m.Place</td>
+                    <td class="col-md-5">@item.Name</td>
+                    <td class="col-md-2">@item.StartDate.ToString(dateFormat)</td>
+                    <td class="col-md-2">@item.EndDate.ToString(dateFormat)</td>
+                    <td class="col-md-2">@item.Place</td>
                 </tr>
             }
         </tbody>

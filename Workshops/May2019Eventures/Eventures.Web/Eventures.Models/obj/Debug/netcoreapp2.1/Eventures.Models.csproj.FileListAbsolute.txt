@@ -1,7 +1,6 @@
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Models\bin\Debug\netcoreapp2.1\Eventures.Models.deps.json
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Models\bin\Debug\netcoreapp2.1\Eventures.Models.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Models\bin\Debug\netcoreapp2.1\Eventures.Models.pdb
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Models\obj\Debug\netcoreapp2.1\Eventures.Models.csprojAssemblyReference.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Models\obj\Debug\netcoreapp2.1\Eventures.Models.AssemblyInfoInputs.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Models\obj\Debug\netcoreapp2.1\Eventures.Models.AssemblyInfo.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Eventures\Eventures.Web\Eventures.Models\obj\Debug\netcoreapp2.1\Eventures.Models.csproj.CoreCompileInputs.cache
