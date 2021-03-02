@@ -286,6 +286,7 @@ app.UseEndpoints(endpoints =>
 ![Filters](https://drek4537l1klr.cloudfront.net/lock/Figures/13fig02_alt.jpg)
 ```
 Парче код, метод или клас, който се извиква в определена ситуация!!!
+
 ```
 ![FilterFlow](https://i.imgur.com/pLveRmq.png)
 
@@ -295,6 +296,9 @@ ActionFilters си има context result of Action-а, Exception filter -> conte
 ```
 
 ## Filter types
+
+![Filter types](https://www.ecanarys.com/sites/default/files/apoorva.hv-233/tbl3.png)
+
 ### Authorization filters 
 ```
  run first and are used to determine whether the user is authorized for the request. 
@@ -340,6 +344,11 @@ They are useful for logic that must surround view or formatter execution.
 	}
 ```
 ## Use case
+```
+Когато нещо се повтаря, например logging-filter(добре е да се напише лог филтер и да се използва във всеки action),
+отколкото във всеки action да пиша logging логика. Друг пример try-catch описан във филтър и така
+action-те ще са по изчистени.
+```
 ### Globally
 ```C#
 Когато се регистрират глобално ще се изпълняват от всички action-и ConfigureServices
