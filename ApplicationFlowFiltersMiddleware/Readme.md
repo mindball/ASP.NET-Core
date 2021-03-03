@@ -99,7 +99,7 @@ Register all services. Called before the Configure() method, by the WebHost
 
 # Error Handling
 
-![Flow Error](https://gwb.blob.core.windows.net/chetan/Windows-Live-Writer/dea7a7be3198_10BBC/clip_image002_thumb.jpg)
+![Flow Error](https://andrewlock.net/content/images/2020/ex_handler_02.png)
 
 ### There are several ways to configure Error handling
 * Developer Exception Page - ASP net core пълната информация(stack trace, code и друга служебна инф.) 
