@@ -75,15 +75,31 @@ namespace Eventures.Web
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseExceptionHandler("/Error/500");
+                //app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                //app.UseExceptionHandler("/Error/500");
+                //app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.Use(async (context, next) =>
+            {
+                await next();
+
+                if (context.Response.StatusCode == 404 && !context.Response.HasStarted)
+                {
+                    string originalPath = context.Request.Path.Value;
+                    context.Items["originalPath"] = originalPath;
+                    context.Request.Path = "/Error/404";
+                    await next();
+                }
+            });
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
