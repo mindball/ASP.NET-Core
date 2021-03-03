@@ -9,6 +9,8 @@ namespace CreateAndUseInMemoryDB
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
 
+    using Extension;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -24,8 +26,26 @@ namespace CreateAndUseInMemoryDB
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseInMemoryDatabase(databaseName: "test"));
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+            services.AddDefaultIdentity<IdentityUser>(options
+                =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequiredLength = 3;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireNonAlphanumeric = false;
+            })
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //Add globaly filter over all controllers and action
+            //services.AddControllersWithViews(options =>
+            //       {
+            //           options.Filters.Add(typeof(TimeFilterAttribute));
+            //           options.Filters.Add(typeof(LogFilterAttribute));
+            //       });
 
             services.AddControllersWithViews();
             services.AddRazorPages();
@@ -34,6 +54,8 @@ namespace CreateAndUseInMemoryDB
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.CreateRoles();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

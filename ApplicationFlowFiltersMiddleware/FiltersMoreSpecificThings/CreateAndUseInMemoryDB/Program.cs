@@ -18,7 +18,7 @@ namespace CreateAndUseInMemoryDB
                 var context = services.GetRequiredService<ApplicationDbContext>();
 
                 //4. Call the DataGenerator to create sample data
-                DataGenerator.Initialize(services);
+                DataGenerator.InitializeData(services);
             }
 
             host.Run();

@@ -2,6 +2,7 @@
 {
     using CreateAndUseInMemoryDB.Data;
     using CreateAndUseInMemoryDB.Data.Models;
+    using Microsoft.AspNetCore.Builder;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
     using System;
@@ -9,8 +10,9 @@
 
     public class DataGenerator
     {
-        public static void Initialize(IServiceProvider serviceProvider)
+        public static void InitializeData(IServiceProvider serviceProvider)
         {
+            //Initialze entities
             using (var context = new ApplicationDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()))
             {
@@ -72,6 +74,7 @@
 
                 context.SaveChanges();
             }
+
         }
     }
 }
