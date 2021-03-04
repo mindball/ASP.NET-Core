@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yBfBH3XqWa4v8ffXif5OkphvNzrs+jsJ8kjfC1UYoEKcujtSoV+Cj+OUCvC09g2mGvdeJ554V4Sgoh8pjGGUZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\ApplicationFlowFiltersMiddleware\\HandleException\\GlobalErrorHandler\\GlobalErrorHandlingByCodeMaze\\GlobalErrorHandlingByCodeMaze.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oilaripi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

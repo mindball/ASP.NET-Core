@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalErrorHandler", "GlobalErrorHandler\GlobalErrorHandler.csproj", "{ABF5624C-90DE-4761-98DE-5FE36B5D4B03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalErrorHandlingByCodeMaze", "GlobalErrorHandlingByCodeMaze\GlobalErrorHandlingByCodeMaze.csproj", "{EF898E23-1789-4F2B-B6BD-262CAA72B42F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABF5624C-90DE-4761-98DE-5FE36B5D4B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF5624C-90DE-4761-98DE-5FE36B5D4B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF5624C-90DE-4761-98DE-5FE36B5D4B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF5624C-90DE-4761-98DE-5FE36B5D4B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF898E23-1789-4F2B-B6BD-262CAA72B42F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF898E23-1789-4F2B-B6BD-262CAA72B42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF898E23-1789-4F2B-B6BD-262CAA72B42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF898E23-1789-4F2B-B6BD-262CAA72B42F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19A3DD0D-5612-4B41-BD45-32315E374C8B}
+	EndGlobalSection
+EndGlobal

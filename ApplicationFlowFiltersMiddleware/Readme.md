@@ -291,6 +291,7 @@ app.UseEndpoints(endpoints =>
 
 ```
 ![FilterFlow](https://i.imgur.com/pLveRmq.png)
+![FilterFlow2](https://code-maze.com/wp-content/uploads/2018/07/Order-of-Infocation-in-Action-Filters.png)
 
 ```
 Всeки filter си има context например Result filters може да има context of View(),
@@ -388,14 +389,18 @@ action-те ще са по изчистени.
  * Cannot have constructor dependencies provided by DI
  * Parameters must be supplied where the attributes are applied
  * This is a limitation of how filters attributes work
+ 
 ### There are several approaches to include DI in Filter Attributes
  * ServiceFilterAttribute
  * TypeFilterAttribute
+ 
 ### Service filter implementation types are registered in DI
  * ServiceFilterAttribute retrieves an instance of the filter from DI
  * Used only for Filters that are registered as Services
+ 
 ### TypeFilterAttribute is similar to ServiceFilterAttribute 
  * The type is not resolved directly from the DI container
  * Type is instantiated using ObjectFactory.
+ 
 ### There are ways to control the reusability of the instances
  * There is no guarantee that a single instance will be created
