@@ -26,3 +26,53 @@ Our action method is much cleaner now and what’s more important we can reuse t
 functionality to write more readable actions in the future.
 ```
 
+## Handling Errors Globally with the Custom Middleware
+
+## UseStatusCodePages
+```
+By default, an ASP.NET Core app doesn't provide a status code page for HTTP error status codes, 
+such as 404 - Not Found. When the app encounters an HTTP 400-599 error status code that doesn't 
+have a body, it returns the status code and an empty response body. To provide status code pages, 
+use the status code pages middleware. To enable default text-only handlers for common error status 
+codes, call UseStatusCodePages.
+
+UseStatusCodePages before the Static File Middleware and the Endpoints Middleware.
+
+UseStatusCodePages isn't typically used in production because it returns a message that isn't useful to users.
+```
+
+## UseStatusCodePagesWithRedirects
+```Important
+Sends a 302 - Found status code to the client.
+Redirects the client to the error handling endpoint provided in the URL template. 
+The error handling endpoint typically displays error information and returns HTTP 200.
+```
+### This method is commonly used when the app:
+* Should redirect the client to a different endpoint, usually in cases where a different app processes the error. 
+* For web apps, the client's browser address bar reflects the redirected endpoint.
+* Shouldn't preserve and return the original status code with the initial redirect response.
+
+## UseStatusCodePagesWithReExecute
+```Important
+Returns the original status code to the client.
+Generates the response body by re-executing the request pipeline using an alternate path.
+```
+```
+If an endpoint within the app is specified, create an MVC view or Razor page for the endpoint. 
+Ensure UseStatusCodePagesWithReExecute is placed before UseRouting so the request can be rerouted to the status page.
+```
+
+## Exception filters
+```
+In MVC apps, exception filters can be configured globally or on a per-controller or per-action basis. 
+In Razor Pages apps, they can be configured globally or per page model. 
+These filters handle any unhandled exceptions that occur during the execution of a controller action or 
+another filter.
+```
+```
+Exception filters are useful for trapping exceptions that occur within MVC actions, 
+but they're not as flexible as the built-in exception handling middleware, UseExceptionHandler. 
+We recommend using UseExceptionHandler, unless you need to perform error handling 
+differently based on which MVC action is chosen.
+```
+
