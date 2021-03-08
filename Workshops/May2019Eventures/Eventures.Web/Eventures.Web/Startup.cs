@@ -75,8 +75,12 @@ namespace Eventures.Web
 
             if (env.IsDevelopment())
             {
-                app.UseExceptionHandler("/Error/500");
-                //app.UseDeveloperExceptionPage();
+                //app.UseStatusCodePagesWithReExecute("/Error/Error/{0}");
+                //app.UseStatusCodePages();
+                //app.UseExceptionHandler("/Error/Error/500");
+                
+                app.UseDeveloperExceptionPage();
+                app.UseStatusCodePagesWithReExecute("/Error/Error", "?statusCode={0}");
                 app.UseDatabaseErrorPage();
             }
             else
@@ -87,18 +91,19 @@ namespace Eventures.Web
                 app.UseHsts();
             }
 
-            app.Use(async (context, next) =>
-            {
-                await next();
+            //Catch exception 404
+            //app.Use(async (context, next) =>
+            //{
+            //    await next();
 
-                if (context.Response.StatusCode == 404 && !context.Response.HasStarted)
-                {
-                    string originalPath = context.Request.Path.Value;
-                    context.Items["originalPath"] = originalPath;
-                    context.Request.Path = "/Error/404";
-                    await next();
-                }
-            });
+            //    if (context.Response.StatusCode == 404 && !context.Response.HasStarted)
+            //    {
+            //        string originalPath = context.Request.Path.Value;
+            //        context.Items["originalPath"] = originalPath;
+            //        context.Request.Path = "/Error/404";
+            //        await next();
+            //    }
+            //});
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

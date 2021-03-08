@@ -28,7 +28,6 @@
         public async Task<IActionResult> All()
         {
             var events = await this.eventsService.GetAll();
-
            
             return this.View(events);
         }

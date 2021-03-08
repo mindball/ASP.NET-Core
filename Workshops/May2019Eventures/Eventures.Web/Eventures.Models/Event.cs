@@ -8,13 +8,13 @@
     {
         public Event()
         {
-            this.Id = Guid.NewGuid().ToString();            
+            //this.Id = Guid.NewGuid().ToString();            
         }
 
         public string Id { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(5)]
         public string Name { get; set; }
 
         [Required]

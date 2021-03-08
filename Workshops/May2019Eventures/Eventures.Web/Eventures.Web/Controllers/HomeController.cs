@@ -25,7 +25,7 @@ namespace Eventures.Web.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return this.StatusCode(500);           
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

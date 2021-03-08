@@ -23,8 +23,8 @@
 
         [Required]
         [Display(Name = "End Date")]
-        [Range(typeof(DateTime), "01/01/2021", "01/01/2022",
-    ErrorMessage = "Valid dates for the Property {0} between {1} and {2}")]
+        //[Range(typeof(DateTime), "01/01/2021", "01/01/2022",
+    //ErrorMessage = "Valid dates for the Property {0} between {1} and {2}")]
         public DateTime EndDate { get; set; }
 
         [Required]
