@@ -2,6 +2,7 @@
 {
     using Messages.Data;
     using Messages.Web.Models;
+    using Microsoft.AspNetCore.Cors;
     using Microsoft.AspNetCore.Mvc;
     using System;
     using System.Collections.Generic;
@@ -28,7 +29,7 @@
         
 
         [HttpPost(Name = "Create")]
-        [Route("create")]
+        [Route("create")]        
         public async Task<ActionResult> Create(MessageCreateBindingModel messageCreateBindingModel)
         {
             Message message = new Message

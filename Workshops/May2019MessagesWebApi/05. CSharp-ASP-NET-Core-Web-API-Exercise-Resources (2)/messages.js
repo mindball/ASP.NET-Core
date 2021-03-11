@@ -1,4 +1,4 @@
-let appUrl = 'https://localhost:5001/api/';
+let appUrl = 'http://localhost:5001/api/';
 let currentUsername = null;
 
 function renderMessages(data) {
@@ -27,19 +27,18 @@ function loadMessages() {
 }
 
 function createMessage() {
-    let message = $('#message').val();
+    let username = currentUsername;
+    let message = $('#message').val();   
 
-    if(isLoggedIn()) {
-        alert('You cannot send a message before logging in!');
+    if(username == null){
+        alert('You cannot sent a message before choosing!!')
         return;
     }
 
     if(message.length === 0) {
         alert('You cannot send empty messages!');
         return;
-    }
-
-    let username = getUser();
+    }    
 
     $.post({
         url: appUrl + 'messages/create',
@@ -55,3 +54,24 @@ function createMessage() {
         }
     });
 }
+
+function chooseUsername(){
+    let username = $('#username').val();
+
+    if(username.length == 0){
+        alert('You cannot choose empty username!!')
+        return;
+    }
+    
+
+    currentUsername = username;
+    $('#username-choice').text(currentUsername);
+    $('#choose-data').hide();
+    $('#reset-data').show();
+}
+
+function resetUsername() {
+    $('#choose-data').show();
+    $('#reset-data').hide();
+}
+

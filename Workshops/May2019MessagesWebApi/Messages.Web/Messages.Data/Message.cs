@@ -4,6 +4,10 @@
 
     public class Message
     {
+        public Message()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
         public string Id { get; set; }
 
         public string Content { get; set; }

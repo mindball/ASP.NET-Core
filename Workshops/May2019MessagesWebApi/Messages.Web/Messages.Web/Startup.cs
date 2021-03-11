@@ -7,6 +7,7 @@ namespace Messages.Web
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.AspNetCore.Mvc;
 
     public class Startup
     {
@@ -28,13 +29,17 @@ namespace Messages.Web
 
             services.AddCors(options =>
             {
-                options.AddPolicy("MessagesCORSPolicy",
+                options.AddPolicy(name: "MessagesCORSPolicy",
                     builder =>
                     {
                         builder.WithOrigins("http://localhost:5001")
+                                .AllowAnyOrigin()
+                                .AllowAnyMethod()
                                 .AllowAnyHeader();
                     });
             });
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddControllers();
         }
@@ -55,13 +60,11 @@ namespace Messages.Web
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors("MessagesCORSPolicy");
-
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-
+            app.UseCors("MessagesCORSPolicy");
 
             app.UseEndpoints(endpoints =>
             {
