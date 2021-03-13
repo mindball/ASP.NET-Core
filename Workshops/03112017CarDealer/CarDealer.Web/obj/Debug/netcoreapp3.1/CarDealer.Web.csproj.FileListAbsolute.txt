@@ -441,7 +441,6 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDe
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Edit.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Create.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\_CustomerForm.cshtml.g.cs
-C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\CarDealer.Web.csprojAssemblyReference.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Parts\Index.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Parts\Create.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Parts\_PartForm.cshtml.g.cs
@@ -450,3 +449,5 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDe
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Create.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\_CarForm.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Index.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\SearchCustomers.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\03112017CarDealer\CarDealer.Web\obj\Debug\netcoreapp3.1\CarDealer.Web.csprojAssemblyReference.cache

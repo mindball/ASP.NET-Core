@@ -49,34 +49,27 @@ using CameraBazaar.Web.Models.ManageViewModel;
 #nullable disable
 #nullable restore
 #line 6 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Web\CameraBazaar.Web\Views\_ViewImports.cshtml"
-using CameraBazaar.Web.Models.CamerasViewmodel;
+using CameraBazaar.Data.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Web\CameraBazaar.Web\Views\_ViewImports.cshtml"
-using CameraBazaar.Web.Infrastructure;
+using CameraBazaar.Services.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 8 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Web\CameraBazaar.Web\Views\_ViewImports.cshtml"
-using CameraBazaar.Web.Infrastructure.Extensions;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 9 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Web\CameraBazaar.Web\Views\_ViewImports.cshtml"
-using CameraBazaar.Data.Models;
+using CameraBazaar.Web.Extensions;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"55072aabf76c5880b32ea50209d3fd33535035f1", @"/Views/Account/Lockout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0f2084a402a8248d9a78737fcd97cf9ffd6b2db2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d05aa11f71ff6df1c1c7eb13bb57ab74e839c953", @"/Views/_ViewImports.cshtml")]
     public class Views_Account_Lockout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -11,6 +11,7 @@ namespace ExercisesBookShopService2017
     using Data;
     using ExercisesBookShopService2017.Services;
     using ExercisesBookShopService2017.Infrastructure.Extensions;
+    using ExercisesBookShopService2017.Infrastructure.Mapping;
 
     public class Startup
     {
@@ -27,7 +28,7 @@ namespace ExercisesBookShopService2017
             services.AddDbContext<BookShopDbContext>(options =>
               options.UseSqlServer(
                   this.Configuration.GetConnectionString("DefaultConnection")));
-
+           
 
             services.AddDomainServices();
 

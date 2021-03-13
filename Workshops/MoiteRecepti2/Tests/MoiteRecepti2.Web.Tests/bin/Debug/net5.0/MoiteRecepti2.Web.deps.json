@@ -2662,7 +2662,8 @@
         "dependencies": {
           "MoiteRecepti2.Data.Common": "1.0.0",
           "MoiteRecepti2.Data.Models": "1.0.0",
-          "MoiteRecepti2.Services.Mapping": "1.0.0"
+          "MoiteRecepti2.Services.Mapping": "1.0.0",
+          "MoiteRecepti2.Web.ViewModels": "1.0.0"
         },
         "runtime": {
           "MoiteRecepti2.Services.Data.dll": {}

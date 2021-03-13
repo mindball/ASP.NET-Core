@@ -3,12 +3,13 @@
     
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using CameraBazaar.Data.Models.Enums;
     using Data.Models;
 
     public class AddCameraViewModel
     {
         [Required]
-        public CameraMake Make { get; set; }
+        public Make Make { get; set; }
 
         [Required]
         [RegularExpression("^[A-Z0-9-]+$")]

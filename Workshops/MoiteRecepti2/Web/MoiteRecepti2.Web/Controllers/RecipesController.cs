@@ -38,11 +38,11 @@
 
             await this.recipesService.CreateAsync(input);
 
-            //return this.Json(input);
+            return this.Json(input);
 
-            //// TODO: Create recipe using service method
-            //// TODO: Redirect to recipe info page
-            return this.RedirectToAction("/");
+            // TODO: Create recipe using service method
+            // TODO: Redirect to recipe info page
+            //return this.RedirectToAction("/");
         }
     }
 }

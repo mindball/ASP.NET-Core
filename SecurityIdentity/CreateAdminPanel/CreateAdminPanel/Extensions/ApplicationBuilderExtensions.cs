@@ -29,21 +29,21 @@ namespace CreateAdminPanel.Extensions
                     {
                         await roleManager.CreateAsync(new IdentityRole(adminRoleName));
                     }
-
-                    var adminName = GlobalConstants.AdminRoleName;
-                    var adminUserExist = await userManager.FindByNameAsync("test@test.com");
+                   
+                    var adminUserExist = await userManager.FindByNameAsync("admin@admin.com");
                     if(adminUserExist == null)
                     {
                         var user = new User
                         {
-                            Email = "test@test.com",
-                            UserName = "test@test.com",
-                            FirstName = "Test",
-                            LastName = "Second"
+                            Email = "admin@admin.com",
+                            UserName = "admin",
+                            FirstName = "admin",
+                            LastName = "admin"
                         };
-                        await userManager.CreateAsync(user, "pass123456");
 
-                        await userManager.AddToRoleAsync(user, adminRoleName);
+                        var result = await userManager.CreateAsync(user, "1234");
+
+                        var result2 = await userManager.AddToRoleAsync(user, adminRoleName);
                     }
 
                     //var studentRoleExists = await roleManager.RoleExistsAsync(GlobalConstants.StudentRoleName);

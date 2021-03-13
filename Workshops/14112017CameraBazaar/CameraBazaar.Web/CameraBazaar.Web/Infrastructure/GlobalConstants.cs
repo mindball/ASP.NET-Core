@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CameraBazaar.Web.Infrastructure
+﻿namespace CameraBazaar.Web.Infrastructure
 {
     public class GlobalConstants
     {
+        public const string AdminRoleKey = "Admin";
+        public const string UserRoleKey = "Seller";
     }
 }

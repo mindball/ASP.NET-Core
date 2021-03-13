@@ -1,12 +1,12 @@
-﻿using CameraBazaar.Data;
-using CameraBazaar.Services.Contracts;
-using CameraBazaar.Services.Models;
-using CameraBazaar.Web.Extensions;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CameraBazaar.Web.Controllers
+﻿namespace CameraBazaar.Web.Controllers
 {
+    using CameraBazaar.Data;
+    using CameraBazaar.Services.Contracts;
+    using CameraBazaar.Services.Models;
+    using CameraBazaar.Web.Extensions;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Mvc;
+
     public class CameraController : Controller
     {
         private readonly ICameraService cameraService;

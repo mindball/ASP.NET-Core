@@ -5,3 +5,11 @@
 15.02.2021 7:25:22 – ::1 – test@test.com – HomeController.Privacy
 15.02.2021 7:25:24 – ::1 – test@test.com – HomeController.Privacy
 15.02.2021 7:25:24 – ::1 – test@test.com – HomeController.Privacy
+15.02.2021 13:11:53 – ::1 – admin@admin.com – HomeController.Privacy
+15.02.2021 15:15:48 – ::1 – admin@admin.com – HomeController.Privacy
+15.02.2021 15:16:17 – ::1 – admin@admin.com – HomeController.Privacy
+15.02.2021 15:17:13 – ::1 – admin@admin.com – HomeController.Privacy
+15.02.2021 15:19:49 – ::1 – admin@admin.com – HomeController.Privacy
+15.02.2021 15:23:02 – ::1 – admin@admin.com – HomeController.Privacy
+15.02.2021 15:25:22 – ::1 – admin@admin.com – HomeController.Privacy
+15.02.2021 15:25:34 – ::1 – Anonymous – HomeController.Privacy

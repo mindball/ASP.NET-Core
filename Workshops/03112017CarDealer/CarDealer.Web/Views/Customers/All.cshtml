@@ -5,6 +5,16 @@
 <h2>All cutomers</h2>
 <h3>Order by Birth day and order by <strong>@Model.Order</strong></h3>
 
+
+
+<form asp-controller="Customers" asp-action="SearchCustomers" method="get">
+    <label for="SearchCustomer">Search customer</label>
+    <input type="text" class="form-control" name="search" size="20" value="" />
+    <br>   
+    <input type="button" class="btn btn-primary" name="Search" value="Submit" />
+</form>
+<br>
+
 <table class="table table-bordered table-hover">
     <thead class="">
         <tr>

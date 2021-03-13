@@ -31,8 +31,19 @@ namespace CarDealer.Web
             services.AddDbContext<CarDealerDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(options =>
+                options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<CarDealerDbContext>();
+            services.Configure<IdentityOptions>(options =>
+                    {
+                        options.Password.RequireDigit = false;
+                        options.Password.RequireLowercase = false;
+                        options.Password.RequireNonAlphanumeric = false;
+                        options.Password.RequireUppercase = false;
+                        options.Password.RequiredLength = 3;
+                        options.Password.RequiredUniqueChars = 1;
+                    });
+
             services.AddControllersWithViews();
             services.AddRazorPages();
 

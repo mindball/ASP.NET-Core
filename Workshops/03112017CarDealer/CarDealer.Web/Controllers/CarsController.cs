@@ -4,16 +4,23 @@
     using CarDealer.Web.Services;
     using Microsoft.AspNetCore.Mvc;
     using System;
-  
+    using System.Linq;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+    using System.Collections.Generic;
+    using Microsoft.AspNetCore.Authorization;
+
     public class CarsController : Controller
     {
         private const int PageSize = 25;
         private const int defaulPage = 1;
         private readonly ICarService carService;
+        private readonly IPartService partService;
 
-        public CarsController(ICarService carService)
+       
+        public CarsController(ICarService carService, IPartService partService)
         {
             this.carService = carService;
+            this.partService = partService;
         }
 
         
@@ -47,21 +54,42 @@
             return this.View(result);
         }
 
-        [HttpGet]        
+        [HttpGet]
+        [Authorize]
         public IActionResult Create()
-            => this.View();
+            => this.View(new CarFormViewModel
+            {
+                AllParts = this.GetPartListItems()
+            });
 
-        [HttpPost]        
+        [HttpPost]
+        [Authorize]
         public IActionResult Create(CarFormViewModel carViewModel)
         {
             if (carViewModel == null || !ModelState.IsValid)
             {
+                carViewModel.AllParts = this.GetPartListItems();
                 return this.View(carViewModel);
             }
 
-            this.carService.Create(carViewModel.Make, carViewModel.Model, carViewModel.TravelledDistance);
+            this.carService
+                .Create(carViewModel.Make
+                , carViewModel.Model
+                , carViewModel.TravelledDistance
+                , carViewModel.SelectedParts);
 
             return this.RedirectToAction(nameof(this.Index));
         }
+
+        private IEnumerable<SelectListItem> GetPartListItems()
+           => partService
+                    .All()
+                    .Select(s => new SelectListItem
+                    {
+                        Text = s.Name,
+                        Value = s.Id.ToString()
+                    })
+            .ToList();
+        
     }
 }

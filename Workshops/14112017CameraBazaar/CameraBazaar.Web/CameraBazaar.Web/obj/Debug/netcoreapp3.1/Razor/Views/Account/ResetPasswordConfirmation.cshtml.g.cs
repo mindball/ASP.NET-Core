@@ -49,34 +49,27 @@ using CameraBazaar.Web.Models.ManageViewModel;
 #nullable disable
 #nullable restore
 #line 6 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Web\CameraBazaar.Web\Views\_ViewImports.cshtml"
-using CameraBazaar.Web.Models.CamerasViewmodel;
+using CameraBazaar.Data.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Web\CameraBazaar.Web\Views\_ViewImports.cshtml"
-using CameraBazaar.Web.Infrastructure;
+using CameraBazaar.Services.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 8 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Web\CameraBazaar.Web\Views\_ViewImports.cshtml"
-using CameraBazaar.Web.Infrastructure.Extensions;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 9 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\14112017CameraBazaar\CameraBazaar.Web\CameraBazaar.Web\Views\_ViewImports.cshtml"
-using CameraBazaar.Data.Models;
+using CameraBazaar.Web.Extensions;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0472669bc416432dc74f0056c5ee572beeeba6cd", @"/Views/Account/ResetPasswordConfirmation.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0f2084a402a8248d9a78737fcd97cf9ffd6b2db2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d05aa11f71ff6df1c1c7eb13bb57ab74e839c953", @"/Views/_ViewImports.cshtml")]
     public class Views_Account_ResetPasswordConfirmation : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Login", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -121,7 +114,7 @@ Write(ViewData["Title"]);
 #line hidden
 #nullable disable
             WriteLiteral("</h2>\r\n<p>\r\n    Your password has been reset. Please ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0472669bc416432dc74f0056c5ee572beeeba6cd6273", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0472669bc416432dc74f0056c5ee572beeeba6cd5978", async() => {
                 WriteLiteral("click here to log in");
             }
             );

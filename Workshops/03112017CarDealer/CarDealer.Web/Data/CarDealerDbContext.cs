@@ -35,7 +35,7 @@
         {
             builder.Entity<PartCar>()
                 .HasKey(p => new { p.CarId, p.PartId });
-                        
+
 
             base.OnModelCreating(builder);
         }

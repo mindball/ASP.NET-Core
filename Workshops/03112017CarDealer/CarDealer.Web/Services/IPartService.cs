@@ -7,6 +7,8 @@
     {
         IEnumerable<FullPartInfo> GetAllParts(int page, int pageSize);
 
+        IEnumerable<PartBasicInfoServiceModel> All();
+
         int Count();
 
         void Create(string name, decimal price, int quantity, int supplierId);

@@ -8,6 +8,7 @@
     [Route("customers")]
     public class CustomersController : Controller
     {
+        private OrderType orderType = OrderType.Descending;
         private readonly ICustomerService customerService;
 
         public CustomersController(ICustomerService customerService)
@@ -64,8 +65,7 @@
         [Route(nameof(All) + "/{orderBy?}")]
         public IActionResult All(string orderBy = "descending")
         {
-            OrderType orderType =
-                orderBy == "descending" ?
+            orderType = orderBy == "descending" ?
                     OrderType.Descending :
                     OrderType.Ascending;
 
@@ -79,11 +79,36 @@
             return View(customersView);
         }
 
-        [Route("{id?}")]
+        [Route("{id?}", Order = 2)]
         public IActionResult CustomerSales(int id)
         {            
            this.customerService.TotalSalesByCustomer(id);
            return this.View(this.customerService.TotalSalesByCustomer(id));
+        }
+
+        [Route(nameof(SearchCustomers) + "/{search?}")]
+        public IActionResult SearchCustomers(string search)
+        {
+            if (string.IsNullOrEmpty(search))
+            {
+                var customers = this.customerService.OrderCustomers(orderType);
+                var customersView = new AllCustomerViewModel
+                {
+                    OrderCustomers = customers,
+                    Order = orderType
+                };
+
+                return this.View("All", customersView);
+            }
+
+            var searchedCustomers = this.customerService.SearchCustomers(search.ToLower());
+            var searchedCustomersViewModel = new SearchedCustomerViewModel
+            {
+                OrderCustomers = searchedCustomers,
+                SearchCustomerName = search
+            };
+
+            return this.View(searchedCustomersViewModel);
         }
     }
 }

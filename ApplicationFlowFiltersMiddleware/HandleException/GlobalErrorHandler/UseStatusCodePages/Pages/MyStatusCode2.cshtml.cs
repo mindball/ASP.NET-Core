@@ -19,6 +19,7 @@ namespace UseStatusCodePages.Pages
         public string ErrorStatusCode { get; set; }
 
         public string OriginalURL { get; set; }
+
         public bool ShowOriginalURL => !string.IsNullOrEmpty(OriginalURL);
 
         public void OnGet(string code)
@@ -26,8 +27,11 @@ namespace UseStatusCodePages.Pages
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
             ErrorStatusCode = code;
 
-            var statusCodeReExecuteFeature = HttpContext.Features.Get<
-                                                   IStatusCodeReExecuteFeature>();
+            var exceptionData = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+
+            var statusCodeReExecuteFeature = 
+                HttpContext.Features.Get<IStatusCodeReExecuteFeature>();
+
             if (statusCodeReExecuteFeature != null)
             {
                 OriginalURL =

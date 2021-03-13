@@ -8955,6 +8955,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "CameraBazaar.Common >= 1.0.0",
       "CameraBazaar.Data >= 1.0.0",
       "CameraBazaar.Services >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.11",
@@ -8996,6 +8997,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\14112017CameraBazaar\\CameraBazaar.Web\\CameraBazaar.Common\\CameraBazaar.Common.csproj": {
+              "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\14112017CameraBazaar\\CameraBazaar.Web\\CameraBazaar.Common\\CameraBazaar.Common.csproj"
+            },
             "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\14112017CameraBazaar\\CameraBazaar.Web\\CameraBazaar.Data\\CameraBazaar.Data.csproj": {
               "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\14112017CameraBazaar\\CameraBazaar.Web\\CameraBazaar.Data\\CameraBazaar.Data.csproj"
             },

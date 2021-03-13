@@ -27,9 +27,11 @@
             this.roleManager = roleManager;
         }
 
+        
         [Authorize(Roles = GlobalConstants.AdminRoleName)]
         public IActionResult All()
         {
+            
             var users = this.db
                 .Users
                 .OrderBy(u => u.Email)
@@ -99,9 +101,7 @@
             if (user == null)
             {
                 return this.NotFound();
-            }
-
-           
+            }           
 
             return this.View(
                 nameof(IdentityChangePasswordViewModel),
@@ -169,8 +169,7 @@
             return this.RedirectToAction(nameof(All));
         }
 
-
-        public async Task<IActionResult> AddRole(string id)
+        public IActionResult AddRole(string id)
         {
             var rolesSelectItems = this.roleManager
                 .Roles

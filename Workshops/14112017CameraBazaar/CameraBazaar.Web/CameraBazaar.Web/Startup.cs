@@ -9,7 +9,12 @@ namespace CameraBazaar.Web
     using Microsoft.Extensions.Hosting;
 
     using Data;
-    using Data.Models;    
+    using Data.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using CameraBazaar.Web.Infrastructure;
+    using CameraBazaar.Web.Services;
+    using CameraBazaar.Services.Contracts;
+    using CameraBazaar.Services;
 
     public class Startup
     {
@@ -37,12 +42,21 @@ namespace CameraBazaar.Web
                 .AddEntityFrameworkStores<CameraBazaarDbContext>()
                 .AddDefaultTokenProviders();
 
-            
+            // Add application services.
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<ICameraService, CameraService>();
+            services.AddTransient<IUserService, UserService>();
 
-            services.AddControllersWithViews();
+            services.AddRouting(options => options.LowercaseUrls = true);
+
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+                options.Filters.Add(new SimpleLogAttribute());
+                options.Filters.Add(new ActionTimeAttribute());
+            });
+
             services.AddRazorPages();
-
-           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

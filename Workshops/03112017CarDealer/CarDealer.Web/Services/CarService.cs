@@ -31,6 +31,7 @@
                     Price = pc.Part.Price
                 })
             })
+            .OrderByDescending(p => p.Id)
             .ToList();
         
         public IEnumerable<FullDetailCarSericeModel> GetFullDetailCar(string make) =>
@@ -56,14 +57,25 @@
             .Distinct()
             .ToList();
 
-        public void Create(string make, string model, long travelledDistance)
+        public void Create(string make, string model, long travelledDistance, IEnumerable<int> partsId)
         {
+            var existingCarIds = this.dbContext
+                .Parts
+                .Where(p => partsId.Contains(p.Id))
+                .Select(p => p.Id)
+                .ToList();
+
             var newCar = new Car
             {
                 Make = make,
                 Model = model,
                 TravelledDistance = travelledDistance
             };
+
+            foreach (var partId in existingCarIds)
+            {
+                newCar.PartCars.Add(new PartCar { PartId = partId });
+            }
 
             this.dbContext.Cars.Add(newCar);
 

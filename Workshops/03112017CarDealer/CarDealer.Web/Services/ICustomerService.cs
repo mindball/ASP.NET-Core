@@ -16,5 +16,7 @@
         void Edit(int id, string name, DateTime birthday, bool isYoungDriver);
 
         void Create(string name, DateTime birthday, bool isYoundDriver);
+
+        IEnumerable<OrderCustomer> SearchCustomers(string name);
     }
 }

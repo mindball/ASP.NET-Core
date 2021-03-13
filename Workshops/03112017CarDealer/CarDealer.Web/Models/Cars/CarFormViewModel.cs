@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-
-namespace CarDealer.Web.Models.Cars
+﻿namespace CarDealer.Web.Models.Cars
 {
+    using CarDealer.Web.Services.DTO.Part;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public class CarFormViewModel
     {
         [Required]
@@ -16,5 +17,10 @@ namespace CarDealer.Web.Models.Cars
         [Required]
         [DisplayName("Travelled Distance")]
         public long TravelledDistance { get; set; }
+
+        public IEnumerable<int> SelectedParts { get; set; }
+
+        [Display(Name = "Parts")]
+        public IEnumerable<SelectListItem> AllParts { get; set; }
     }
 }

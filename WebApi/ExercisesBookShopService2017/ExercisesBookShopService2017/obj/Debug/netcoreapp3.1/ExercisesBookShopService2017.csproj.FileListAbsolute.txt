@@ -69,3 +69,4 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookSho
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ExercisesBookShopService2017\obj\Debug\netcoreapp3.1\ExercisesBookShopService2017.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ExercisesBookShopService2017\obj\Debug\netcoreapp3.1\ExercisesBookShopService2017.pdb
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ExercisesBookShopService2017\obj\Debug\netcoreapp3.1\ExercisesBookShopService2017.genruntimeconfig.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ExercisesBookShopService2017\obj\Debug\netcoreapp3.1\ExercisesBookShopService2017.csprojAssemblyReference.cache

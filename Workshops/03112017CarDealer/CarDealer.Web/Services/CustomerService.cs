@@ -43,7 +43,7 @@
                     Id = c.Id,
                     Name = c.Name,
                     Birthday = c.BirthDate,
-                    IsYoungDriver = c.IsYoungDriver                    
+                    IsYoungDriver = c.IsYoungDriver
                 })
                 .FirstOrDefault();
 
@@ -56,7 +56,7 @@
 
             var customer = this.dbContext.Customers.FirstOrDefault(c => c.Id == id);
 
-            if(customer == null)
+            if (customer == null)
             {
                 return;
             }
@@ -104,6 +104,19 @@
             }
         }
 
+        public IEnumerable<OrderCustomer> SearchCustomers(string name)
+            => this.dbContext.Customers
+                    .Where(c => c.Name.ToLower().Contains(name.ToLower()))
+                    .OrderByDescending(c => c.Id)
+                    .Select(b => new OrderCustomer
+                    {
+                        Id = b.Id,
+                        Name = b.Name,
+                        Birthday = b.BirthDate,
+                        IsYoungDriver = b.IsYoungDriver
+                    })
+                        .ToList();
+
         //Total Sales by Customer
         public CustomerSales TotalSalesByCustomer(int id)
         {
@@ -114,13 +127,13 @@
 
             var result = this.dbContext.Customers
             .Where(c => c.Id == id)
-            .Select(c => new 
+            .Select(c => new
             {
                 Name = c.Name,
                 BoughtCarCount = c.Sales.Count,
                 CarsSale = c.Sales
-                                .Where(s => s.CustomerId == c.Id)                               
-                                .Select(cr => new 
+                                .Where(s => s.CustomerId == c.Id)
+                                .Select(cr => new
                                 {
                                     Price = cr.Car.PartCars.Sum(p => (double)p.Part.Price)
                                 })
@@ -145,5 +158,5 @@
 
             return experience < 2.0m;
         }
-    }    
+    }
 }

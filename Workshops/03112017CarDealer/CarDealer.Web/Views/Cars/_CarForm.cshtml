@@ -15,7 +15,12 @@
         <label asp-for="TravelledDistance">Travelled Distance</label>
         <input asp-for="TravelledDistance" min="1" class="form-control">
         <span asp-validation-for="TravelledDistance" class="form-text text-danger"></span>
-    </div>    
+    </div>
+    <div class="form-group">
+        <label asp-for="AllParts"></label>
+        <select asp-for="SelectedParts" asp-items="Model.AllParts" multiple class="form-control parts-select"></select>
+        <small>* Hold "Ctr" to select multiple parts</small>
+    </div>
     <div>
         <input class="btn btn-success" type="submit" value="Save car" />
     </div>

@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CameraBazaar.Web.Extensions
+﻿namespace CameraBazaar.Web.Extensions
 {
-    public class UserExtensions
+    using System.Security.Claims;
+
+    public static class UserExtensions
     {
+        public static string GetUserId(this ClaimsPrincipal user)
+        {
+            if (!user.Identity.IsAuthenticated)
+                return null;
+
+            ClaimsPrincipal currentUser = user;
+            return currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+        }
     }
 }

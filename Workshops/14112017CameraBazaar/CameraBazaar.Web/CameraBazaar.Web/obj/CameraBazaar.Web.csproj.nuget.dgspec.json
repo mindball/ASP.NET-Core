@@ -237,6 +237,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\14112017CameraBazaar\\CameraBazaar.Web\\CameraBazaar.Common\\CameraBazaar.Common.csproj": {
+                "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\14112017CameraBazaar\\CameraBazaar.Web\\CameraBazaar.Common\\CameraBazaar.Common.csproj"
+              },
               "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\14112017CameraBazaar\\CameraBazaar.Web\\CameraBazaar.Data\\CameraBazaar.Data.csproj": {
                 "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\14112017CameraBazaar\\CameraBazaar.Web\\CameraBazaar.Data\\CameraBazaar.Data.csproj"
               },

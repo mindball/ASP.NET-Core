@@ -32,6 +32,16 @@
                     SupplierName = p.Supplier.Name
                 }).ToList();
 
+        public IEnumerable<PartBasicInfoServiceModel> All()
+            => this.dbContext.Parts
+                .Select(p => new PartBasicInfoServiceModel
+                {
+                    Id = p.Id,
+                    Name = p.Name
+                })
+                .Distinct()
+                .ToList();
+
         public void Create(string name, decimal price, int quantity, int supplierId) 
         {
             var newPart = new Part

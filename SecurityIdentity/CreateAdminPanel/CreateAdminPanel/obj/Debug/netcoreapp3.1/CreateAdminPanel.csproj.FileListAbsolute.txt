@@ -171,3 +171,5 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\Create
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Views\Identity\IdentityChangePasswordViewModel.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Views\Identity\Delete.cshtml.g.cs
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Views\Identity\AddRole.cshtml.g.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\CreateAdminPanel.csprojAssemblyReference.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\SecurityIdentity\CreateAdminPanel\CreateAdminPanel\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs

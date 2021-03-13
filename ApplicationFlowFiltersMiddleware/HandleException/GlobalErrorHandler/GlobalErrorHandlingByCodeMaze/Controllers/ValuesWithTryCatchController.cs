@@ -25,7 +25,7 @@ namespace GlobalErrorHandlingByCodeMaze.Controllers
                     new Student(){ Name = "Vesi", Age = 28, Gender ="female"}
                 }; //simulation for the data base access
 
-                throw new Exception("Exception while fetching all the students from the storage.");
+                //throw new Exception("Exception while fetching all the students from the storage.");
 
                 return Ok(students);
             }

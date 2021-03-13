@@ -5,6 +5,10 @@
     this.ViewData["Title"] = "Home Page";
 }
 
+@section Styles {
+    <link href="~/css/Charts/charts.css" rel="stylesheet" />
+}
+
 <ul class="list-group">
     <li class="list-group-item d-flex justify-content-between align-items-center">
         Category count
@@ -23,3 +27,29 @@
         <span class="badge badge-primary badge-pill">@Model.IngredientsCount</span>
     </li>
 </ul>
+
+<div class='buttons'>
+    <button id='2000'>
+        2000
+    </button>
+    <button id='2004'>
+        2004
+    </button>
+    <button id='2008'>
+        2008
+    </button>
+    <button id='2012'>
+        2012
+    </button>
+    <button id='2016' class='active'>
+        2016
+    </button>
+</div>
+<div id="container"></div>
+
+@section Scripts {
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="~/js/Charts/charts.js"></script>
+}

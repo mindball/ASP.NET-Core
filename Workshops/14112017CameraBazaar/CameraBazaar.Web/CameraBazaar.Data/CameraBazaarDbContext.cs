@@ -9,7 +9,7 @@
         public CameraBazaarDbContext(DbContextOptions<CameraBazaarDbContext> options)
             : base(options)
         {
-            Database.Migrate();
+            
         }
 
         public DbSet<Camera> Cameras { get; set; }

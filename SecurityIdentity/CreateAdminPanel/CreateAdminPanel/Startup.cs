@@ -36,8 +36,6 @@ namespace CreateAdminPanel
                    options.Password.RequireUppercase = false;
                    options.Password.RequireNonAlphanumeric = false;
                    options.Password.RequireNonAlphanumeric = false;
-                   options.SignIn.RequireConfirmedAccount = true;
-
                })
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();

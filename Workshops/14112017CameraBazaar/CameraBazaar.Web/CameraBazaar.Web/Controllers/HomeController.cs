@@ -5,27 +5,24 @@
     using System.Diagnostics;
 
     using CameraBazaar.Web.Models;
+    using CameraBazaar.Services.Contracts;
 
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ICameraService cameraService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ICameraService cameraService)
         {
-            _logger = logger;
+            this.cameraService = cameraService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var cameras = this.cameraService.GetAllCamerasDetails();
+
+            return View(cameras);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new Error { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
