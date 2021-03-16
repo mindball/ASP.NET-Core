@@ -1,0 +1,12 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\obj\Debug\netcoreapp3.1\ApproachWithEmptyMigration.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\obj\Debug\netcoreapp3.1\ApproachWithEmptyMigration.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\obj\Debug\netcoreapp3.1\ApproachWithEmptyMigration.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\bin\Debug\netcoreapp3.1\ApproachWithEmptyMigration.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\bin\Debug\netcoreapp3.1\ApproachWithEmptyMigration.runtimeconfig.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\bin\Debug\netcoreapp3.1\ApproachWithEmptyMigration.runtimeconfig.dev.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\bin\Debug\netcoreapp3.1\ApproachWithEmptyMigration.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\bin\Debug\netcoreapp3.1\ApproachWithEmptyMigration.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\obj\Debug\netcoreapp3.1\ApproachWithEmptyMigration.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\obj\Debug\netcoreapp3.1\ApproachWithEmptyMigration.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\obj\Debug\netcoreapp3.1\ApproachWithEmptyMigration.genruntimeconfig.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\GoodPractice\InitializeSeedingDataApproach\ApproachWithEmptyMigration\obj\Debug\netcoreapp3.1\ApproachWithEmptyMigration.csprojAssemblyReference.cache

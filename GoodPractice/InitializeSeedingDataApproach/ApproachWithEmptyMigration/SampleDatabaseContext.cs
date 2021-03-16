@@ -1,7 +1,6 @@
 ﻿using ApproachWithEmptyMigration.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-
 using System.IO;
 
 namespace ApproachWithEmptyMigration.DBContext
@@ -20,13 +19,8 @@ namespace ApproachWithEmptyMigration.DBContext
         {
             if (!opBuilder.IsConfigured)
             {
-                opBuilder.UseSqlServer("Server=10.148.73.5;Database=SeedEmptyMigration;User=sa;Password=Q1w2e3r4");
+                opBuilder.UseSqlServer(GlobalConstant.ConnectionString);
             }
-        }
-
-        private static DbContextOptions GetOptions(string connectionString)
-        {
-            return SqlServerDbContextOptionsExtensions.UseSqlServer(new DbContextOptionsBuilder(), connectionString).Options;
         }
     }
 }

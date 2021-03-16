@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace InitializeSeedingDataApproach.Data.Models
+namespace ApproachWithEmptyMigration.Models
 {
     public class LookupType
     {
