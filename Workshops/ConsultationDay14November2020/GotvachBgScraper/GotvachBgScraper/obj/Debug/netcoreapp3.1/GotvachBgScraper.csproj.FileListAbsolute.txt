@@ -1,0 +1,15 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\bin\Debug\netcoreapp3.1\GotvachBgScraper.exe
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\bin\Debug\netcoreapp3.1\GotvachBgScraper.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\bin\Debug\netcoreapp3.1\GotvachBgScraper.runtimeconfig.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\bin\Debug\netcoreapp3.1\GotvachBgScraper.runtimeconfig.dev.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\bin\Debug\netcoreapp3.1\GotvachBgScraper.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\bin\Debug\netcoreapp3.1\GotvachBgScraper.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\bin\Debug\netcoreapp3.1\AngleSharp.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\obj\Debug\netcoreapp3.1\GotvachBgScraper.csprojAssemblyReference.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\obj\Debug\netcoreapp3.1\GotvachBgScraper.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\obj\Debug\netcoreapp3.1\GotvachBgScraper.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\obj\Debug\netcoreapp3.1\GotvachBgScraper.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\obj\Debug\netcoreapp3.1\GotvachBgScraper.csproj.CopyComplete
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\obj\Debug\netcoreapp3.1\GotvachBgScraper.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\obj\Debug\netcoreapp3.1\GotvachBgScraper.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\ConsultationDay14November2020\GotvachBgScraper\GotvachBgScraper\obj\Debug\netcoreapp3.1\GotvachBgScraper.genruntimeconfig.cache

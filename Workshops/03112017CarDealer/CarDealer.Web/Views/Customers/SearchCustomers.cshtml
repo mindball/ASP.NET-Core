@@ -1,0 +1,41 @@
+﻿@model SearchedCustomerViewModel
+@{
+    ViewData["Title"] = "Search customers";
+}
+<h2>@ViewData["Title"], contains: @Model.SearchCustomerName</h2>
+
+
+<form method="get">
+    <input type="text" class="form-control" name="search" value="@Model.SearchCustomerName" />
+    <input type="submit" class="btn btn-primary" value="Submit" />
+</form>
+
+<table class="table table-bordered table-hover">
+    <thead class="">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Young Driver</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int index = 1;
+            foreach (var customer in Model.OrderCustomers)
+            {
+                <tr>
+                    <th scope="row">@index</th>
+                    <td>@customer.Name</td>
+                    <td>@customer.Birthday.ToShortDateString()</td>
+                    <td>@(customer.IsYoungDriver ? "Yes" : "No")</td>
+                    <td>
+                        <a class="btn btn-info" href="/customers/edit/@(customer.Id.ToString())" role="button">Edit</a>
+                    </td>
+                </tr>
+                index++;
+            }
+        }
+    </tbody>
+</table>

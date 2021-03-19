@@ -1,0 +1,16 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.exe
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.dev.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csprojAssemblyReference.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CopyComplete
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\WebApi\ExercisesBookShopService2017\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "3DZVPttr8ngd8elgMah4qHHvc9WHufPH9BM2DJR/Dswbvwl2ZCAD4uMSQaCADpmDUGXn49ALvag3aJRR9d+Ycg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\ConsultationDay14November2020\\GotvachBgScraper\\GotvachBgScraper\\GotvachBgScraper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oilaripi\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

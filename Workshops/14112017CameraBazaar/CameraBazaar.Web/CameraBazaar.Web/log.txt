@@ -1,0 +1,25 @@
+19.01.2021 15:08:02 – ::1 – Anonymous – HomeController.Index
+19.01.2021 15:08:10 – ::1 – Anonymous – HomeController.Index
+19.01.2021 15:08:13 – ::1 – Anonymous – HomeController.Index
+19.01.2021 15:08:15 – ::1 – Anonymous – AccountController.Login
+[!] 19.01.2021 15:08:21 – ::1 – Anonymous – AccountController.Login – SqlException – Invalid column name 'IsBanned'.
+Invalid column name 'LastLogin'.
+19.01.2021 15:09:04 – ::1 – Anonymous – HomeController.Index
+19.01.2021 15:09:08 – ::1 – Anonymous – AccountController.Login
+[!] 19.01.2021 15:09:12 – ::1 – Anonymous – AccountController.Login – SqlException – Invalid column name 'IsBanned'.
+Invalid column name 'LastLogin'.
+19.01.2021 15:12:50 – ::1 – Anonymous – HomeController.Index
+19.01.2021 15:12:54 – ::1 – Anonymous – AccountController.Login
+19.01.2021 15:12:58 – ::1 – Anonymous – AccountController.Login
+19.01.2021 15:12:58 – ::1 – oilaripi – CameraController.Add
+19.01.2021 15:13:11 – ::1 – oilaripi – ProfilesController.Details
+19.01.2021 15:13:18 – ::1 – oilaripi – CameraController.Add
+19.01.2021 15:26:52 – ::1 – oilaripi – HomeController.Index
+19.01.2021 15:28:15 – ::1 – oilaripi – HomeController.Index
+19.01.2021 15:29:02 – ::1 – oilaripi – HomeController.Index
+19.01.2021 15:29:32 – ::1 – oilaripi – HomeController.Index
+19.01.2021 15:29:40 – ::1 – oilaripi – ManageController.Index
+19.01.2021 15:29:46 – ::1 – oilaripi – HomeController.Index
+19.01.2021 15:29:54 – ::1 – oilaripi – ProfilesController.Details
+20.01.2021 5:45:19 – ::1 – oilaripi – HomeController.Index
+20.01.2021 5:45:24 – ::1 – oilaripi – CameraController.Add

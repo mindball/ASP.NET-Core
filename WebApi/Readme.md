@@ -92,6 +92,7 @@ Content-Type and Accept header are the important elements while requesting a ser
 service in which format he will be receiving the input and in which format he needs to send the data 
 back respectively. If you are making an Ajax call, below is the basic structure:
 ```
+## AJAX
 ```Ajax
 $.ajax({
  url: "http://localhost:1240/api/Products",
@@ -101,6 +102,17 @@ $.ajax({
  success: function(result) { },
 });
 ```
+### AJAX is not a programming language
+### AJAX is a set of web development techniques
+```
+Used to create asynchronous web applications
+Using AJAX, you can send and retrieve data to and from a server
+asynchronously – in the background via HTTP requests
+```
+* Read data from a web server - after the page has loaded
+* Update a web page (or parts of it) without reloading the page
+* Send data to a web server - in the background
+[AJAX: Workflow](https://ibb.co/bmkzTxN)
 ## API Endpoint return types or controller action return types in ASP.NET Core web API:
 
 ### Specific type - primitive or complex data type
@@ -154,7 +166,14 @@ public ActionResult<IEnumerable<Product>> Get()
 ## RESTful API
 ```
 Концепцията: url да са едни и същи за CRUD операции. Зависи от http методите.
+
+Изпълнява се action-а в конкретния контролер според метод от request-а.
 ```
+```
+[Route("api"/[controller])] квадратните скоби в контролера означва динамично името на контролера
+```
+
+
 [![restful-Pic.jpg](https://i.postimg.cc/9MMnCBc5/restful-Pic.jpg)](https://postimg.cc/8F2HbMFt)
 
 ### Примери:
@@ -178,13 +197,20 @@ GET http://host/service/Categories?$orderby=Products/$count - Return all Categor
 
 ### Method OPTIONS - cross origin request sharing какви са правата ни да правим заявки при определен адрес
 
-
-
-## CORS
+## CORS - SOP
 ```
+Browser security prevents a web page from making requests to a
+different domain
+
 Ако някои тръгне да прави заявка със postman, друг тоол, никои няма да му забрани да направи заявката
 ограничава и дава насоки на BROWSE-рите. Кой домейни могат да ни достъпват api-то
 ```
+* Globally, via a middleware
+* Per Action or per Controller via an Attribute
+[Example CORS example](https://ibb.co/Vw1TVmS)
+> Client Origin -> клиента иска достъп до този домейн с метод Delete и пита има ли authorization
+> api-то позволява достъп от всеки origin, позволява метод DELETE със authorization
+> Client изпраща JWToken с метод DELETE
 
 ## Good practice
 ```

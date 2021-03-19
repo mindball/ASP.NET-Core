@@ -12,3 +12,6 @@
 /Workshops/May2019Panda/Panda.App/Panda.App/appsettings.json
 /Workshops/May2019Eventures/Eventures.Web/appsettings.json
 /Workshops/May2019MessagesWebApi/Messages.Web/Messages.Web/appsettings.json
+/GoodPractice/InitializeSeedingDataApproach/ApproachWithEmptyMigration/GlobalConstant.cs
+/GoodPractice/InitializeSeedingDataApproach/ApproachWithDIMicrosoftVersion/appsettings.json
+/WebApi/ConfigureJWTokenWithCredentials/ConfigureJWTokenWithCredentials/appsettings.json
