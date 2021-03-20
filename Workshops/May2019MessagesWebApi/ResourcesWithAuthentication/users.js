@@ -2,6 +2,8 @@ function login() {
     let username = $('#username-login').val();
     let password = $('#password-login').val();
     
+	checkUserDataInput(username, password);	
+	
     //clear input field
     $('#username-login').val('');
     $('#password-login').val('');
@@ -35,10 +37,12 @@ function login() {
 
 function register() {
     let username = $('#username-register').val();
-    let password = $('#password-password').val();
+    let password = $('#password-register').val();
 
+	checkUserDataInput(username, password);	
+	
     $('#username-register').val('');
-    $('#password-password').val('');
+    $('#password-register').val('');
 
     let requestBody = {
         username: username,
@@ -48,6 +52,8 @@ function register() {
     $.post({
         url: APP_SERVICE_URL + 'users/register',
         data: JSON.stringify(requestBody),
+		contentType: 'application/json',
+		dataType:"json",
         success: function (data) {
             // toggleLogin();
         },
@@ -121,6 +127,11 @@ function isLoggedIn() {
     return localStorage.getItem('auth_token') != null;
 }
 
-
+function checkUserDataInput(username, password) {	
+	if(username.length === 0 || password.length === 0) {
+		alert('username or password not be emtpy');
+		return;
+	}
+}
 $('#logged-in-data').hide();
 toggleLogin();

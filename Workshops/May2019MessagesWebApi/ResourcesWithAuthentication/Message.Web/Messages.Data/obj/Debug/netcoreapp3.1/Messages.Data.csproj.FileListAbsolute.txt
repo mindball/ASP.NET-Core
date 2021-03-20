@@ -1,0 +1,8 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Data\bin\Debug\netcoreapp3.1\Messages.Data.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Data\bin\Debug\netcoreapp3.1\Messages.Data.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Data\bin\Debug\netcoreapp3.1\Messages.Data.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Data\obj\Debug\netcoreapp3.1\Messages.Data.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Data\obj\Debug\netcoreapp3.1\Messages.Data.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Data\obj\Debug\netcoreapp3.1\Messages.Data.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Data\obj\Debug\netcoreapp3.1\Messages.Data.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Data\obj\Debug\netcoreapp3.1\Messages.Data.pdb
