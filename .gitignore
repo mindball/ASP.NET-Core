@@ -15,3 +15,6 @@
 /GoodPractice/InitializeSeedingDataApproach/ApproachWithEmptyMigration/GlobalConstant.cs
 /GoodPractice/InitializeSeedingDataApproach/ApproachWithDIMicrosoftVersion/appsettings.json
 /WebApi/ConfigureJWTokenWithCredentials/ConfigureJWTokenWithCredentials/appsettings.json
+/Workshops/May2019MessagesWebApi/ResourcesWithAuthentication/Message.Web/Messages.Web/appsettings.json
+/Workshops/May2019Eventures/Eventures.Web/Eventures.Web/appsettings.json
+/WebApi/WebApiDemo/WebApiDemo/appsettings.json

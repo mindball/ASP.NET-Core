@@ -1,1 +1,1 @@
-let APP_SERVICE_URL = 'https://localhost:5001/api/';
+let appUrl = 'https://localhost:5001/api/';

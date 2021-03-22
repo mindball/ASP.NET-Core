@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Messages.Web.Models
 {
-    public class UserCreateBindingModel
+    public class UserBindingModel
     {
         public string UserName { get; set; }
 

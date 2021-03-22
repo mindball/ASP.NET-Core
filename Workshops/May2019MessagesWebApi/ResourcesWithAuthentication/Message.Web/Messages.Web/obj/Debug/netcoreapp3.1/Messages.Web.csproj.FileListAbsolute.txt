@@ -61,3 +61,4 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019Messag
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Web\obj\Debug\netcoreapp3.1\Messages.Web.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Web\obj\Debug\netcoreapp3.1\Messages.Web.pdb
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Web\obj\Debug\netcoreapp3.1\Messages.Web.genruntimeconfig.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\May2019MessagesWebApi\ResourcesWithAuthentication\Message.Web\Messages.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

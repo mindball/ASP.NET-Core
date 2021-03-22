@@ -1,3 +1,5 @@
+let token = null;
+
 function login() {
     let username = $('#username-login').val();
     let password = $('#password-login').val();
@@ -18,21 +20,41 @@ function login() {
     $('#caption').text('Welcome to Chat-Inc!');
     hideLoginAndRegisterAndShowLoggedInData();
 
+    
 
-    // $.post({
-    //     url: APP_SERVICE_URL + 'users/login',
-    //     data: JSON.stringify(requestBody),
-    //     success: function (data) {
-    //         // CHANGE CAPTION TO 'Welcome to Chat-Inc!'
-    //         // Save token to localStorage using saveToken()
-    //         // EXTRACT FROM JWT TOKEN currently logged in user's username
-    //         // Logged-in-data visualize
-    //         // Hide Guest Navbar
-    //     },
-    //     error: function (error) {
-    //         console.error(error);
-    //     }
-    // });
+    $.post({
+        url: APP_SERVICE_URL + 'users/login',
+        contentType: 'application/json',
+        data: JSON.stringify(requestBody),        
+        success: function (data) {
+            // CHANGE CAPTION TO 'Welcome to Chat-Inc!'
+            hideGuestNavbar();
+            $('#guest-navbar').hide();
+            $('#caption').text('Welcome to Chat-Inc');
+           
+            token = data.rawHeader + 
+                '.' + 
+                data.rawPayload + 
+                '.' +
+                data.rawSignature;
+
+            console.log(token);
+
+            saveToken(token);
+
+            $('#username-logged-in').text(getUser());
+            
+            // Save token to localStorage using saveToken()
+            // EXTRACT FROM JWT TOKEN currently logged in user's username
+            // Logged-in-data visualize
+            // Hide Guest Navbar
+
+            hideLoginAndRegisterAndShowLoggedInData();
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    });
 }
 
 function register() {
@@ -80,6 +102,18 @@ function hideLoginAndRegisterAndShowLoggedInData() {
     $('#logged-in-data').show();
 }
 
+function hideGuestNavbar() {
+    $('#guest-navbar')
+    .removeClass('d-block')
+    .addClass('d-none');
+}
+
+function showGuestNavbar() {
+    $('#guest-navbar')
+    .removeClass('d-none')
+    .addClass('d-block');
+}
+
 function showLoginAndHideLoggedInData() {
     toggleLogin();
 
@@ -89,6 +123,7 @@ function showLoginAndHideLoggedInData() {
 function logout() {
     // TODO: Copy Functionality described in the Exercise
     $('#caption').text('Choose your username to begin chatting!');
+    showGuestNavbar();
 
     showLoginAndHideLoggedInData();
 }
@@ -106,21 +141,9 @@ function getUser() {
 
     let claims = token.split('.')[1];
     let decodedClaims = atob(claims);
-    let parsedClaims = JSON.parse(decodedClaims);
+    let parsedClaims = JSON.parse(decodedClaims);   
 
-    // return parsedClaims.name;
-}
-
-function getUser1(token) {
-    //let token = localStorage.getItem('auth_token');
-
-    let claims = token.split('.')[1];
-    let decodedClaims = atob(claims);
-    
-    let parsedClaims = JSON.parse(decodedClaims);
-    
-    console.log(parsedClaims)
-    // return parsedClaims.name;
+    return parsedClaims.nameid;
 }
 
 function isLoggedIn() {

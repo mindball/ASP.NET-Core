@@ -36,6 +36,35 @@ It can be deployed to the cloud (e.g. Azure) or on-premises
 *Built-in security features
 *Identity with users, roles and external providers
 
+## Areas
+```
+Ако имаме комбиниран случай с Areas + global controllers е важно да осигурим 
+help-tag asp-area="" - празно, по този начин линковете ще работят!!!
+```
+```
+за всяка ареа трябва да добавим _ViewStart, _ViewImports
+```
+### Ако генерираме линковете и имаме areas например products
+> Лош пример
+```html
+<a asp-area="Products" asp-controller="Home" asp-action="Index">Products</a>
+<a asp-controller="Home" asp-action="Index">Home</a>
+при този вариант когато сме в http://localhost/Products и и изберем link-a Home ние ще бъдем в http://localhost/Products/Home-контолера,
+ако излезнем от http://localhost/Products и се върнем в http://localhost и изберем линк-а Home ние ще влезнем в Global-контролера
+Home това не е правилно!!!
+```
+> Добър пример изрично да се каже празна area тоест не искаме area искаме глобални контролери 
+> или искаме конкретна area-Products
+```html
+<a asp-area="Products" asp-controller="Home" asp-action="Index">Products</a>
+<a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+```
+```
+Ако във view-то нa нечиа area решим да генерираме линк, няма смисъл от изричното и споменаване.
+пример <a asp-area> тук е излишно. 
+```
+> Извод: В която и area да се намираме, ASP.NET генерира линк за нея, както е описано в лошият пример
+
 ## Controllers and actions
 ### Controller
 ```

@@ -157,7 +157,6 @@ Cross-Site Request Forgery няма да проработи.
 Добавянето на други contexт-и е за големи с две бази данни едната за приложението другата за потребителите.
 ```
 
-
 ## JWT Authentication
 ```
 Ползва се предимно SPA и web api;
@@ -174,9 +173,15 @@ Cross-Site Request Forgery няма да проработи.
 името на класа трябва да съвпада с key(секцията) в appsettings. 
 ```
 ```
+options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme подменяме cooking схемата за автентикация чрез JWToken,
+т.е. автентикацията пред app вече е JWToken 
+```
+
+```
 При WebApi-тата нямам регистрационна форма, не можем да Scaffold-нем 
 Identity-то, нямаме бисквитки. 
 ```
-
-
-
+```
+Разгледай Workshop-messages with credentials и по-точно за какво се ползва ключа в TokenProviderOptions
+-> SigningCredentials и ключа в IssuerSigningKey-> key
+```
