@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Web.Demo.Data;
+using Web.Demo.Infrastructure;
 
 namespace Web.Demo
 {
@@ -28,10 +30,14 @@ namespace Web.Demo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+               options.UseInMemoryDatabase(databaseName: "test"));
+
+            services.AddMvc().AddMvcOptions(options =>
+            {
+                options.Conventions.Add(new RouteTokenTransformerConvention(
+                                            new SlugifyParameterTransformer()));
+            });
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
