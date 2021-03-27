@@ -23,8 +23,11 @@ namespace Web.Demo.Controllers
         [Route("Home")]
         [Route("Home/Index")]
         [Route("Home/Index/{id?}")]
+        //[Route("Index")]
+        //[Route("/")]
         public IActionResult Index()
         {
+            
             var routedData = ControllerContext.RouteData.Values.Select(r => r.Value.ToString()).ToList();
 
             StringBuilder str = new StringBuilder();

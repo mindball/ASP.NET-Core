@@ -8,7 +8,7 @@ namespace WebApi.Demo.Controllers
 {
     public class HttpVerbController : BaseController
     {
-        [HttpGet]   // GET /api/HttpVerb
+        [HttpGet(Name = "Products_List")]   // GET /api/HttpVerb
         public string ListProducts()
         {
             return nameof(ListProducts);

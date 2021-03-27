@@ -32,6 +32,7 @@ namespace Web.Demo
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseInMemoryDatabase(databaseName: "test"));
 
+            //ParameterTransformersController
             services.AddMvc().AddMvcOptions(options =>
             {
                 options.Conventions.Add(new RouteTokenTransformerConvention(
@@ -66,13 +67,19 @@ namespace Web.Demo
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name: "blog",
-                pattern: "blog/{*article}",
-                defaults: new { controller = "Blog", action = "Article" });
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+            ////multiple parameters
+            //endpoints.MapControllerRoute("parameters",
+            //             "parameters/{level}/{type}/{id}", //-> work accessed -> https://localhost:5001/parameters/1/asd/2
+            //              //"/parameters/{level}/{type}/{id}", -> work accessed -> https://localhost:5001/parameters/1/asd/2
+            //              //"MultipleParameters/parameters/{level}/{type}/{id}", -> work accessed -> https://localhost:5001/MultipleParameters/parameters/1/asd/2
+            //             defaults: new { controller = "MultipleParameters", action = "Parameters" });
+            //endpoints.MapControllerRoute(name: "blog",
+            //pattern: "blog/{*article}",
+            //defaults: new { controller = "Blog", action = "Article" });
+            endpoints.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+            endpoints.MapRazorPages();
             });
         }
     }
