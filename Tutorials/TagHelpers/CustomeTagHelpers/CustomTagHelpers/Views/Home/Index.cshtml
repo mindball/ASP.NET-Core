@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h5>
+    BackgroundColorTH
+</h5>
+<button type="submit" background-color="danger" title="with tag-helpers">Add</button>
+<button type="submit" class="btn btn-info" title="without tag-helper">Info</button>
+<a background-color="dark" href="/" title="more than one [HtmlTargetElement()]">see BackgroundColorTH</a>
+<hr>
+<h5>
+    AspButtonTH
+</h5>
+@*Tooltip title attribute is missing but tag-class AspButton is set it;*@
+@*type  attribute is missing but tag-class AspButton is set it;*@
+@*class title attribute is missing but tag-class AspButton is set it;*@
+@*Content is missing but tag-class AspButton is set it;*@
+<aspbutton />
+@*override attributes*@
+<aspbutton title="test" background-color="danger"/>
