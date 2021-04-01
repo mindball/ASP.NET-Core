@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<hr>
+<h5>
+    Route Parameters
+</h5>
+<a asp-route="parameters"
+   asp-route-id="19"
+   asp-route-type="Test Name"
+   asp-route-level="5">Route Parameters</a>
+@*%20 is a URL-encoded space.*@
+<hr>
+<h5>
+    Routing to Named Routes
+</h5>
+<a asp-route="account" asp-route-id="5">Account</a>
+
+<hr>
+<h5>
+    Route Data vs Query String
+</h5>
+/parameters/18/title/7?postTitle=this-is-a-title
+    "postTitle" value is part of the query string and therefore not part of the route data.
+
+<hr>
+<h5>
+    Accessing Route Data
+</h5>
+The slug for this article is @ViewContext.RouteData.Values["controller"]
+
+<hr>
+<h5>
+    Accessing Query String Parameters in route https://localhost:5001/home/index/?postTitle=this-is-a-title
+</h5>
+<p>All query string on https://localhost:5001/parameters/18/title/7?postTitle=this-is-a-title</p>
+<p>The slug for this article is @Context.Request.Query["postTitle"].ToString()</p>

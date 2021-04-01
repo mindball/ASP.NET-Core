@@ -18,4 +18,62 @@
 @*Content is missing but tag-class AspButton is set it;*@
 <aspbutton />
 @*override attributes*@
-<aspbutton title="test" background-color="danger"/>
+<aspbutton title="test" background-color="danger" />
+
+<hr>
+<h5>
+    Appending and Prepending Elements with Tag Helper
+</h5>
+@*Appending and Prepending Elements with Tag Helper*@
+<body>
+    <div class="container-fluid">
+        <div pre-post="Tag Helpers">
+            Test
+        </div>
+    </div>
+</body>
+
+<hr>
+<h5>
+    Appending and Prepending Contents with Tag Helper
+</h5>
+@*Appending and Prepending Contents with Tag Helper*@
+@{
+    var list = new Dictionary<string, int>();
+    list.Add("Tom", 20);
+    list.Add("John", 36);
+    list.Add("Maria", 18);
+    list.Add("Max", 45);
+    list.Add("Ram", 55);
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    @foreach (var product in list)
+    {
+        <tr>
+            <td underline>@product.Key</td>
+            <td>@product.Value</td>
+        </tr>
+    }
+</table>
+
+<hr>
+<h5>
+    Microsoft tutorial
+</h5>
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+<address>
+    <strong>Support:</strong> <email mail-to="support"></email><br />
+    <strong>Marketing:</strong> <email mail-to="marketing"></email>
+</address>

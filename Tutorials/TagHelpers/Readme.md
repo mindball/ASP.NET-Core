@@ -21,7 +21,15 @@ adding in _ViewImports.cshtml file -> @addTagHelper CustomTagHelpers.TagHelpers.
 Tag Helpers receive information about the element they are transforming through TagHelperContext class object. 
 It is provided as the first parameter of the Process() function
 ```
-## The Process function has 2 parameters which are of type:
+
+## Demystify Process()
+```
+The TagName property is used to specify to make aspbutton a html button element. 
+The TagMode property is used to specify that the element is written using start and end tags.
+I used the SetAttribute() method to add class attribute with bootstrap classes and type attribute value to the one provided in the attribute.
+Finally with the SetContent() method I added the content to this button.
+```
+### The Process function has 2 parameters which are of type:
 1. TagHelperContext
 ```
 Tag Helpers receive information about the element they are transforming
@@ -32,6 +40,13 @@ TagHelperOutput class is provided as the 2nd parameter of the Process() function
 HTML element to be transformed and the transformation is done by configuring it’s object.
 Tag Helper output use to read and change the actual content that’s in the scope of our Tag Helper.
 ```
+
+## Appending and Prepending Elements with Tag Helper
+```
+The PreElement and PostElement properties of the TagHelperOutput class is used to add elements before and after the output element.
+```
+> PreContent : Contents are inserted before all the already existing contents.
+> PostContent : Contents are inserted after all the already existing contents.
 
 ## Managing the Scope of a Tag Helper
 ```
@@ -51,7 +66,16 @@ by [HtmlTargetElement()]
 > structure corresponds to a given value. This value is given from the TagStructure enumeration 
 > which defines ‘Unspecified’, ‘NormalOrSelfClosing’ and ‘WithoutEndTag’
 
+## TagHelperContext.Items Property to Coordinate between Tag Helpers
+```
+The TagHelperContext.Items property is used to coordinate between tag helpers that operate on 
+elements and those that operate on their descendants.
+```
 
+## Suppressing the Output Element
+```
+The SupressOutput() method of the TagHelperOutput class prevents the output element from being included in the View.
+```
 ## Summary and used links
 * With Tag Helpers, we can extend existing elements with attributes or create new elements
 * Once we create a Tag Helper, we usually have a reusable attribute or element
