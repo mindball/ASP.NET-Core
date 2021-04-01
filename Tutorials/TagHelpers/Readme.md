@@ -76,6 +76,10 @@ elements and those that operate on their descendants.
 ```
 The SupressOutput() method of the TagHelperOutput class prevents the output element from being included in the View.
 ```
+
+## Usefull case - IHtmlGenerator to generate the label asp-for,input asp-for,asp-validation-for taghelper's codes.
+> InputHelper
+
 ## Summary and used links
 * With Tag Helpers, we can extend existing elements with attributes or create new elements
 * Once we create a Tag Helper, we usually have a reusable attribute or element

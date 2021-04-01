@@ -26,8 +26,15 @@ using CustomTagHelpers.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Tutorials\TagHelpers\CustomeTagHelpers\CustomTagHelpers\Views\_ViewImports.cshtml"
+using CustomTagHelpers.Models.CreateForm;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8c315de31fa5ccf65133820c2364ac8249be0028", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8aabe6b1eae54b9d9453f8473df9a34aff79334e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f1514c8e681ddc7320fd8c058dc1671d5ff90ab0", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", new global::Microsoft.AspNetCore.Html.HtmlString("submit"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -78,7 +85,7 @@ using CustomTagHelpers.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<h5>\r\n    BackgroundColorTH\r\n</h5>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be00287363", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be00287625", async() => {
                 WriteLiteral("Add");
             }
             );
@@ -96,7 +103,7 @@ using CustomTagHelpers.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n<button type=\"submit\" class=\"btn btn-info\" title=\"without tag-helper\">Info</button>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be00288764", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be00289026", async() => {
                 WriteLiteral("see BackgroundColorTH");
             }
             );
@@ -114,7 +121,7 @@ using CustomTagHelpers.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n<hr>\r\n<h5>\r\n    AspButtonTH\r\n</h5>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("aspbutton", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8c315de31fa5ccf65133820c2364ac8249be002810129", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("aspbutton", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8c315de31fa5ccf65133820c2364ac8249be002810391", async() => {
             }
             );
             __CustomTagHelpers_TagHelpers_AspButtonTH = CreateTagHelper<global::CustomTagHelpers.TagHelpers.AspButtonTH>();
@@ -127,7 +134,7 @@ using CustomTagHelpers.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("aspbutton", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8c315de31fa5ccf65133820c2364ac8249be002811008", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("aspbutton", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8c315de31fa5ccf65133820c2364ac8249be002811270", async() => {
             }
             );
             __CustomTagHelpers_TagHelpers_AspButtonTH = CreateTagHelper<global::CustomTagHelpers.TagHelpers.AspButtonTH>();
@@ -148,9 +155,9 @@ using CustomTagHelpers.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n<hr>\r\n<h5>\r\n    Appending and Prepending Elements with Tag Helper\r\n</h5>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002812798", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002813060", async() => {
                 WriteLiteral("\r\n    <div class=\"container-fluid\">\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002813104", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002813366", async() => {
                     WriteLiteral("\r\n            Test\r\n        ");
                 }
                 );
@@ -201,7 +208,7 @@ using CustomTagHelpers.Models;
 #line hidden
 #nullable disable
             WriteLiteral("        <tr>\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002816022", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002816284", async() => {
 #nullable restore
 #line 60 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Tutorials\TagHelpers\CustomeTagHelpers\CustomTagHelpers\Views\Home\Index.cshtml"
                      Write(product.Key);
@@ -240,7 +247,7 @@ using CustomTagHelpers.Models;
 #line hidden
 #nullable disable
             WriteLiteral("</table>\r\n\r\n<hr>\r\n<h5>\r\n    Microsoft tutorial\r\n</h5>\r\n<address>\r\n    One Microsoft Way<br />\r\n    Redmond, WA 98052<br />\r\n    <abbr title=\"Phone\">P:</abbr>\r\n    425.555.0100\r\n</address>\r\n<address>\r\n    <strong>Support:</strong> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("email", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002818326", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("email", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002818588", async() => {
             }
             );
             __CustomTagHelpers_TagHelpers_EmailTagHelper = CreateTagHelper<global::CustomTagHelpers.TagHelpers.EmailTagHelper>();
@@ -255,7 +262,7 @@ using CustomTagHelpers.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("<br />\r\n    <strong>Marketing:</strong> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("email", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002819447", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("email", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c315de31fa5ccf65133820c2364ac8249be002819709", async() => {
             }
             );
             __CustomTagHelpers_TagHelpers_EmailTagHelper = CreateTagHelper<global::CustomTagHelpers.TagHelpers.EmailTagHelper>();

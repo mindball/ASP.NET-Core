@@ -385,3 +385,4 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Tutorials\TagHelpers\Cu
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Tutorials\TagHelpers\CustomeTagHelpers\CustomTagHelpers\obj\Debug\netcoreapp3.1\CustomTagHelpers.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Tutorials\TagHelpers\CustomeTagHelpers\CustomTagHelpers\obj\Debug\netcoreapp3.1\CustomTagHelpers.pdb
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Tutorials\TagHelpers\CustomeTagHelpers\CustomTagHelpers\obj\Debug\netcoreapp3.1\CustomTagHelpers.genruntimeconfig.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Tutorials\TagHelpers\CustomeTagHelpers\CustomTagHelpers\obj\Debug\netcoreapp3.1\Razor\Views\CreateForm\Index.cshtml.g.cs

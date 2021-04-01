@@ -26,8 +26,15 @@ using CustomTagHelpers.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Tutorials\TagHelpers\CustomeTagHelpers\CustomTagHelpers\Views\_ViewImports.cshtml"
+using CustomTagHelpers.Models.CreateForm;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8aabe6b1eae54b9d9453f8473df9a34aff79334e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f1514c8e681ddc7320fd8c058dc1671d5ff90ab0", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
