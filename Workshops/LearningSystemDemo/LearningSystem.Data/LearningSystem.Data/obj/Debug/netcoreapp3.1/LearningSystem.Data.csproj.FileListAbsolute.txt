@@ -1,0 +1,12 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\bin\Debug\netcoreapp3.1\LearningSystem.Data.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\bin\Debug\netcoreapp3.1\LearningSystem.Data.runtimeconfig.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\bin\Debug\netcoreapp3.1\LearningSystem.Data.runtimeconfig.dev.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\bin\Debug\netcoreapp3.1\LearningSystem.Data.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\bin\Debug\netcoreapp3.1\LearningSystem.Data.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\obj\Debug\netcoreapp3.1\LearningSystem.Data.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\obj\Debug\netcoreapp3.1\LearningSystem.Data.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\obj\Debug\netcoreapp3.1\LearningSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\obj\Debug\netcoreapp3.1\LearningSystem.Data.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\obj\Debug\netcoreapp3.1\LearningSystem.Data.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\obj\Debug\netcoreapp3.1\LearningSystem.Data.genruntimeconfig.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Data\obj\Debug\netcoreapp3.1\LearningSystem.Data.csprojAssemblyReference.cache
