@@ -1,6 +1,7 @@
 ﻿using LearningSystem.Data.Models;
 using LearningSystem.Services.Admin;
 using LearningSystem.Web.Areas.Admin.Models;
+using LearningSystem.Web.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -45,6 +46,29 @@ namespace LearningSystem.Web.Areas.Admin.Controllers
             });
         }
 
-        
+        public async Task<IActionResult> AddToRole(AddUserToRoleFormModel userForm)
+        {
+            var user = await this.userManager.FindByIdAsync(userForm.UserId);
+            var role = await this.roleManager.FindByNameAsync(userForm.Role);
+
+            var userExist = user != null;
+            var roleExist = role != null;
+
+            if (!userExist || !roleExist)
+            {
+                ModelState.AddModelError(string.Empty, "Invalid identity details");
+            }
+
+            if(!ModelState.IsValid)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            await this.userManager.AddToRoleAsync(user, userForm.Role);
+
+            TempData.AddSuccessMessage($"User {user.UserName} successfully added to the {userForm.Role} role.");
+
+            return this.RedirectToAction(nameof(Index));
+        }
     }
 }
