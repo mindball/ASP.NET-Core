@@ -1,0 +1,14 @@
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\bin\Debug\netcoreapp3.1\LearningSystem.Services.deps.json
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\bin\Debug\netcoreapp3.1\LearningSystem.Services.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\bin\Debug\netcoreapp3.1\LearningSystem.Services.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\bin\Debug\netcoreapp3.1\LearningSystem.Common.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\bin\Debug\netcoreapp3.1\LearningSystem.Data.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\bin\Debug\netcoreapp3.1\LearningSystem.Common.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\bin\Debug\netcoreapp3.1\LearningSystem.Data.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\obj\Debug\netcoreapp3.1\LearningSystem.Services.csprojAssemblyReference.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\obj\Debug\netcoreapp3.1\LearningSystem.Services.AssemblyInfoInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\obj\Debug\netcoreapp3.1\LearningSystem.Services.AssemblyInfo.cs
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\obj\Debug\netcoreapp3.1\LearningSystem.Services.csproj.CoreCompileInputs.cache
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\obj\Debug\netcoreapp3.1\LearningSystem.Services.csproj.CopyComplete
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\obj\Debug\netcoreapp3.1\LearningSystem.Services.dll
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Services\obj\Debug\netcoreapp3.1\LearningSystem.Services.pdb

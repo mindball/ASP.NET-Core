@@ -4,6 +4,69 @@
     "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Web\\LearningSystem.Web.csproj": {}
   },
   "projects": {
+    "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Common\\LearningSystem.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Common\\LearningSystem.Common.csproj",
+        "projectName": "LearningSystem.Common",
+        "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Common\\LearningSystem.Common.csproj",
+        "packagesPath": "C:\\Users\\oilaripi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oilaripi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Data\\LearningSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -87,6 +150,80 @@
         }
       }
     },
+    "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Services\\LearningSystem.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Services\\LearningSystem.Services.csproj",
+        "projectName": "LearningSystem.Services",
+        "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Services\\LearningSystem.Services.csproj",
+        "packagesPath": "C:\\Users\\oilaripi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oilaripi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Common\\LearningSystem.Common.csproj": {
+                "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Common\\LearningSystem.Common.csproj"
+              },
+              "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Data\\LearningSystem.Data.csproj": {
+                "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Data\\LearningSystem.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Web\\LearningSystem.Web.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -116,6 +253,9 @@
             "projectReferences": {
               "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Data\\LearningSystem.Data.csproj": {
                 "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Data\\LearningSystem.Data.csproj"
+              },
+              "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Services\\LearningSystem.Services.csproj": {
+                "projectPath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\LearningSystemDemo\\LearningSystem.Data\\LearningSystem.Services\\LearningSystem.Services.csproj"
               }
             }
           }
@@ -130,6 +270,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.13, )"

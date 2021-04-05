@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
 
-namespace LearningSystem.Web.Infrastructure
+namespace LearningSystem.Web.Infrastructure.Extensions
 {
     public static class ApplicationBuilderExtensions
     {

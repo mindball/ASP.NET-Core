@@ -1,6 +1,7 @@
+using AutoMapper;
 using LearningSystem.Data;
 using LearningSystem.Data.Models;
-using LearningSystem.Web.Infrastructure;
+using LearningSystem.Web.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -26,7 +27,7 @@ namespace LearningSystem.Web
             services.AddDbContext<LearningSystemDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            
+
             services
                .AddIdentity<User, IdentityRole>(options =>
                {
@@ -37,6 +38,10 @@ namespace LearningSystem.Web
                })
                .AddEntityFrameworkStores<LearningSystemDbContext>()
                .AddDefaultTokenProviders();
+
+            services.AddDomainServices();
+
+            services.AddAutoMapper();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
@@ -68,6 +73,9 @@ namespace LearningSystem.Web
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                     name: "MyArea",
+                     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
