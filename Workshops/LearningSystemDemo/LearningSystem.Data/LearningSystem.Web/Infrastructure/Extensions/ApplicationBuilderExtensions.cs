@@ -17,6 +17,7 @@ namespace LearningSystem.Web.Infrastructure.Extensions
                 app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
                 var dbContext = serviceScope.ServiceProvider.GetService<LearningSystemDbContext>();
+                //dbContext.Database.EnsureCreated();
                 dbContext.Database.Migrate();
 
                 var userManager = serviceScope.ServiceProvider.GetService<UserManager<User>>();

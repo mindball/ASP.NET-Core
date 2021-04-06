@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace LearningSystem.Web.Areas.Admin.Models
+namespace LearningSystem.Web.Areas.Admin.Models.Users
 {
     public class AddUserToRoleFormModel
     {

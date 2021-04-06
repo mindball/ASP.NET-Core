@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 
-namespace LearningSystem.Web.Areas.Admin.Models
+namespace LearningSystem.Web.Areas.Admin.Models.Users
 {
     public class UserListingViewModel 
     {

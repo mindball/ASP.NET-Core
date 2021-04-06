@@ -27,9 +27,9 @@ namespace LearningSystem.Data.Models
 
         public DateTime EndDate { get; set; }
 
-        //public string TrainerId { get; set; }
+        public string TrainerId { get; set; }
 
-        //public virtual User Trainer { get; set; }
+        public virtual User Trainer { get; set; }
 
         public virtual List<StudentCourse> Students { get; set; } = new List<StudentCourse>();
     }

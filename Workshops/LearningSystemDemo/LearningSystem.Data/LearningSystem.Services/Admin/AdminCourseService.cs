@@ -1,4 +1,5 @@
 ﻿using LearningSystem.Data;
+using LearningSystem.Data.Models;
 using System;
 using System.Threading.Tasks;
 
@@ -12,13 +13,23 @@ namespace LearningSystem.Services.Admin
             this.dbContext = dbContext;
         }
 
-        public Task CreateAsync(string name, 
+        public async Task CreateAsync(string name, 
             string description, 
             DateTime startDate, 
             DateTime endDate, 
             string trainerId)
         {
-            throw new NotImplementedException();
+            var newCourse = new Course
+            {
+                Name = name,
+                Description = description,
+                StartDate = startDate,
+                EndDate = endDate,
+                TrainerId = trainerId
+            };
+
+            this.dbContext.Add(newCourse);
+            await this.dbContext.SaveChangesAsync();
         }
     }
 }

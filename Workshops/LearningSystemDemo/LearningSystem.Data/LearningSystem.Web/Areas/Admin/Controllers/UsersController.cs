@@ -1,6 +1,8 @@
 ﻿using LearningSystem.Data.Models;
 using LearningSystem.Services.Admin;
-using LearningSystem.Web.Areas.Admin.Models;
+using LearningSystem.Web.Areas.Admin.Models.Courses;
+using LearningSystem.Web.Areas.Admin.Models.Users;
+using LearningSystem.Web.Controllers;
 using LearningSystem.Web.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -59,7 +61,7 @@ namespace LearningSystem.Web.Areas.Admin.Controllers
                 ModelState.AddModelError(string.Empty, "Invalid identity details");
             }
 
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return RedirectToAction(nameof(Index));
             }
