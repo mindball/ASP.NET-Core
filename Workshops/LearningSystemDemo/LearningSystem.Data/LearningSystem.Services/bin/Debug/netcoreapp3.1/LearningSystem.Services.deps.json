@@ -9,12 +9,35 @@
       "LearningSystem.Services/1.0.0": {
         "dependencies": {
           "AutoMapper": "6.2.1",
+          "HtmlSanitizer": "5.0.376",
           "LearningSystem.Common": "1.0.0",
           "LearningSystem.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.13"
         },
         "runtime": {
           "LearningSystem.Services.dll": {}
+        }
+      },
+      "AngleSharp/0.14.0": {
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.dll": {
+            "assemblyVersion": "0.14.0.0",
+            "fileVersion": "0.14.0.0"
+          }
+        }
+      },
+      "AngleSharp.Css/0.14.2": {
+        "dependencies": {
+          "AngleSharp": "0.14.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.Css.dll": {
+            "assemblyVersion": "0.14.2.0",
+            "fileVersion": "0.14.2.0"
+          }
         }
       },
       "AutoMapper/6.2.1": {
@@ -35,6 +58,18 @@
           "lib/netstandard1.3/AutoMapper.dll": {
             "assemblyVersion": "6.2.1.0",
             "fileVersion": "6.2.1.0"
+          }
+        }
+      },
+      "HtmlSanitizer/5.0.376": {
+        "dependencies": {
+          "AngleSharp": "0.14.0",
+          "AngleSharp.Css": "0.14.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/HtmlSanitizer.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.376.0"
           }
         }
       },
@@ -1448,12 +1483,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AngleSharp/0.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-34w9I7nyszfEYBY8g7T3B0AtWlOivNh+QoWc3KECRwbmcNyqWmb4huihtmpH2Ds7rIRRHMMPv9yfPBxxjBn03g==",
+      "path": "anglesharp/0.14.0",
+      "hashPath": "anglesharp.0.14.0.nupkg.sha512"
+    },
+    "AngleSharp.Css/0.14.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2USpPu9V/+1iBwHpanBsqr1eR+3vxKe19ZsnejbZfxNOadsMvUUkJ+0OjMsQmT0ExSW4vjCKXq9K/JWv0ie8JQ==",
+      "path": "anglesharp.css/0.14.2",
+      "hashPath": "anglesharp.css.0.14.2.nupkg.sha512"
+    },
     "AutoMapper/6.2.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ZD9he/2wsNQbfnZJMc7Ijvz0hf2Lc6R8Tk97k8Q741flowTHd/YPxG8d5P0BVOJAPLVXjjX6IZ8l0u0A2l+K2g==",
       "path": "automapper/6.2.1",
       "hashPath": "automapper.6.2.1.nupkg.sha512"
+    },
+    "HtmlSanitizer/5.0.376": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jj2fn4g7w/Q4ljW/qzhhggzodmvURMpBSs6reCOZB7vo8bmgb4F6kSLFoFF7sAIPcYuhTsEqBtr3//1oF0VSDg==",
+      "path": "htmlsanitizer/5.0.376",
+      "hashPath": "htmlsanitizer.5.0.376.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.13": {
       "type": "package",

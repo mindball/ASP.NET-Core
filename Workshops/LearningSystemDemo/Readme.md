@@ -83,3 +83,56 @@ public class AddCoursesFormModel : IValidatableObject
         }
     }
 ```
+
+### Article contrller
+```
+понеже е един и няма да създваме друг няма нужда от basecontroller, при User and Course controller имаме обща логика.
+Но ако се разшири 
+```
+
+> Insert tinymce from cloud
+
+### HTML sanitizer
+```
+Винаги когато имаме HTML, който го рендерираме на страница и до, която имат достъп всякакви user-ите.
+```
+```
+Service, който идва от
+вън, inject-вамего, и не ползва базаданните.
+```
+### ValidateModelStateAttribute - когато имаме много повтарящо validate model state действие
+
+```cs
+...
+		if (!ModelState.IsValid)
+        {
+            return RedirectToAction(nameof(Index) or viewModel);
+        }
+...
+public class ValidateModelStateAttribute : ActionFilterAttribute
+    {       
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            if (!context.ModelState.IsValid)
+            {
+                var controller = context.Controller as Controller;
+
+                if (controller == null)
+                {
+                    return;
+                }
+
+                var model = context
+                    .ActionArguments
+                    .FirstOrDefault(a => a.Key.ToLower().Contains("model"))
+                    .Value;
+
+                if (model == null)
+                {
+                    return;
+                }
+
+                context.Result = controller.View(model);
+            }
+        }
+```
