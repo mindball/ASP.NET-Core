@@ -83,11 +83,10 @@ public class AddCoursesFormModel : IValidatableObject
         }
     }
 ```
-
 ### Article contrller
 ```
 понеже е един и няма да създваме друг няма нужда от basecontroller, при User and Course controller имаме обща логика.
-Но ако се разшири 
+Но ако се разшири може да включим друг basecontroller с обща логика с article.
 ```
 
 > Insert tinymce from cloud
@@ -98,7 +97,7 @@ public class AddCoursesFormModel : IValidatableObject
 ```
 ```
 Service, който идва от
-вън, inject-вамего, и не ползва базаданните.
+вън, inject-ваме го, и не ползва context-a.
 ```
 ### ValidateModelStateAttribute - когато имаме много повтарящо validate model state действие
 

@@ -2,11 +2,11 @@
 using LearningSystem.Services.Blog;
 using LearningSystem.Services.HTML;
 using LearningSystem.Web.Areas.Blog.Models;
+using LearningSystem.Web.Infrastructure.Extensions;
 using LearningSystem.Web.Validation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
 namespace LearningSystem.Web.Areas.Blog.Controllers
@@ -28,18 +28,24 @@ namespace LearningSystem.Web.Areas.Blog.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public async Task<IActionResult> Index(int page = 1)
+            =>  View(new BlogArticleListingViewModel 
+                    { 
+                        Articles = await this.blogArticleService.All(page),
+                        TotalArticles = await this.blogArticleService.TotalAsync(),
+                        CurrentPage = page
+            });
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Details(string id)
+            => this.ViewOrNotFound(await this.blogArticleService.GetById(id));
 
         public IActionResult Create()
             => this.View();
 
-
         [HttpPost]
         [ValidateModelState]
-        public async Task<IActionResult> Create(AddArticleFormModel articleModel)
+        public async Task<IActionResult> Create(AddBlogArticleFormModel articleModel)
         {
             articleModel.Content = this.htmlService.Sanitize(articleModel.Content);
 

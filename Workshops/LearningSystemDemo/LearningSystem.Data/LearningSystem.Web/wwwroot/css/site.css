@@ -51,6 +51,14 @@ button.accept-policy {
   line-height: inherit;
 }
 
+.article-list li {
+    margin-bottom: 20px;
+}
+
+.pagination li.disabled a {
+    pointer-events: none;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

@@ -1,9 +1,14 @@
-﻿using LearningSystem.Data;
+﻿using AutoMapper.QueryableExtensions;
+using LearningSystem.Data;
 using LearningSystem.Data.Models;
+using LearningSystem.Services.Blog.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
+
+using static LearningSystem.Services.ServiceConstants;
 
 namespace LearningSystem.Services.Blog
 {
@@ -15,6 +20,25 @@ namespace LearningSystem.Services.Blog
         {
             this.dbContext = dbContext;
         }
+
+        public async Task<BlogArticleDetailsServiceModel> GetById(string Id)
+        => await this.dbContext.Articles
+            .Where(a => a.Id == Id)
+            .ProjectTo<BlogArticleDetailsServiceModel>()
+            .FirstOrDefaultAsync();
+
+        public async Task<IEnumerable<BlogArticleListingServiceModel>> All(int page = 1)
+            => await this.dbContext
+                        .Articles
+                        .OrderByDescending(a => a.PublishDate)
+                        .Skip((page - 1) * BlogArticlesPageSize)
+                        .Take(BlogArticlesPageSize)
+                        .ProjectTo<BlogArticleListingServiceModel>()
+                        .ToListAsync();
+
+        public async Task<int> TotalAsync()
+        => await this.dbContext.Articles.CountAsync();
+
         public async Task CreateAsync(string title, string content, string authorId)
         {
             var article = new Article
