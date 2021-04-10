@@ -14,27 +14,41 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Web\Views\_ViewImports.cshtml"
-using LearningSystem.Web;
+using LearningSystem.Data.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Web\Views\_ViewImports.cshtml"
-using LearningSystem.Web.Models;
+using LearningSystem.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Web\Views\_ViewImports.cshtml"
-using LearningSystem.Data.Models;
+using LearningSystem.Web.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Web\Views\_ViewImports.cshtml"
+using LearningSystem.Web.Models.Home;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Web\Views\_ViewImports.cshtml"
+using LearningSystem.Services.Courses.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b846edc5c1ef997de64dd9dd0a200b43f1e5b9a2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3042dbe6582d05148b9878a92a7decdd6222da9e", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

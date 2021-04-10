@@ -59,6 +59,14 @@ button.accept-policy {
     pointer-events: none;
 }
 
+.home-jumbotron {
+    margin-top: 50px;
+}
+
+.home-page .img-responsive {
+    height: 200px !important;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

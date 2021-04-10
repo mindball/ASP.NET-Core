@@ -1,0 +1,42 @@
+﻿@model BlogArticleListingViewModel
+
+@{
+    ViewData["Title"] = "Blog Articles";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <ul class="list-group article-list">
+            @foreach (var article in Model.Articles)
+            {
+
+                //Би трябвало asp.net framework-a да знае че се намираме в area=blog, controller=articlescontroller
+                //затова не ползваме tag help-ите
+                <li class="list-group-item">
+                    <a asp-action="Details" asp-route-id="@article.Id" asp-route-title="@article.Title.ToFriendlyUrl()">@article.Title</a>
+                    <br />
+                    <small>published by @article.Author on @article.PublishDate.ToShortDateString()</small>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+@if (Model.TotalArticles > Model.Articles.Count())
+{
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="@(Model.CurrentPage == 1 ? "disabled" : string.Empty)">
+            <a class="page-link" asp-route-page="@Model.PreviousPage"
+               aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="@(Model.CurrentPage == Model.TotalPages ? "disabled" : string.Empty)">
+            <a class="page-link" asp-route-page="@Model.NextPage"
+               aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+        }

@@ -1,4 +1,6 @@
-﻿using LearningSystem.Web.Models;
+﻿using LearningSystem.Services.Courses;
+using LearningSystem.Web.Models;
+using LearningSystem.Web.Models.Home;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,17 +13,24 @@ namespace LearningSystem.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ICourseService courseService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ICourseService courseService)
         {
-            _logger = logger;
+            this.courseService = courseService;
+
         }
 
-        public IActionResult Index()
-        {
-            return View();
+        public async Task<IActionResult> Index()
+        { 
+            var viewModelResult = new HomeIndexViewModel
+            {
+                Courses = await this.courseService.ActiveAsync()
+            };
+
+            return this.View(viewModelResult);
         }
+        
 
         public IActionResult Privacy()
         {
