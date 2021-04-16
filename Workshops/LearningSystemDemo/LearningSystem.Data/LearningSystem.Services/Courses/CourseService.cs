@@ -49,6 +49,8 @@ namespace LearningSystem.Services.Courses
                 return false;
             }
 
+            //TODO: check start date
+
             var student = await this.dbContext.Users.FirstOrDefaultAsync(s => s.Id == studentId);
             if (student == null) 
                 throw new ArgumentException("No such user in db");
@@ -66,8 +68,35 @@ namespace LearningSystem.Services.Courses
             await this.dbContext.StudentsCourses.AddAsync(addStudentsCourses);
             await this.dbContext.SaveChangesAsync();
 
+            return true;           
+        }
+
+        public async Task<bool> SignOutStudentAsync(string courseId, string studentId)
+        {
+            if (!await this.dbContext.StudentsCourses
+                .AnyAsync(cs => cs.CourseId == courseId && cs.StudentId == studentId))
+            {
+                return false;
+            }
+            //TODO: check start date
+
+
+            var student = await this.dbContext.Users.FirstOrDefaultAsync(s => s.Id == studentId);
+            if (student == null)
+                throw new ArgumentException("No such user in db");
+
+            var course = await this.dbContext.Courses.FirstOrDefaultAsync(c => c.Id == courseId);
+            if (course == null)
+                throw new ArgumentException("No such course in db");
+
+            var studentCourse =
+                await this.dbContext.StudentsCourses
+                .FirstOrDefaultAsync(sc => sc.StudentId == student.Id && sc.CourseId == course.Id);
+
+            this.dbContext.Remove(studentCourse);
+            await this.dbContext.SaveChangesAsync();
+
             return true;
-           
         }
 
         public async Task<bool> StudentIsEnrolledCourseAsync(string courseId, string userId)

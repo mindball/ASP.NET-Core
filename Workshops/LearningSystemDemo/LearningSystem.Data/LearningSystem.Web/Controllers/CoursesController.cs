@@ -62,5 +62,23 @@ namespace LearningSystem.Web.Controllers
 
             return this.RedirectToAction(nameof(Details), new { id = courseId });
         }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> SignOut([FromRoute(Name = "id")] string courseId)
+        {
+            var userId = this.userManager.GetUserId(User);
+            var success = await this.courseService.SignOutStudentAsync(courseId, userId);
+
+            if (!success)
+            {
+                return BadRequest();
+            }
+
+            var courseName = await this.courseService.ByIdAsync<CourseDetailsServiceModel>(courseId);
+            TempData.AddSuccessMessage($"You have successfully sign out of {courseName.Name}");
+
+            return this.RedirectToAction(nameof(Details), new { id = courseId });
+        }
     }
 }

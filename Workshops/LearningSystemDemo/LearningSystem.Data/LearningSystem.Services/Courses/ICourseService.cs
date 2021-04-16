@@ -13,5 +13,7 @@ namespace LearningSystem.Services.Courses
         Task<bool> StudentIsEnrolledCourseAsync(string courseId, string userId);
 
         Task<bool> SignUpStudentAsync(string courseId, string studentId);
+
+        Task<bool> SignOutStudentAsync(string courseId, string studentId);
     }
 }
