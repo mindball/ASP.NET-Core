@@ -44,6 +44,7 @@ namespace LearningSystem.Web
 
             services.AddAutoMapper();
 
+            //app.UseExceptionHandler("/Home/Error"); тук се чупи link-вете
             services.AddRouting(routing => routing.LowercaseUrls = true);
 
             services.AddControllersWithViews(options =>

@@ -1,7 +1,7 @@
 ﻿@model HomeIndexViewModel
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Active courses";
 }
 
 <div class="jumbotron">
@@ -28,8 +28,8 @@
                     <h4 class="card-title">@course.Name</h4>
                     <img src="http://thecatapi.com/api/images/get?format=src&type=gif&guid=@(Guid.NewGuid())" class="img-fluid">
                     <br />
-                    <p class="text-center">@course.StartDate.ToShortDateString() - @course.EndDate.ToShortDateString()</p>                    
-                    <a href="#" class="card-link">Card link</a>
+                    <p class="text-center">@course.StartDate.ToShortDateString() - @course.EndDate.ToShortDateString()</p>
+                    <a href="/courses/details/@course.Id" class="card-link">Detail</a>                    
                 </div>
             </div>
         </div>

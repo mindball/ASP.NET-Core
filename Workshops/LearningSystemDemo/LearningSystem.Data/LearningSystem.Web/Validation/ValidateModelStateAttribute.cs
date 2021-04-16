@@ -7,7 +7,7 @@ namespace LearningSystem.Web.Validation
     /// <summary>
     ///    This is action filter validated the model state, .....
     ///    Controller-a трябва да наследява Controller иначе няма да запали.
-    ///    Модел в пост action-a трябва да Contain("model")
+    ///    Модел в пост action-a трябва та има аргумент и да Contain("model")
     ///    Също така ако ModelState.IsValid е невалиден в някои случай 
     ///    имаме логика когато влезнем в if. Например: няма работи
     ///     if(!context.ModelState.IsValid)

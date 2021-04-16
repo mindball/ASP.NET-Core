@@ -6,3 +6,4 @@ C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSyste
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Common\obj\Debug\netcoreapp3.1\LearningSystem.Common.csproj.CoreCompileInputs.cache
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Common\obj\Debug\netcoreapp3.1\LearningSystem.Common.dll
 C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Common\obj\Debug\netcoreapp3.1\LearningSystem.Common.pdb
+C:\Users\oilaripi\source\repos\ASP.NET Core\ASP.NET-Core\Workshops\LearningSystemDemo\LearningSystem.Data\LearningSystem.Common\obj\Debug\netcoreapp3.1\LearningSystem.Common.csprojAssemblyReference.cache

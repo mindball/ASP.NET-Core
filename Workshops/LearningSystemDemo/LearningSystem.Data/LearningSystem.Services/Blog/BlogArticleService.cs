@@ -21,13 +21,13 @@ namespace LearningSystem.Services.Blog
             this.dbContext = dbContext;
         }
 
-        public async Task<BlogArticleDetailsServiceModel> GetById(string Id)
+        public async Task<BlogArticleDetailsServiceModel> GetByIdAsync(string Id)
         => await this.dbContext.Articles
             .Where(a => a.Id == Id)
             .ProjectTo<BlogArticleDetailsServiceModel>()
             .FirstOrDefaultAsync();
 
-        public async Task<IEnumerable<BlogArticleListingServiceModel>> All(int page = 1)
+        public async Task<IEnumerable<BlogArticleListingServiceModel>> AllAsync(int page = 1)
             => await this.dbContext
                         .Articles
                         .OrderByDescending(a => a.PublishDate)

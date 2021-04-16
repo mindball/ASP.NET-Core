@@ -8,9 +8,9 @@ namespace LearningSystem.Services.Blog
 {
     public interface IBlogArticleService
     {
-        Task<IEnumerable<BlogArticleListingServiceModel>> All(int page = 1);
+        Task<IEnumerable<BlogArticleListingServiceModel>> AllAsync(int page = 1);
 
-        Task<BlogArticleDetailsServiceModel> GetById(string Id);
+        Task<BlogArticleDetailsServiceModel> GetByIdAsync(string Id);
 
         Task<int> TotalAsync();
 

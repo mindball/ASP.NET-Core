@@ -31,14 +31,14 @@ namespace LearningSystem.Web.Areas.Blog.Controllers
         public async Task<IActionResult> Index(int page = 1)
             =>  View(new BlogArticleListingViewModel 
                     { 
-                        Articles = await this.blogArticleService.All(page),
+                        Articles = await this.blogArticleService.AllAsync(page),
                         TotalArticles = await this.blogArticleService.TotalAsync(),
                         CurrentPage = page
             });
 
         [AllowAnonymous]
         public async Task<IActionResult> Details(string id)
-            => this.ViewOrNotFound(await this.blogArticleService.GetById(id));
+            => this.ViewOrNotFound(await this.blogArticleService.GetByIdAsync(id));
 
         public IActionResult Create()
             => this.View();

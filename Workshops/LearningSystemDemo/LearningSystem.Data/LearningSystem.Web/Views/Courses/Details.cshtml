@@ -1,0 +1,34 @@
+﻿@model CourseDetailViewModel
+@{
+    ViewData["Title"] = $"{Model.Course.Name} Course";
+}
+
+<h2>@ViewData["Title"] - @Model.Course.Students students enrolled</h2>
+
+<h3>@Model.Course.Trainer</h3>
+
+<h4>@Model.Course.StartDate.ToShortDateString() - @Model.Course.EndDate.ToShortDateString()</h4>
+
+@if (User.Identity.IsAuthenticated)
+{
+    if (Model.UserIsEnrolledCourse
+        && Model.Course.EndDate.Date == DateTime.UtcNow.AddDays(1).Date)
+    {
+        <form asp-action="SubmitExam" asp-route-id="@Model.Course.Id" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All"></div>
+            <br />
+            Upload your exam (only .zip files allowed):
+            <br />
+            <input type="file" name="exam" style="display: none" accept=".zip" />
+            <button type="button" class="btn btn-default" onclick="document.getElementsByName('exam')[0].click()">Choose your file!</button>
+            <br />
+            <br />
+            <input type="submit" class="btn btn-primary" value="Upload Exam" />
+        </form>
+        <br />
+    }  
+}
+else
+{
+    <span>To sign up for this course, please <a asp-area="Identity" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Context.Request.Path">login</a> into your account.</span>
+}

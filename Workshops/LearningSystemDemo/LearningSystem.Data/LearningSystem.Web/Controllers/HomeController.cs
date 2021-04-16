@@ -2,11 +2,7 @@
 using LearningSystem.Web.Models;
 using LearningSystem.Web.Models.Home;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace LearningSystem.Web.Controllers

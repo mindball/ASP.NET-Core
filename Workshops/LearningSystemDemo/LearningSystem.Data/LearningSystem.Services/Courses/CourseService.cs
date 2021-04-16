@@ -19,11 +19,9 @@ namespace LearningSystem.Services.Courses
         }
         public async Task<IEnumerable<CourseListingServiceModel>> ActiveAsync()
         {
-
             var date = DateTime.UtcNow;
             var courseData = await this.dbContext.Courses
                   .Select(c => c.StartDate).FirstAsync();
-
 
             bool com = date > courseData;
 
@@ -34,5 +32,17 @@ namespace LearningSystem.Services.Courses
 
             return result;
         }
+
+        public async Task<TModel> ByIdAsync<TModel>(string id) where TModel : class
+            => await this.dbContext
+                .Courses
+                .Where(c => c.Id == id)
+                .ProjectTo<TModel>()
+                .FirstOrDefaultAsync();
+
+        public async Task<bool> StudentIsEnrolledCourseAsync(string courseId, string userId)
+            => await this.dbContext
+                .StudentsCourses
+                .AnyAsync(c => c.CourseId == courseId && c.StudentId == userId);
     }
 }
