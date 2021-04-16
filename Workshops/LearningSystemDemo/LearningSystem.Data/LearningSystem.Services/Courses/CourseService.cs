@@ -1,5 +1,6 @@
 ﻿using AutoMapper.QueryableExtensions;
 using LearningSystem.Data;
+using LearningSystem.Data.Models;
 using LearningSystem.Services.Courses.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -39,6 +40,35 @@ namespace LearningSystem.Services.Courses
                 .Where(c => c.Id == id)
                 .ProjectTo<TModel>()
                 .FirstOrDefaultAsync();
+
+        public async Task<bool> SignUpStudentAsync(string courseId, string studentId)
+        {
+            if(await this.dbContext.StudentsCourses
+                .AnyAsync(cs => cs.CourseId == courseId && cs.StudentId == studentId))
+            {
+                return false;
+            }
+
+            var student = await this.dbContext.Users.FirstOrDefaultAsync(s => s.Id == studentId);
+            if (student == null) 
+                throw new ArgumentException("No such user in db");
+
+            var course = await this.dbContext.Courses.FirstOrDefaultAsync(c => c.Id == courseId);
+            if (course == null)
+                throw new ArgumentException("No such course in db");
+
+            var addStudentsCourses = new StudentCourse
+            {
+                Course = course,
+                Student = (User)student
+            };
+
+            await this.dbContext.StudentsCourses.AddAsync(addStudentsCourses);
+            await this.dbContext.SaveChangesAsync();
+
+            return true;
+           
+        }
 
         public async Task<bool> StudentIsEnrolledCourseAsync(string courseId, string userId)
             => await this.dbContext

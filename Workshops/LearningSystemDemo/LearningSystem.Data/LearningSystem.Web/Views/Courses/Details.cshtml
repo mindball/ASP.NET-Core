@@ -26,7 +26,33 @@
             <input type="submit" class="btn btn-primary" value="Upload Exam" />
         </form>
         <br />
-    }  
+    }
+    if (Model.Course.StartDate > DateTime.UtcNow)
+    {
+        if (Model.UserIsEnrolledCourse)
+        {
+            <form asp-action="SignOut" asp-route-id="@Model.Course.Id" method="post">
+                <input type="submit" class="btn btn-primary" value="Sign Out" />
+            </form>
+        }
+        else
+        {
+            <form asp-action="SignUp" asp-route-id="@Model.Course.Id" method="post">
+                <input type="submit" class="btn btn-primary" value="Sign Up" />
+            </form>
+        }
+    }
+     else
+    {
+        if (Model.Course.EndDate < DateTime.UtcNow)
+        {
+            <span>This course has already finished.</span>
+        }
+        else
+        {
+            <span>This course has already started.</span>
+        }
+    }
 }
 else
 {

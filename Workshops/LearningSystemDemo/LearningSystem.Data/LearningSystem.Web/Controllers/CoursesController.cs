@@ -1,6 +1,7 @@
 ﻿using LearningSystem.Data.Models;
 using LearningSystem.Services.Courses;
 using LearningSystem.Services.Courses.Models;
+using LearningSystem.Web.Infrastructure.Extensions;
 using LearningSystem.Web.Models.Courses;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -35,10 +36,31 @@ namespace LearningSystem.Web.Controllers
 
             if (User.Identity.IsAuthenticated)
             {
-               
+                var userId = this.userManager.GetUserId(User);
+
+                courseDetails.UserIsEnrolledCourse = 
+                   await this.courseService.StudentIsEnrolledCourseAsync(courseId, userId);
             }
 
             return this.View(courseDetails);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> SignUp([FromRoute(Name = "id")] string courseId)
+        {
+            var userId = this.userManager.GetUserId(User);
+
+            var success = await this.courseService.SignUpStudentAsync(courseId, userId);
+
+            if (!success)
+            {
+                return BadRequest();
+            }
+
+            TempData.AddSuccessMessage("Thank you for your registration!");
+
+            return this.RedirectToAction(nameof(Details), new { id = courseId });
         }
     }
 }
