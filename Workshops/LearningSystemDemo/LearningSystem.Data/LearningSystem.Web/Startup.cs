@@ -37,8 +37,10 @@ namespace LearningSystem.Web
                    options.Password.RequireUppercase = false;
                    options.Password.RequireNonAlphanumeric = false;
                })
-               .AddEntityFrameworkStores<LearningSystemDbContext>()
-               .AddDefaultTokenProviders();
+               .AddDefaultTokenProviders()
+               .AddDefaultUI()
+               .AddEntityFrameworkStores<LearningSystemDbContext>();
+
 
             services.AddDomainServices();
 

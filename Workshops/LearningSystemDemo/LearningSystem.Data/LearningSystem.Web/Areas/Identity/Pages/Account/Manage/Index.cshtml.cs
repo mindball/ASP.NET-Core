@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-using LearningSystem.Data.Models;
+﻿using LearningSystem.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
+
+using static LearningSystem.Data.DataConstants;
 
 namespace LearningSystem.Web.Areas.Identity.Pages.Account.Manage
 {
@@ -25,14 +25,36 @@ namespace LearningSystem.Web.Areas.Identity.Pages.Account.Manage
 
         public string Username { get; set; }
 
+        [Required]
+        [MinLength(UserNameMinLength)]
+        [MaxLength(UserNameMaxLength)]
+        public string Name { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime Birthdate { get; set; }
+
+        public bool IsEmailConfirmed { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Phone]
+        [Display(Name = "Phone number")]
+        public string PhoneNumber { get; set; }
+
+
         [TempData]
         public string StatusMessage { get; set; }
 
         [BindProperty]
         public InputModel Input { get; set; }
 
-        public class InputModel : User
-        {            
+        public class InputModel
+        {
+            [Phone]
+            [Display(Name = "Phone number")]
+            public string PhoneNumber { get; set; }
         }
 
         private async Task LoadAsync(User user)
