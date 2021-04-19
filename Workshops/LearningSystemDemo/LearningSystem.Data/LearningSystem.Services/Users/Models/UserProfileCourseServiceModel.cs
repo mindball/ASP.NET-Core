@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using LearningSystem.Common.Mapping;
 using LearningSystem.Data.Models;
-using LearningSystem.Data.Models.Enums;
+using LearningSystem.Data.Enums;
 using System.Linq;
 
 namespace LearningSystem.Services.Users.Models
@@ -23,7 +23,8 @@ namespace LearningSystem.Services.Users.Models
                         .MapFrom(g => g.Students
                         .Where(s => s.StudentId == studentId)
                         .Select(v => v.Grade)
-                        .FirstOrDefault()));                        
+                        .FirstOrDefault()));
+            ;
         }
     }
 }
