@@ -2,8 +2,6 @@
 using LearningSystem.Common.Mapping;
 using LearningSystem.Data.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LearningSystem.Services.Courses.Models
 {

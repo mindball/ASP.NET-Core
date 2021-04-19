@@ -20,6 +20,6 @@ namespace LearningSystem.Data.Models
 
         public virtual List<Course> Trainings { get; set; } = new List<Course>();
 
-        public List<StudentCourse> Course { get; set; } = new List<StudentCourse>();
+        public List<StudentCourse> Courses { get; set; } = new List<StudentCourse>();
     }
 }

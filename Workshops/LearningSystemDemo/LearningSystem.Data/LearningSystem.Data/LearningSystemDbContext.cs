@@ -4,12 +4,28 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LearningSystem.Data
 {
-    public class LearningSystemDbContext : IdentityDbContext
+    public class LearningSystemDbContext : IdentityDbContext<User>
     {
+
+        ////when manual initial migration
+        //public LearningSystemDbContext()
+        //{
+        //}
+
         public LearningSystemDbContext(DbContextOptions<LearningSystemDbContext> options)
             : base(options)
         {
-        }       
+        }
+
+        //when manual initial migration
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    // Specify that we will use sqlite and the path of the database here
+        //    var options = optionsBuilder
+        //        .UseSqlServer("DefaultConnectionString");
+
+        //    base.OnConfiguring(options);
+        //}
 
         public DbSet<StudentCourse> StudentsCourses { get; set; }
 

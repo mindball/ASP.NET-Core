@@ -80,6 +80,10 @@ namespace LearningSystem.Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "profile",
+                    pattern: "users/{username}",
+                    defaults: new { controller = "Users", action = "Profile" });
+                endpoints.MapControllerRoute(
                     name: "blog",
                     pattern: "blog/articles/{id}/{title}",
                     defaults: new { area = "Blog", controller = "Articles", action = "Details" });
