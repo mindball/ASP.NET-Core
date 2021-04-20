@@ -7,32 +7,30 @@
 <div class="jumbotron">
     <h1 class="text-center">Welcome to our learning system!</h1>
 </div>
+
 <div class="row">
-    @foreach (var course in Model.Courses)
-    {
-        <!--<div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title text-center">@course.Name</h3>
-                </div>
-                <div class="panel-body">-->
-        @*<img src="http://thecatapi.com/api/images/get?format=src&type=gif&guid=@(Guid.NewGuid())" class="img-responsive">
-            <br />
-            <p class="text-center">@course.StartDate.ToShortDateString() - @course.EndDate.ToShortDateString()</p>*@
-        <!--</div>
-            </div>
-        </div>-->
-        <div class="col-md-3 text-center my-auto">
-            <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                    <h4 class="card-title">@course.Name</h4>
-                    <img src="http://thecatapi.com/api/images/get?format=src&type=gif&guid=@(Guid.NewGuid())" class="img-fluid">
-                    <br />
-                    <p class="text-center">@course.StartDate.ToShortDateString() - @course.EndDate.ToShortDateString()</p>
-                    <a href="/courses/details/@course.Id" class="card-link">Detail</a>                    
-                </div>
-            </div>
+    <form asp-action="Search">
+        <div class="col-md-6">
+            <input asp-for="SearchText" class="form-control" placeholder="Search..." />
         </div>
-    }
+        <div class="col-md-2">
+            <input asp-for="SearchCourses" />
+            <label asp-for="SearchCourses"></label>
+        </div>
+        <div class="col-md-2">
+            <input asp-for="SearchUsers" />
+            <label asp-for="SearchUsers"></label>
+        </div>
+        <div class="col-md-2">
+            <input type="submit" class="btn btn-default pull-right" value="Search" />
+        </div>
+    </form>
+</div>
+
+<br />
+
+<div class="row">
+    @await Html.PartialAsync("_CourseListingsPartial", Model.Courses)
+</div>
 
 

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CourseListingServiceModel>
+
+@foreach (var course in Model)
+{
+    <div class="col-md-3 text-center my-auto">
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <h4 class="card-title">@course.Name</h4>
+                <img src="http://thecatapi.com/api/images/get?format=src&type=gif&guid=@(Guid.NewGuid())" class="img-fluid">
+                <br />
+                <p class="text-center">@course.StartDate.ToShortDateString() - @course.EndDate.ToShortDateString()</p>
+                <a href="/courses/details/@course.Id" class="card-link">Detail</a>
+            </div>
+        </div>
+    </div>
+}

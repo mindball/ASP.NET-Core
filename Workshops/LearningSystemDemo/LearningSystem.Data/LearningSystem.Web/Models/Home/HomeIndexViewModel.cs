@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LearningSystem.Web.Models.Home
 {
-    public class HomeIndexViewModel
+    public class HomeIndexViewModel : SearchFormViewModel
     {
         public IEnumerable<CourseListingServiceModel> Courses { get; set; }
     }

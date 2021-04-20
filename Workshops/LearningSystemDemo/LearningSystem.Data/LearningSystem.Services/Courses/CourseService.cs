@@ -103,5 +103,21 @@ namespace LearningSystem.Services.Courses
             => await this.dbContext
                 .StudentsCourses
                 .AnyAsync(c => c.CourseId == courseId && c.StudentId == userId);
+
+        public async Task<IEnumerable<CourseListingServiceModel>> FindCoursesAsync(string searchText)
+        {
+            if(string.IsNullOrEmpty(searchText))
+            {
+                throw new ArgumentException("search text is empty");
+            }
+
+            var courses = await this.dbContext.Courses
+                .OrderBy(c => c.Name)
+                .Where(c => c.Name.ToLower().Contains(searchText.ToLower()))
+                .ProjectTo<CourseListingServiceModel>()
+                .ToListAsync();
+
+            return courses;
+        }
     }
 }

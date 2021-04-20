@@ -8,6 +8,8 @@ namespace LearningSystem.Services.Courses
     {
         Task<IEnumerable<CourseListingServiceModel>> ActiveAsync();
 
+        Task<IEnumerable<CourseListingServiceModel>> FindCoursesAsync(string searchText);
+
         Task<TModel> ByIdAsync<TModel>(string id) where TModel : class;
 
         Task<bool> StudentIsEnrolledCourseAsync(string courseId, string userId);
