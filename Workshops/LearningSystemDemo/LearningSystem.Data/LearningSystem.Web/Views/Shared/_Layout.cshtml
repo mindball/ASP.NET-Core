@@ -37,6 +37,12 @@
                                 <a class="nav-link text-dark" asp-area="Blog" asp-controller="Articles" asp-action="Create">Publish Article</a>
                             </li>
                         }
+                        @if (User.IsInRole(WebConstants.TrainerRole))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Trainers" asp-action="Courses">List courses</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
