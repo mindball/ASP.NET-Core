@@ -135,3 +135,22 @@ public class ValidateModelStateAttribute : ActionFilterAttribute
             }
         }
 ```
+## Good practice
+```
+Ако има повтарящи се html форми е добре да се изнесат в _partialView. Например ако някъде се листват courses-вете
+```
+```csharp
+//На някой места ни трябват пълни данни от модела, на други. Затова подаваме различни модели.
+Task<TModel> ByIdAsync<TModel>(string id) where TModel : class;
+```
+### Add new entity exam
+```
+може да се сложи и в mapping таблицата в случая. Но както е направено в softuni е добре да е в отделна таблица
+поради някои bussness cases. Например ако качваме файлове zip трябва да ги проверим, ако качваме файлове cs. и т.н,.
+В случая ще добавим ExamSubmission в mapping таблицата StudentCourse
+```
+
+### Extension method ToByteArray
+```
+Изваждането на този extension-метод от контролера, e по добрата четимост на контролера, също така тази логика може да се преизползва
+```

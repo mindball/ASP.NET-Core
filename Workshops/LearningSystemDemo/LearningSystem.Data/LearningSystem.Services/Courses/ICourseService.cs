@@ -17,5 +17,7 @@ namespace LearningSystem.Services.Courses
         Task<bool> SignUpStudentAsync(string courseId, string studentId);
 
         Task<bool> SignOutStudentAsync(string courseId, string studentId);
+
+        Task<bool> SaveExamSubmission(string courseId, string userId, byte[] fileContents);
     }
 }

@@ -39,6 +39,10 @@ namespace LearningSystem.Data
                 .Entity<StudentCourse>()
                 .HasKey(st => new { st.CourseId, st.StudentId });
 
+            builder
+               .Entity<Exam>()
+               .HasKey(st => new { st.CourseId, st.StudentId });
+
             //builder
             //    .Entity<StudentCourse>()
             //    .HasOne(sc => sc.Student)

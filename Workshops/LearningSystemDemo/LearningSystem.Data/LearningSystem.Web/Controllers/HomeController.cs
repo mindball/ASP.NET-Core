@@ -51,11 +51,8 @@ namespace LearningSystem.Web.Controllers
                     await this.usersService.FindUsersAsync(searchModel.SearchText);
             }
 
-
-
             return this.View(searchViewModel);
-        }
-        
+        }        
 
         public IActionResult Privacy()
         {

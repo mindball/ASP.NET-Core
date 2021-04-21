@@ -42,10 +42,21 @@ namespace LearningSystem.Services.Trainers
                     .ProjectTo<CourseListingServiceModel>()
                     .ToListAsync();
 
+        public async Task<byte[]> GetExamSubmissionAsync(string courseId, string studentId)
+            => (await this.db.StudentsCourses
+                    .FindAsync(courseId, studentId))
+                ?.ExamSubmission;
+
         public async Task<bool> IsTrainerAsync(string courseId, string trainerId)
          => await this.db
                 .Courses
                 .AnyAsync(c => c.Id == courseId && c.TrainerId == trainerId);
+
+        public async Task<StudentInCourseNameServiceModel> StudentInCourseNamesAsync(string courseId, string studentId)
+            => await this.db.Users
+            .Where(s => s.Id == studentId)            
+            .ProjectTo<StudentInCourseNameServiceModel>(new { courseId })
+            .FirstOrDefaultAsync();
 
         public async Task<IEnumerable<StudentInCourseServiceModel>> StudentsInCourseAsync(string courseId)
         {

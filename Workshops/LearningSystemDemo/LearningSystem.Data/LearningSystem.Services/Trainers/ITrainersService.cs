@@ -15,5 +15,9 @@ namespace LearningSystem.Services.Trainers
         Task<IEnumerable<StudentInCourseServiceModel>> StudentsInCourseAsync(string courseId);
 
         Task<bool> AddGradeAsync(string courseId, string studentId, Grade grade);
+
+        Task<byte[]> GetExamSubmissionAsync(string courseId, string studentId);
+
+        Task<StudentInCourseNameServiceModel> StudentInCourseNamesAsync(string courseId, string studentId);
     }
 }

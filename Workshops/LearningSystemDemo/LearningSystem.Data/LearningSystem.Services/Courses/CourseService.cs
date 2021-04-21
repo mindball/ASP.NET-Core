@@ -119,5 +119,20 @@ namespace LearningSystem.Services.Courses
 
             return courses;
         }
+
+        public async Task<bool> SaveExamSubmission(string courseId, string userId, byte[] fileContents)
+        {
+            var studentInCourse = await this.dbContext.FindAsync<StudentCourse>(courseId, userId);
+
+            if(studentInCourse == null)
+            {
+                return false;
+            }
+
+            studentInCourse.ExamSubmission = fileContents;
+            await this.dbContext.SaveChangesAsync();
+
+            return true;
+        }
     }
 }

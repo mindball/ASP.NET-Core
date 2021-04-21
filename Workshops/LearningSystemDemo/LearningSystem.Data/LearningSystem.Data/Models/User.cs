@@ -21,5 +21,7 @@ namespace LearningSystem.Data.Models
         public virtual List<Course> Trainings { get; set; } = new List<Course>();
 
         public List<StudentCourse> Courses { get; set; } = new List<StudentCourse>();
+
+        public virtual List<Exam> Exams { get; set; } = new List<Exam>();
     }
 }

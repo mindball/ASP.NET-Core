@@ -32,5 +32,7 @@ namespace LearningSystem.Data.Models
         public virtual User Trainer { get; set; }
 
         public virtual List<StudentCourse> Students { get; set; } = new List<StudentCourse>();
+
+        public virtual List<Exam> Exams { get; set; } = new List<Exam>();
     }
 }
