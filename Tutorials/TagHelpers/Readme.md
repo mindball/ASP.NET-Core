@@ -90,3 +90,5 @@ so if you use class name CoolTagHelper, you will be able to use <cool> tag in yo
 ```
 [Custom-tag1](https://codingblast.com/asp-net-core-mvc-custom-tag-helpers/)
 [Custom-tag2](https://www.yogihosting.com/aspnet-core-custom-tag-helpers/)
+[auto generated identifier upon rendering multiple input elements with the same property name?](https://stackoverflow.com/questions/63033109/how-to-use-an-alternative-auto-generated-identifier-upon-rendering-multiple-inpu)
+

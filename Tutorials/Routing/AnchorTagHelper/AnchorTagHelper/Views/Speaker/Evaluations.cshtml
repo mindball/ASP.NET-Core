@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Speaker Evaluation page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <h4>@Model.SpeakerId</h4>
+    @if (@Model.Name != null)
+    {
+        <h4>@Model.Name</h4>
+    }
+    @if (@Model.CurrentYear)
+    {
+        <h4>Current year: @DateTime.Now.Year</h4>
+    }
+</div>

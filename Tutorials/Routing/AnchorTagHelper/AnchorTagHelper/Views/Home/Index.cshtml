@@ -1,0 +1,41 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h2>Anchor Tag Helper attributes</h2>
+<h4>asp-controller & asp-action</h4>
+@*If no asp-controller attribute is specified, the default controller calling the view
+    executing the current view is used.*@
+<a asp-controller="Speaker"
+   asp-action="Evaluations">Speaker Evaluations with specified controller and action</a>
+<br />
+<a asp-action="Evaluations">Speaker Evaluations with specified only action</a>
+<br />
+<h4>asp-route-{value}</h4>
+<a asp-controller="Speaker"
+   asp-action="Detail"
+   asp-route-id="@Model.Speaker.SpeakerId">SpeakerId: @Model.Speaker.SpeakerId</a>
+<br />
+<small>Catch by SpeakerController with RouteAttribute [Route("Speaker/{id:int}")]</small>
+<h5>Assume the route prefix isn't part of the matching routing template</h5>
+<a asp-controller="Speaker"
+   asp-action="Detail"
+   asp-route-speakerId="@Model.Speaker.SpeakerId"
+   asp-route-speakerName="test">SpeakerId: @Model.Speaker.SpeakerId</a>
+<br />
+<a asp-route-speakerId="@Model.Speaker.SpeakerId"
+   asp-route-speakerName="test">asp-controller or asp-action aren't specified</a>
+<h4>asp-route</h4>
+<a asp-route="speakerevals">Speaker Evaluations</a>
+<h4>asp-all-route-data</h4>
+@{
+    var parms = new Dictionary<string, string>
+    {
+                { "speakerId", "11" },
+                { "speakerName", "asp-all-route-data" },
+                { "currentYear", "true" }
+            };
+}
+
+<a asp-route="speakerevalscurrent"
+   asp-all-route-data="parms">Speaker Evaluations</a>
