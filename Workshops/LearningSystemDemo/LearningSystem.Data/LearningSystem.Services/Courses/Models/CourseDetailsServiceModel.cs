@@ -21,7 +21,7 @@ namespace LearningSystem.Services.Courses.Models
 
         public int  Students { get; set; }
 
-        public void ConfigureMapping(Profile mapper)
+        public virtual void ConfigureMapping(Profile mapper)
         {
             mapper.CreateMap<Course, CourseDetailsServiceModel>()
                  .ForMember(c => c.Trainer, cfg => cfg.MapFrom(c => c.Trainer.Name))
