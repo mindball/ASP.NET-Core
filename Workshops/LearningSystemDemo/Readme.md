@@ -154,3 +154,27 @@ Task<TModel> ByIdAsync<TModel>(string id) where TModel : class;
 ```
 Изваждането на този extension-метод от контролера, e по добрата четимост на контролера, също така тази логика може да се преизползва
 ```
+### Automapping
+```csharp
+var certificateInfo = await this.db
+                .Courses
+                .Where(c => c.Id == courseId)
+                .Select(c => new
+                {
+                    CourseName = c.Name,
+                    CourseStartDate = c.StartDate,
+                    CourseEndDate = c.EndDate,
+                    StudentName = c.Students
+                        .Where(s => s.StudentId == studentId)
+                        .Select(s => s.Student.Name)
+                        .FirstOrDefault(),
+                    StudentGrade = c.Students
+                        .Where(s => s.StudentId == studentId)
+                        .Select(s => s.Grade)
+                        .FirstOrDefault(),
+                    Trainer = c.Trainer.Name
+                })
+                .FirstOrDefaultAsync();
+Няма смисъл от automapper защото нищо с нищо не съвпада!!!
+```
+### Re-user code from serviceModels with override IHaveCustomMapping

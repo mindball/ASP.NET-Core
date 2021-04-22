@@ -207,6 +207,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.13, )"
+            },
+            "iTextSharp.LGPLv2.Core": {
+              "target": "Package",
+              "version": "[1.7.1, )"
             }
           },
           "imports": [

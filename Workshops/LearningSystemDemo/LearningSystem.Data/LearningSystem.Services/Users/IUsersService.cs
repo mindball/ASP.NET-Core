@@ -9,5 +9,7 @@ namespace LearningSystem.Services.Users
         Task<UserProfileServiceModel> ProfileAsync(string userId);
 
         Task<IEnumerable<UserListingServiceModel>> FindUsersAsync(string searchText);
+
+        public  Task<byte[]> GetPdfCertificate(string courseId, string userId);
     }
 }

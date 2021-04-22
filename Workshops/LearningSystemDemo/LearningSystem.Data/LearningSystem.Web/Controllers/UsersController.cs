@@ -33,10 +33,18 @@ namespace LearningSystem.Web.Controllers
             return View(profile);
         }
 
-        public async Task<IActionResult>  DownloadCertificate(string courseId)
+        public async Task<IActionResult>  DownloadCertificate([FromRoute(Name = "id")]string courseId)
         {
+            var userId = this.userManager.GetUserId(User);
+            var certificateContent = await this.users
+                .GetPdfCertificate(courseId, userId);
 
-            return null;
+            if (certificateContent == null)
+            {
+                return BadRequest();
+            }
+
+            return File(certificateContent, "application/pdf", "Certificate.pdf");
         }
 
     }
