@@ -4,6 +4,10 @@ using System.Threading.Tasks;
 
 namespace ViewComponentDemo.ViewComponets
 {
+    //The [ViewComponent] attribute can change the name used to reference a view component. 
+    //For example, we could've named the class XYZ and applied the ViewComponent attribute:
+    [ViewComponent(Name = "LoginStatus")]
+    //public class XYZ : ViewComponent
     public class LoginStatusViewComponent : ViewComponent
     {
         private readonly SignInManager<IdentityUser> _signInManager;

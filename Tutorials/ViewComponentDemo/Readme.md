@@ -24,6 +24,21 @@ but that the rendering logic is complicated and may need to be tested.
 > Sidebar content on a typical blog
 > A login panel that would be rendered on every page and show either the links to log out or log in, depending on the log in state of the user
 
+## Invoking a view component
+### Component.InvokeAsync Method
+```csharp
+@await Component.InvokeAsync("Name of view component", {Anonymous Type Containing Parameters})
+```
+### as a Tag Helper
+> Name: Tag Helpers are translated into their kebab case
+```cshtml
+<vc:viewComponent-name max-priority="2" is-done="false">
+</vc:priority-list>
+```
+> also add to import
+```
+@addTagHelper *, namespace of project
+```
 ### Invoking directly from a controller
 ```cs
 public IActionResult IndexVC()

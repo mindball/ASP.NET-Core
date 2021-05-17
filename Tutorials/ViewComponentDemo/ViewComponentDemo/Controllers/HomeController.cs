@@ -23,9 +23,9 @@ namespace ViewComponentDemo.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult CallVC()
         {
-            return View();
+            return ViewComponent("LoginStatus");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

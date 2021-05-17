@@ -23,11 +23,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CallVC">View component</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
-                        @await Component.InvokeAsync("LoginStatus")                        
+                        @*Add viewComponent InvokeAsync method*@
+                        @await Component.InvokeAsync("LoginStatus")*@
+
+                        @*Add viewComponent as tag-helper*@
+                        <vc:login-status></vc:login-status>
                     </ul>
                 </div>
             </div>
