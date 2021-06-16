@@ -16,7 +16,25 @@
 </div>
 
 @section Scripts {
+
     <script>
+        var entityMap = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;',
+            '/': '&#x2F;',
+            '`': '&#x60;',
+            '=': '&#x3D;'
+        };
+
+        function escapeHtml(string) {
+            return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+                return entityMap[s];
+            });
+        }
+
         var connection =
             new signalR.HubConnectionBuilder()
                 .withUrl("/chat")
@@ -24,13 +42,13 @@
 
         connection.on("NewMessage",
             function (message) {
-                var chatInfo = `<div>[${message.user}] ${message.text}</div>`;
+                var chatInfo = `<div>[${escapeHtml(message.user)}] ${escapeHtml(message.text)}</div>`;
                 $("#messagesList").append(chatInfo);
             });
 
         $("#sendButton").click(function() {
             var message = $("#messageInput").val();
-            connection.invoke("Send", message);
+            connection.invoke("Send",escapeHtml(message));
         });
 
         connection.start().catch(function (err) {
