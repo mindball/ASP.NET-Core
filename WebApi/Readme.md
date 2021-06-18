@@ -79,7 +79,7 @@ errors are transformed into ProblemDetails
 
 ### AddXmlSerializerFormatters() заедно със Header-a "Accept=application/xml" ще позволи api-то да обработва и връща XML
 ### Content Negotiation
-* Content-Type
+* Content-Type (json/xml)
 * Accept
 ```
 Content-Type and Accept header are the important elements while requesting a service. It tells the 
@@ -214,5 +214,5 @@ different domain
 
 ## Good practice
 ```
-Добре е да връщаме status code, според спецефичните резултати. Пример: Unauthorize, OK, NotFound, BadRequest
+Добре е да връщаме status code specific, според спецефичните резултати. Пример: Unauthorize, OK, NotFound, BadRequest заедно с данните
 ```

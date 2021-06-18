@@ -179,5 +179,19 @@ Server site validation and client-side - да не влизат невалидн
 може да стане проблем ако потребителя натисне F5 да добваи същите данни. При redirect
 browser-а redirect към GET заявка
 ```
+```
+Tricky tips: ако използваме reflection (и не ни зарежда(събира) всички асемблите, като например да събере services-те,  automapper configurations и т.н)
+причина за това, е че.net lazy-load-ва. Тоест няма да се мап-нe профила на autmapper, custom-mapping-гите и т.н, докато не му потрябват. Затова
+ако в ConfigureServices разменим например тези две настройки, няма да сработи.
+			//App - LearningSystem-Workshop
+			//First
+            services.AddDomainServices(); //Infrastructure/Extenison
+			//Second
+            services.AddAutoMapper();  //Infrastructure/Extenison ако не load-ва асемблитата може да добавим var serviceType = typeof(IService)
+```
+```
+Sql база данни се препоръчват, когато имаме сценарий, small writing -> big reading
+No-Sql данните е обратното: много writing -> less reading
+```
 
 
