@@ -1,5 +1,6 @@
 ﻿using CacheDemo.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 using System;
@@ -12,13 +13,16 @@ namespace CacheDemo.Controllers
         private const string cacheKey = "New";
         private static int count = 0;
         private readonly ApplicationDbContext context;
-        private IMemoryCache cache;
+        private IMemoryCache memoryCache;
+        private IDistributedCache distributedCache;
 
         public CacheController(ApplicationDbContext context, 
-            IMemoryCache cache)
+            IMemoryCache memoryCache,
+            IDistributedCache distributedCache)
         {
             this.context = context;
-            this.cache = cache;
+            this.memoryCache = memoryCache;
+            this.distributedCache = distributedCache;
         }
 
         public IActionResult IMemoryCache()
@@ -37,10 +41,10 @@ namespace CacheDemo.Controllers
                 count = countRecords;
                 var allCars = this.context.Cars.Select(c => c).ToList();
                 var result = JsonConvert.SerializeObject(allCars, Formatting.Indented);
-                this.cache.Set<string>(cacheKey, result.ToString());
+                this.memoryCache.Set<string>(cacheKey, result.ToString());
             }
 
-            if(this.cache.TryGetValue(cacheKey, out var value))
+            if(this.memoryCache.TryGetValue(cacheKey, out var value))
             {
                 return this.Content(value.ToString());
             }
@@ -67,6 +71,21 @@ namespace CacheDemo.Controllers
              * 
              */
             return this.Content(DateTime.Now.ToString());
+        }
+
+        public IActionResult DistributedCache()
+        {
+            //Ако искаме по сложен обект да бъде cache-нат можем да го сериализираме в JSON
+            var stringValue = this.distributedCache.GetString(cacheKey);
+            if(stringValue == null)
+            {
+                var allCars = this.context.Cars.Select(c => c).ToList();
+                var result = JsonConvert.SerializeObject(allCars, Formatting.Indented);
+                //Look at in db table CacheEntries 
+                this.distributedCache.SetString(cacheKey, result.ToString());
+            }
+
+            return this.Content(this.distributedCache.GetString(cacheKey));
         }
     }
 }

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Caching.SqlServer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +35,19 @@ namespace CacheDemo
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            //services.AddMemoryCache();
+            services.AddMemoryCache();
             services.AddResponseCaching();
             services.AddControllersWithViews();
+            //In PowerShell run command:
+            //dotnet tool install --global dotnet-sql-cache
+            //dotnet sql-cache create "ConectionString" dbo CacheEntries
+            services.AddDistributedSqlServerCache(opt =>
+                {
+                    opt.ConnectionString = Configuration.GetConnectionString("DefaultConnection");
+                    opt.SchemaName = "dbo";
+                    opt.TableName = "CacheEntries";
+                }
+            );
 
             services.AddRazorPages();
         }
