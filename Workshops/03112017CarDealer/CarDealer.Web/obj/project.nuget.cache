@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HCuKWohW4uN7iVhKtnUxQ3nq0vqTn4rY7fWuHAmCkVpk7Hm2TIgwWIbHcfYMa5IZyCy1bIweK2116ukewHxC8Q==",
+  "dgSpecHash": "8JvvHjhlFjyW67guAkYC4WSE6xEF6/z0d7AOJ7WvTWrjySoCZCZjjnh8YbO/Rw0F8e1siBwNPj+DOsLwJQ8tRQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\oilaripi\\source\\repos\\ASP.NET Core\\ASP.NET-Core\\Workshops\\03112017CarDealer\\CarDealer.Web\\CarDealer.Web.csproj",
   "expectedPackageFiles": [
@@ -175,7 +175,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\oilaripi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
   ],
   "logs": []
 }

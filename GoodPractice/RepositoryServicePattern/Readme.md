@@ -1,5 +1,10 @@
 # The Repository-Service Pattern with DI and ASP.NET Core
 ```
+Разликата между services и Repository, е че при Repository имам CRUD операции, 
+тоест със сигурност работим с базаданни, докато при сървисите може и да нямаме
+такива операции
+```
+```
 Get this tutorial and thx https://exceptionnotfound.net/
 ```
 
