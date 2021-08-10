@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Taghelper cache Page";
+    var user = this.User.Identity.Name;
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+</div>
+<cache>
+    <h1>@DateTime.Now</h1>
+</cache>
+@*varian 2*@
+@*<cache vary-by-user="true">
+        <h1>@DateTime.Now</h1>
+        <h1>@user</h1>
+        Добра идея да се използва с viewcomponent(в която има сложни данни) например последно регистриран user
+    </cache>*@
+@*varian 3*@
+@*Това се достъпва когато имам следния route с query id -> https://localhost:5001/imemorycache/taghelpercache?id=1234,
+    https://localhost:5001/imemorycache/taghelpercache?id=12345 ако се върнем на 1234 ще ни покаже часа когато за
+    пръв път сме го достъпили.*@
+@*<cache vary-by-query="id">
+        <h1>@DateTime.Now</h1>
+    </cache>*@
+
+
